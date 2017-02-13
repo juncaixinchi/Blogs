@@ -30,18 +30,6 @@ function imagezoom(imgobj, box_w, box_h) {
   var chId;
   var homePageUrl, homePageName;
   var scs = document.getElementsByTagName("script");
-  if (location.href.indexOf("fm.qq.com") > -1 || location.href.indexOf("fm.qzone.qq.com") > -1) {
-    homePageName = "\u8fd4\u56de\u4f01\u9e45FM";
-    homePageUrl = "https://fm.qq.com";
-  } else {
-    if (location.href.indexOf("qzone.qq.com") > -1) {
-      homePageName = "\u8fd4\u56de\u6211\u7684\u7a7a\u95f4";
-      homePageUrl = "https://qzone.qq.com";
-    } else {
-      homePageName = "\u8fd4\u56de\u817e\u8baf\u7f51";
-      homePageUrl = "https://www.qq.com";
-    }
-  }
   for (var i = 0;i < scs.length;i++) {
     if (scs[i].src.indexOf("404/search_children.js") > -1) {
       if (scs[i].getAttribute("homePageUrl")) {
