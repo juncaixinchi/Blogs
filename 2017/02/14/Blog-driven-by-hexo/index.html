@@ -105,7 +105,7 @@
 
 网页部署
  生成的网页存在于public文件夹内，将其部署到Github Pages或其他服务器即可 Blogs">
-<meta property="og:updated_time" content="2017-02-14T13:02:54.770Z">
+<meta property="og:updated_time" content="2017-02-14T13:07:02.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Hexo+Next+GitHub搭建个人博客">
 <meta name="twitter:description" content="基于Hexo+Next+GitHub搭建个人博客简介Hexo是依赖于node.js的个人博客生成引擎，可以把基于Markdown的文件生成博客页面，所以整个项目分为两部分：
@@ -443,13 +443,12 @@ comments: false
 <pre><code>hexo generate
 </code></pre><p>然而发现问题还没解决，debug N 久后发现，hexo自动生成public文件时，会对page.js处理一下，其中第297行：</p>
 <pre><code>c += &quot;&lt;&quot; + d + &quot;&gt;\n&quot; + a[d] + &quot;\n\n&quot;;
-</code></pre><p>变成了以下内容，然后保错。。。</p>
+</code></pre><p>变成了以下内容，然后报错<del>~~(&gt;_&lt;)</del>~~</p>
 <pre><code>c += &quot;&lt;&quot; +=&quot;&quot; d=&quot;&quot; &quot;=&quot;&quot;&gt;\n&quot; + a[d] + &quot;\n\n&quot;;
 </code></pre><p>暂时未知原因，只好手动替换page.js解决之</p>
 <pre><code>cp source/404/page.js public/404/page.js
-
-#顺便也可替换404.html，可以避免一次跳转
-cp source/404.html public/404.html
+</code></pre><p>顺便也可替换404.html，可以避免一次跳转</p>
+<pre><code>cp source/404.html public/404.html
 </code></pre><p>然后上传部署，OK</p>
 <pre><code>hexo deploy
 </code></pre>
