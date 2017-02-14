@@ -43,7 +43,7 @@ function imagezoom(imgobj, box_w, box_h) {
     }
   }
   for (var i = 0;i < scs.length;i++) {
-    if (scs[i].src.indexOf("/404/search_children.js") > -1) {
+    if (scs[i].src.indexOf("404/search_children.js") > -1) {
       if (scs[i].getAttribute("homePageUrl")) {
         homePageUrl = scs[i].getAttribute("homePageUrl");
       }
