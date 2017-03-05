@@ -155,7 +155,6 @@
 		timeout = setTimeout(function() {
 			_Callback({tm_now:(new Date).getTime() / 1E3});
 		}, 2E3);
-		getData("http://boss.qzone.qq.com/fcg-bin/fcg_zone_info");
 		_w.share = function(target) {
 			var summary = ["\u80cc\u666f\uff1a", current.name, "\uff0c\u6027\u522b\uff1a", current.sex, "\uff0c\u51fa\u751f\u65f6\u95f4\uff1a", current.birth_time, "\uff0c\u5931\u8e2a\u65f6\u95f4\uff1a", current.lost_time, "\uff0c\u7279\u5f81\u63cf\u8ff0\uff1a", current.child_feature].join("");
 			if (summary) {
