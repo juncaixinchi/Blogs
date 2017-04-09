@@ -4,6 +4,22 @@
   
     
     <entry>
+      <title><![CDATA[Display flex in css]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/04/09/Display-flex-in-css/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Dialog in React Material-UI]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/04/09/Dialog-in-React-Material-UI/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[npm and googleapis mirror]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/03/20/npm-mirror/</url>
       <content type="html"><![CDATA[<p>最近家里网络很糟糕，上不了npm，很是纠结，于是修改设置使用国内的taobao镜像</p>
@@ -1148,9 +1164,9 @@ _   底线
         
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> Cheat-sheet </tag>
+            
+            <tag> Hexo </tag>
             
         </tags>
         

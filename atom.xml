@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-03-21T13:23:17.759Z</updated>
+  <updated>2017-04-09T03:40:08.407Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Display flex in css</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/04/09/Display-flex-in-css/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/04/09/Display-flex-in-css/</id>
+    <published>2017-04-09T03:40:08.000Z</published>
+    <updated>2017-04-09T03:40:08.407Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dialog in React Material-UI</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/04/09/Dialog-in-React-Material-UI/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/04/09/Dialog-in-React-Material-UI/</id>
+    <published>2017-04-09T03:39:47.000Z</published>
+    <updated>2017-04-09T03:39:47.367Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>npm and googleapis mirror</title>
@@ -352,9 +380,9 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://juncaixinchi.github.io/Blogs/tags/Hexo/"/>
-    
       <category term="Cheat-sheet" scheme="https://juncaixinchi.github.io/Blogs/tags/Cheat-sheet/"/>
+    
+      <category term="Hexo" scheme="https://juncaixinchi.github.io/Blogs/tags/Hexo/"/>
     
   </entry>
   
