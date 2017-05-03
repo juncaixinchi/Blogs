@@ -80,7 +80,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/03/20/npm-mirror/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/03/20/npm-mirror/</id>
     <published>2017-03-20T14:55:06.000Z</published>
-    <updated>2017-03-21T13:23:17.759Z</updated>
+    <updated>2017-05-03T12:15:09.295Z</updated>
     
     <summary type="html">
     
@@ -118,7 +118,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/03/18/Vim-Setting/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/03/18/Vim-Setting/</id>
     <published>2017-03-18T12:57:18.000Z</published>
-    <updated>2017-03-18T13:57:05.035Z</updated>
+    <updated>2017-05-03T12:26:20.615Z</updated>
     
     <summary type="html">
     
@@ -224,7 +224,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/02/18/Simple-Canvas-Game/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/02/18/Simple-Canvas-Game/</id>
     <published>2017-02-18T15:10:08.000Z</published>
-    <updated>2017-02-18T15:28:21.734Z</updated>
+    <updated>2017-05-03T12:14:26.056Z</updated>
     
     <summary type="html">
     
@@ -246,7 +246,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/02/14/Git-note/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/02/14/Git-note/</id>
     <published>2017-02-14T11:36:07.000Z</published>
-    <updated>2017-02-18T15:18:49.945Z</updated>
+    <updated>2017-05-03T12:05:32.486Z</updated>
     
     <summary type="html">
     
@@ -298,19 +298,18 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/Github-Git-Cheat-Sheet/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/02/12/Github-Git-Cheat-Sheet/</id>
     <published>2017-02-12T08:42:19.000Z</published>
-    <updated>2017-03-04T14:30:33.516Z</updated>
+    <updated>2017-05-03T12:22:42.024Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;GitHub-Git-备忘单&quot;&gt;&lt;a href=&quot;#GitHub-Git-备忘单&quot; class=&quot;headerlink&quot; title=&quot;GitHub Git 备忘单&quot;&gt;&lt;/a&gt;GitHub Git 备忘单&lt;/h1&gt;&lt;p&gt;Git是一个开源的分布式版本控制系统，方便你在笔记本或桌面端进行GitHub的操作，这个备忘单总结了常用的Git命令行指令，以便快速查询。&lt;/p&gt;
 &lt;p&gt;转载自&lt;a href=&quot;https://services.github.com/on-demand/downloads/zh_CN/github-git-cheat-sheet/&quot;&gt;GitHub Git 备忘单&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;要点&quot;&gt;&lt;a href=&quot;#要点&quot; class=&quot;headerlink&quot; title=&quot;要点&quot;&gt;&lt;/a&gt;要点&lt;/h2&gt;&lt;p&gt;将所有文件进行快照处理用于版本控制&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git add *
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将文件快照永久地记录在版本历史中&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;upload files&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上传所有本地分支commit到GitHub上&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git push
-&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git add *&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;将文件快照永久地记录在版本历史中&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git commit -m &amp;quot;upload files&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上传所有本地分支commit到GitHub上&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git push&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -328,7 +327,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/Todo-List/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/02/12/Todo-List/</id>
     <published>2017-02-12T08:42:01.000Z</published>
-    <updated>2017-03-04T14:32:06.971Z</updated>
+    <updated>2017-05-03T12:23:18.535Z</updated>
     
     <summary type="html">
     
@@ -346,7 +345,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/Markdown-note/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/02/12/Markdown-note/</id>
     <published>2017-02-12T08:41:46.000Z</published>
-    <updated>2017-03-04T14:31:41.018Z</updated>
+    <updated>2017-05-03T12:23:04.680Z</updated>
     
     <summary type="html">
     
@@ -366,7 +365,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/node-install-note/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/02/12/node-install-note/</id>
     <published>2017-02-12T08:39:15.000Z</published>
-    <updated>2017-03-04T14:32:01.365Z</updated>
+    <updated>2017-05-03T12:18:16.079Z</updated>
     
     <summary type="html">
     

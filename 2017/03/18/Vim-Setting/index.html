@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/03/18/Vim-Setting/index.html">
 <meta property="og:site_name" content="俊采新驰">
 <meta property="og:description" content="Vim 是高效的文本编辑器，以下是我整理的日常中经常用到的命令与插件">
-<meta property="og:updated_time" content="2017-03-18T13:57:05.035Z">
+<meta property="og:updated_time" content="2017-05-03T12:26:20.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vim-Setting">
 <meta name="twitter:description" content="Vim 是高效的文本编辑器，以下是我整理的日常中经常用到的命令与插件">
@@ -132,67 +132,64 @@
     	<p>Vim 是高效的文本编辑器，以下是我整理的日常中经常用到的命令与插件</p>
 <a id="more"></a>
 <h2 id="基本编辑命令"><a href="#基本编辑命令" class="headerlink" title="基本编辑命令"></a>基本编辑命令</h2><p>打开文件file</p>
-<pre><code>vi file
-</code></pre><p>进入编辑模式</p>
-<pre><code>i
-</code></pre><p>退出编辑模式，进入命令模式</p>
-<pre><code>&lt;Esc&gt;
-</code></pre><p>保存并退出</p>
-<pre><code>:wp
-</code></pre><p>强制（不保存）退去</p>
-<pre><code>:q!
-</code></pre><h3 id="文件命令"><a href="#文件命令" class="headerlink" title="文件命令"></a>文件命令</h3><p>将vim窗口分成双栏并打开新文件</p>
-<pre><code>:vs newfile
-</code></pre><p>在多栏窗口中切换</p>
-<pre><code>ctrl + w + w
-</code></pre><h3 id="移动命令"><a href="#移动命令" class="headerlink" title="移动命令"></a>移动命令</h3><p>移动到第一行</p>
-<pre><code>gg
-</code></pre><p>移动到最后一行</p>
-<pre><code>G
-</code></pre><p>移动到第7行</p>
-<pre><code>7gg
-</code></pre><h3 id="插入命令"><a href="#插入命令" class="headerlink" title="插入命令"></a>插入命令</h3><p>在当前位置生前插入</p>
-<pre><code>i
-</code></pre><p>在当前行首插入</p>
-<pre><code>I
-</code></pre><p>在当前行尾插入</p>
-<pre><code>A
-</code></pre><p>在当前行之后插入一行</p>
-<pre><code>o
-</code></pre><h3 id="复制、粘贴、删除"><a href="#复制、粘贴、删除" class="headerlink" title="复制、粘贴、删除"></a>复制、粘贴、删除</h3><p>拷贝当前行或者之后的7行</p>
-<pre><code>yy
-y7y
-</code></pre><p>粘贴</p>
-<pre><code>p
-</code></pre><p>删除当前行或者之后的7行</p>
-<pre><code>dd
-d7d
-</code></pre><h3 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h3><p>查找text，按n健查找下一个，按N健查找前一个</p>
-<pre><code>/text
-</code></pre><p>查找光标处的单词</p>
-<pre><code>*
-</code></pre><p>设置高亮查找到的内容</p>
-<pre><code>:set hlsearch
-</code></pre><p>全局替换aaa为bbb</p>
-<pre><code>:%s/aaa/bbb/g
-</code></pre><p>用//注释第3-5行</p>
-<pre><code>:3,5 s/^/\/\/ /g
-</code></pre><h3 id="撤销和重做"><a href="#撤销和重做" class="headerlink" title="撤销和重做"></a>撤销和重做</h3><p>撤销（Undo）</p>
-<pre><code>u
-</code></pre><p>重做（Redo），即撤销的撤销</p>
-<pre><code>Ctrl + r
-</code></pre><h3 id="VIM-代码折叠"><a href="#VIM-代码折叠" class="headerlink" title="VIM 代码折叠"></a>VIM 代码折叠</h3><p>用缩进表示折叠</p>
-<pre><code>set foldmethod=indent
-</code></pre><p>全部折叠</p>
-<pre><code>:set foldlevelstart=0
-</code></pre><p>取消折叠</p>
-<pre><code>:set foldlevelstart=99
-</code></pre><p>使用空格作为折叠快捷键</p>
-<pre><code>nnoremap &lt;space&gt; @=((foldclosed(line(&apos;.&apos;)) &lt; 0) ? &apos;zc&apos; : &apos;zo&apos;)&lt;CR&gt;
-</code></pre><p>自动加载view，使得上一次折叠的内容可以保存</p>
-<pre><code>au BufWinLeave * silent mkview
-au BufWinEnter * silent loadview
-</code></pre><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi file</div></pre></td></tr></table></figure>
+<p>进入编辑模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">i</div></pre></td></tr></table></figure>
+<p>退出编辑模式，进入命令模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;Esc&gt;</div></pre></td></tr></table></figure>
+<p>保存并退出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:wp</div></pre></td></tr></table></figure>
+<p>强制（不保存）退去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:q!</div></pre></td></tr></table></figure>
+<h3 id="文件命令"><a href="#文件命令" class="headerlink" title="文件命令"></a>文件命令</h3><p>将vim窗口分成双栏并打开新文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:vs newfile</div></pre></td></tr></table></figure>
+<p>在多栏窗口中切换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctrl + w + w</div></pre></td></tr></table></figure>
+<h3 id="移动命令"><a href="#移动命令" class="headerlink" title="移动命令"></a>移动命令</h3><p>移动到第一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gg</div></pre></td></tr></table></figure>
+<p>移动到最后一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">G</div></pre></td></tr></table></figure>
+<p>移动到第7行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">7gg</div></pre></td></tr></table></figure>
+<h3 id="插入命令"><a href="#插入命令" class="headerlink" title="插入命令"></a>插入命令</h3><p>在当前位置生前插入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">i</div></pre></td></tr></table></figure>
+<p>在当前行首插入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I</div></pre></td></tr></table></figure>
+<p>在当前行尾插入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">A</div></pre></td></tr></table></figure>
+<p>在当前行之后插入一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">o</div></pre></td></tr></table></figure>
+<h3 id="复制、粘贴、删除"><a href="#复制、粘贴、删除" class="headerlink" title="复制、粘贴、删除"></a>复制、粘贴、删除</h3><p>拷贝当前行或者之后的7行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yy</div><div class="line">y7y</div></pre></td></tr></table></figure>
+<p>粘贴</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p</div></pre></td></tr></table></figure>
+<p>删除当前行或者之后的7行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dd</div><div class="line">d7d</div></pre></td></tr></table></figure>
+<h3 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h3><p>查找text，按n健查找下一个，按N健查找前一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/text</div></pre></td></tr></table></figure>
+<p>查找光标处的单词</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*</div></pre></td></tr></table></figure>
+<p>设置高亮查找到的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:set hlsearch</div></pre></td></tr></table></figure>
+<p>全局替换aaa为bbb</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:%s/aaa/bbb/g</div></pre></td></tr></table></figure>
+<p>用//注释第3-5行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:3,5 s/^/\/\/ /g</div></pre></td></tr></table></figure>
+<h3 id="撤销和重做"><a href="#撤销和重做" class="headerlink" title="撤销和重做"></a>撤销和重做</h3><p>撤销（Undo）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">u</div></pre></td></tr></table></figure>
+<p>重做（Redo），即撤销的撤销</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ctrl + r</div></pre></td></tr></table></figure>
+<h3 id="VIM-代码折叠"><a href="#VIM-代码折叠" class="headerlink" title="VIM 代码折叠"></a>VIM 代码折叠</h3><p>用缩进表示折叠</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set foldmethod=indent</div></pre></td></tr></table></figure>
+<p>全部折叠</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:set foldlevelstart=0</div></pre></td></tr></table></figure>
+<p>取消折叠</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:set foldlevelstart=99</div></pre></td></tr></table></figure>
+<p>使用空格作为折叠快捷键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nnoremap &lt;space&gt; @=((foldclosed(line(&apos;.&apos;)) &lt; 0) ? &apos;zc&apos; : &apos;zo&apos;)&lt;CR&gt;</div></pre></td></tr></table></figure>
+<p>自动加载view，使得上一次折叠的内容可以保存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">au BufWinLeave * silent mkview</div><div class="line">au BufWinEnter * silent loadview</div></pre></td></tr></table></figure>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><ul>
 <li>首先要安装Vundle</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mkdir ~/.vim/bundle</div><div class="line"></div><div class="line">mkdir ~/.vim/bundle/Vundle.vim</div><div class="line"></div><div class="line"><span class="built_in">cd</span> ~/.vim/bundle/Vundle.vim</div><div class="line"></div><div class="line">git <span class="built_in">clone</span> https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim</div></pre></td></tr></table></figure>
@@ -205,8 +202,8 @@ au BufWinEnter * silent loadview
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Plugin &apos;mxw/vim-jsx&apos;</div></pre></td></tr></table></figure>
 <p>然后运行以下代码安装插件</p>
-<pre><code>vim +PluginInstall +qall
-</code></pre><h2 id="配置文件-vimrc"><a href="#配置文件-vimrc" class="headerlink" title="配置文件.vimrc"></a>配置文件<code>.vimrc</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">set nocompatible              &quot; be iMproved, required</div><div class="line">filetype off                  &quot; required</div><div class="line"></div><div class="line">&quot; set the runtime path to include Vundle and initialize</div><div class="line">set rtp+=~/.vim/bundle/Vundle.vim</div><div class="line">call vundle#begin()</div><div class="line"></div><div class="line">&quot; let Vundle manage Vundle, required</div><div class="line">&quot; use the command below to install the plugins from the command line</div><div class="line">&quot; vim +PluginInstall +qall</div><div class="line"></div><div class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</div><div class="line">Plugin &apos;vim-syntastic/syntastic&apos;</div><div class="line">Plugin &apos;Valloric/YouCompleteMe&apos;</div><div class="line">Plugin &apos;pangloss/vim-javascript&apos;</div><div class="line">Plugin &apos;mxw/vim-jsx&apos;</div><div class="line"></div><div class="line">&quot; All of your Plugins must be added before the following line</div><div class="line">call vundle#end()            &quot; required</div><div class="line">filetype plugin indent on    &quot; required</div><div class="line"></div><div class="line">syntax on</div><div class="line"></div><div class="line">&quot; vim-jsx</div><div class="line">let g:jsx_ext_required = 0</div><div class="line"></div><div class="line">&quot; syntastic</div><div class="line">&quot; see more by &apos;:help syntastic&apos;</div><div class="line">let g:syntastic_javascript_checkers = [&apos;eslint&apos;]</div><div class="line">let g:syntastic_check_on_w = 0</div><div class="line"></div><div class="line"></div><div class="line">&quot; fold</div><div class="line">set foldmethod=indent</div><div class="line">set foldlevelstart=99</div><div class="line">nnoremap &lt;space&gt; @=((foldclosed(line(&apos;.&apos;)) &lt; 0) ? &apos;zc&apos; : &apos;zo&apos;)&lt;CR&gt;</div><div class="line"></div><div class="line"></div><div class="line">&quot; auto mkview &amp; loadview</div><div class="line">au BufWinLeave * silent mkview</div><div class="line">au BufWinEnter * silent loadview</div><div class="line"></div><div class="line">&quot; indent set tab = 2 blank space</div><div class="line">set ts=2</div><div class="line">set sw=2</div><div class="line">set expandtab</div><div class="line">set smartindent</div><div class="line">set number</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim +PluginInstall +qall</div></pre></td></tr></table></figure>
+<h2 id="配置文件-vimrc"><a href="#配置文件-vimrc" class="headerlink" title="配置文件.vimrc"></a>配置文件<code>.vimrc</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">set nocompatible              &quot; be iMproved, required</div><div class="line">filetype off                  &quot; required</div><div class="line"></div><div class="line">&quot; set the runtime path to include Vundle and initialize</div><div class="line">set rtp+=~/.vim/bundle/Vundle.vim</div><div class="line">call vundle#begin()</div><div class="line"></div><div class="line">&quot; let Vundle manage Vundle, required</div><div class="line">&quot; use the command below to install the plugins from the command line</div><div class="line">&quot; vim +PluginInstall +qall</div><div class="line"></div><div class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</div><div class="line">Plugin &apos;vim-syntastic/syntastic&apos;</div><div class="line">Plugin &apos;Valloric/YouCompleteMe&apos;</div><div class="line">Plugin &apos;pangloss/vim-javascript&apos;</div><div class="line">Plugin &apos;mxw/vim-jsx&apos;</div><div class="line"></div><div class="line">&quot; All of your Plugins must be added before the following line</div><div class="line">call vundle#end()            &quot; required</div><div class="line">filetype plugin indent on    &quot; required</div><div class="line"></div><div class="line">syntax on</div><div class="line"></div><div class="line">&quot; vim-jsx</div><div class="line">let g:jsx_ext_required = 0</div><div class="line"></div><div class="line">&quot; syntastic</div><div class="line">&quot; see more by &apos;:help syntastic&apos;</div><div class="line">let g:syntastic_javascript_checkers = [&apos;eslint&apos;]</div><div class="line">let g:syntastic_check_on_w = 0</div><div class="line"></div><div class="line"></div><div class="line">&quot; fold</div><div class="line">set foldmethod=indent</div><div class="line">set foldlevelstart=99</div><div class="line">nnoremap &lt;space&gt; @=((foldclosed(line(&apos;.&apos;)) &lt; 0) ? &apos;zc&apos; : &apos;zo&apos;)&lt;CR&gt;</div><div class="line"></div><div class="line"></div><div class="line">&quot; auto mkview &amp; loadview</div><div class="line">au BufWinLeave * silent mkview</div><div class="line">au BufWinEnter * silent loadview</div><div class="line"></div><div class="line">&quot; indent set tab = 2 blank space</div><div class="line">set ts=2</div><div class="line">set sw=2</div><div class="line">set expandtab</div><div class="line">set smartindent</div><div class="line">set number</div></pre></td></tr></table></figure>
   	</div>
 	  
 	  <div class="article-tags tags">

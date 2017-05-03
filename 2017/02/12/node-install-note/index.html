@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/02/12/node-install-note/index.html">
 <meta property="og:site_name" content="俊采新驰">
 <meta property="og:description" content="Node安装与npm环境变量配置">
-<meta property="og:updated_time" content="2017-03-04T14:32:01.365Z">
+<meta property="og:updated_time" content="2017-05-03T12:18:16.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node install note">
 <meta name="twitter:description" content="Node安装与npm环境变量配置">
@@ -131,16 +131,19 @@
   	<div class="article-entry" itemprop="articleBody">
     	<h1 id="Node安装与npm环境变量配置"><a href="#Node安装与npm环境变量配置" class="headerlink" title="Node安装与npm环境变量配置"></a>Node安装与npm环境变量配置</h1><a id="more"></a>
 <h1 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h1><p>进入nodejs官方网站下载软件(nodejs.org)</p>
-<p>Windows环境下的NodeJS+NPM+Bower安装配置</p>
-<p>Windows环境下的NodeJS+NPM+Bower安装配置</p>
-<p>下载完成后，双击默认安装。安装程序会自动添加环境变量<br>Windows环境下的NodeJS+NPM+Bower安装配置</p>
-<p>检测nodejs是否安装成功。打开cmd命令行 输入 node - v 显示当前版本号</p>
-<p>Windows环境下的NodeJS+NPM+Bower安装配置</p>
-<p>检查npm是否安装。由于新版的NodeJS已经集成了npm，所以之前npm也一并安装好了。同样可以使用cmd命令行中键入 npm -v</p>
-<p>Windows环境下的NodeJS+NPM+Bower安装配置</p>
-<h1 id="npm环境变量配置"><a href="#npm环境变量配置" class="headerlink" title="npm环境变量配置"></a>npm环境变量配置</h1><p>npm作为一个NodeJS的模块管理，之前我由于没有系统地看资料所以导致安装配置模块的时候走了一大段弯路，所以现在很有必要列出来记录下。我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立“node_global”及“node_cache”两个文件夹。我们就在cmd中键入两行命令：<br>    npm config set prefix “D:\Program Files\nodejs\node_global”<br>    和<br>    npm config set cache “D:\Program Files\nodejs\node_cache”</p>
-<p>下面这一步非常关键，我们需要设置系统变量。进入我的电脑→属性→高级→环境变量。在系统变量下新建“NODE_PATH”，输入“D:\Program Files\nodejs\node_global\node_modules”。<br>安装bower, npm install bower -g; -g表示全局</p>
-<p>输入 node，require(‘bower’) 测试是否安装成功！</p>
+<p>下载完成后，双击默认安装。安装程序会自动添加环境变量</p>
+<p>检测nodejs是否安装成功。打开cmd命令行 输入 <code>node - v</code> 显示当前版本号</p>
+<p>检查npm是否安装。由于新版的NodeJS已经集成了npm，所以之前npm也一并安装好了。同样可以使用cmd命令行中键入 <code>npm -v</code></p>
+<h1 id="npm环境变量配置"><a href="#npm环境变量配置" class="headerlink" title="npm环境变量配置"></a>npm环境变量配置</h1><p>npm作为一个NodeJS的模块管理，之前我由于没有系统地看资料所以导致安装配置模块的时候走了一大段弯路，所以现在很有必要列出来记录下。我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立<code>node_global</code>及<code>node_cache</code>两个文件夹。我们就在cmd中键入两行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm config set prefix &quot;D:\Program Files\nodejs\node_global&quot;</div><div class="line"></div><div class="line">npm config set cache &quot;D:\Program Files\nodejs\node_cache&quot;</div></pre></td></tr></table></figure>
+<p>下面这一步非常关键，我们需要设置系统变量。进入我的电脑→属性→高级→环境变量。在系统变量下新建<code>NODE_PATH</code>，输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">D:\Program Files\nodejs\node_global\node_modules</div></pre></td></tr></table></figure>
+<p>安装bower</p>
+<p><code>npm install bower -g</code></p>
+<p>其中 -g表示全局</p>
+<p>输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node</div><div class="line">require(&apos;bower&apos;)</div></pre></td></tr></table></figure>
+<p>测试是否安装成功！</p>
 
   	</div>
 	  
