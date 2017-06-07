@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-05-15T13:23:15.375Z</updated>
+  <updated>2017-06-07T11:10:45.456Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>this in js</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/06/07/this-in-js/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/06/07/this-in-js/</id>
+    <published>2017-06-07T11:10:45.000Z</published>
+    <updated>2017-06-07T11:10:45.456Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>electron app</title>
@@ -389,25 +403,6 @@
     
     
       <category term="Node.js" scheme="https://juncaixinchi.github.io/Blogs/tags/Node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello Hexo</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/Hello-Hexo/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/12/Hello-Hexo/</id>
-    <published>2017-02-12T08:24:56.000Z</published>
-    <updated>2017-03-04T14:31:29.091Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Hello Hexo !&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="https://juncaixinchi.github.io/Blogs/tags/Hexo/"/>
     
   </entry>
   
