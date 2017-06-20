@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-06-07T11:10:45.456Z</updated>
+  <updated>2017-06-20T12:48:30.716Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS里的异步及Promise</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/06/20/JS%E9%87%8C%E7%9A%84%E5%BC%82%E6%AD%A5%E5%8F%8APromise/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/06/20/JS里的异步及Promise/</id>
+    <published>2017-06-20T12:48:30.000Z</published>
+    <updated>2017-06-20T12:48:30.716Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>this in js</title>
@@ -385,24 +399,6 @@
       <category term="Cheat-sheet" scheme="https://juncaixinchi.github.io/Blogs/tags/Cheat-sheet/"/>
     
       <category term="Markdown" scheme="https://juncaixinchi.github.io/Blogs/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node install note</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/node-install-note/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/12/node-install-note/</id>
-    <published>2017-02-12T08:39:15.000Z</published>
-    <updated>2017-05-03T12:18:16.079Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Node安装与npm环境变量配置&quot;&gt;&lt;a href=&quot;#Node安装与npm环境变量配置&quot; class=&quot;headerlink&quot; title=&quot;Node安装与npm环境变量配置&quot;&gt;&lt;/a&gt;Node安装与npm环境变量配置&lt;/h1&gt;
-    
-    </summary>
-    
-    
-      <category term="Node.js" scheme="https://juncaixinchi.github.io/Blogs/tags/Node-js/"/>
     
   </entry>
   
