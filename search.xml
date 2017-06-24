@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[缩放查看图片功能小记]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/06/24/%E7%BC%A9%E6%94%BE%E6%9F%A5%E7%9C%8B%E5%9B%BE%E7%89%87%E5%8A%9F%E8%83%BD%E5%B0%8F%E8%AE%B0/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JS里的异步及Promise]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/06/20/JS%E9%87%8C%E7%9A%84%E5%BC%82%E6%AD%A5%E5%8F%8APromise/</url>
       <content type="html"></content>
@@ -249,9 +257,9 @@
         
         <tags>
             
-            <tag> JavaScript </tag>
-            
             <tag> React </tag>
+            
+            <tag> JavaScript </tag>
             
             <tag> state </tag>
             
@@ -367,9 +375,9 @@
         
         <tags>
             
-            <tag> JavaScript </tag>
-            
             <tag> React </tag>
+            
+            <tag> JavaScript </tag>
             
             <tag> JSX </tag>
             

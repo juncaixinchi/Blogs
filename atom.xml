@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-06-20T12:48:30.716Z</updated>
+  <updated>2017-06-24T13:50:46.021Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>缩放查看图片功能小记</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/06/24/%E7%BC%A9%E6%94%BE%E6%9F%A5%E7%9C%8B%E5%9B%BE%E7%89%87%E5%8A%9F%E8%83%BD%E5%B0%8F%E8%AE%B0/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/06/24/缩放查看图片功能小记/</id>
+    <published>2017-06-24T13:50:46.000Z</published>
+    <updated>2017-06-24T13:50:46.021Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JS里的异步及Promise</title>
@@ -189,9 +203,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
       <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
       <category term="state" scheme="https://juncaixinchi.github.io/Blogs/tags/state/"/>
     
@@ -211,9 +225,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
       <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
       <category term="JSX" scheme="https://juncaixinchi.github.io/Blogs/tags/JSX/"/>
     
@@ -379,26 +393,6 @@
     
     
       <category term="Blog" scheme="https://juncaixinchi.github.io/Blogs/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown note</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/Markdown-note/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/12/Markdown-note/</id>
-    <published>2017-02-12T08:41:46.000Z</published>
-    <updated>2017-05-03T12:23:04.680Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Markdown语法摘要&quot;&gt;&lt;a href=&quot;#Markdown语法摘要&quot; class=&quot;headerlink&quot; title=&quot;Markdown语法摘要&quot;&gt;&lt;/a&gt;Markdown语法摘要&lt;/h1&gt;&lt;h3 id=&quot;基本格式&quot;&gt;&lt;a href=&quot;#基本格式&quot; class=&quot;headerlink&quot; title=&quot;基本格式&quot;&gt;&lt;/a&gt;基本格式&lt;/h3&gt;&lt;p&gt;标记+空格+内容&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Cheat-sheet" scheme="https://juncaixinchi.github.io/Blogs/tags/Cheat-sheet/"/>
-    
-      <category term="Markdown" scheme="https://juncaixinchi.github.io/Blogs/tags/Markdown/"/>
     
   </entry>
   
