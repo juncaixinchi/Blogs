@@ -12,22 +12,16 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浅谈js里的thisthis是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象
-两个例子首先来看几个例子，改编自阮一峰老师的博客
-1234567891011121314151617181920212223242526272829303132333435363738var name = &quot;The Window&quot;;var object1 = &amp;#12">
+  <meta name="description" content="浅谈js里的thisthis是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="this in js">
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/06/07/this-in-js/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="浅谈js里的thisthis是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象
-两个例子首先来看几个例子，改编自阮一峰老师的博客
-1234567891011121314151617181920212223242526272829303132333435363738var name = &quot;The Window&quot;;var object1 = &amp;#12">
-<meta property="og:updated_time" content="2017-06-25T10:58:42.418Z">
+<meta property="og:description" content="浅谈js里的thisthis是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象">
+<meta property="og:updated_time" content="2017-06-25T11:27:30.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this in js">
-<meta name="twitter:description" content="浅谈js里的thisthis是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象
-两个例子首先来看几个例子，改编自阮一峰老师的博客
-1234567891011121314151617181920212223242526272829303132333435363738var name = &quot;The Window&quot;;var object1 = &amp;#12">
+<meta name="twitter:description" content="浅谈js里的thisthis是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -136,6 +130,7 @@
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
     	<h2 id="浅谈js里的this"><a href="#浅谈js里的this" class="headerlink" title="浅谈js里的this"></a>浅谈js里的this</h2><p>this是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象</p>
+<a id="more"></a>
 <h3 id="两个例子"><a href="#两个例子" class="headerlink" title="两个例子"></a>两个例子</h3><p>首先来看几个例子，改编自阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="external">博客</a></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"The Window"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object1 = &#123;</div><div class="line">	<span class="attr">name</span> : <span class="string">"My Object1"</span>,</div><div class="line">	<span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object2 = &#123;</div><div class="line">	<span class="attr">name</span> : <span class="string">"My Object2"</span>,</div><div class="line">	<span class="attr">getNameFunc</span> : <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.name</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object3 = &#123;</div><div class="line">	<span class="attr">name</span> : <span class="string">"My Object3"</span>,</div><div class="line">	<span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">		&#125;;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object4 = &#123;</div><div class="line">	<span class="attr">name</span> : <span class="string">"My Object4"</span>,</div><div class="line">	<span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line">		<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			<span class="keyword">return</span> that.name;</div><div class="line">		&#125;;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(object1.getNameFunc()); <span class="comment">// My Object1</span></div><div class="line"><span class="built_in">console</span>.log(object2.getNameFunc()); <span class="comment">// The Window</span></div><div class="line"><span class="built_in">console</span>.log(object3.getNameFunc()()); <span class="comment">// The Window</span></div><div class="line"><span class="built_in">console</span>.log(object4.getNameFunc()()); <span class="comment">// My Object4</span></div></pre></td></tr></table></figure>
 <ul>

@@ -15,10 +15,7 @@
   <meta name="description" content="使用带session的ipc通讯
 在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。
 
-适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。
-
-
-123456789import UUID from &apos;node-uuid&apos;import &amp;#123; ipcRenderer &amp;#125; from electron//	...	this.session =">
+适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ipc Message with Session Id">
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/04/15/Ipc-Message-with-Session-Id/index.html">
@@ -26,20 +23,14 @@
 <meta property="og:description" content="使用带session的ipc通讯
 在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。
 
-适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。
-
-
-123456789import UUID from &apos;node-uuid&apos;import &amp;#123; ipcRenderer &amp;#125; from electron//	...	this.session =">
-<meta property="og:updated_time" content="2017-06-25T11:11:15.011Z">
+适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。">
+<meta property="og:updated_time" content="2017-06-25T11:27:11.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ipc Message with Session Id">
 <meta name="twitter:description" content="使用带session的ipc通讯
 在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。
 
-适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。
-
-
-123456789import UUID from &apos;node-uuid&apos;import &amp;#123; ipcRenderer &amp;#125; from electron//	...	this.session =">
+适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -153,6 +144,7 @@
 <li><p>适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。</p>
 </li>
 </ul>
+<a id="more"></a>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> UUID <span class="keyword">from</span> <span class="string">'node-uuid'</span></div><div class="line"><span class="keyword">import</span> &#123; ipcRenderer &#125; <span class="keyword">from</span> electron</div><div class="line"></div><div class="line"><span class="comment">//	...</span></div><div class="line">	<span class="keyword">this</span>.session = UUID.v4()</div><div class="line">	<span class="keyword">this</span>.digest = <span class="keyword">this</span>.props.items[currentIndex][<span class="number">0</span>]</div><div class="line">	<span class="keyword">this</span>.photo = <span class="keyword">this</span>.props.items[currentIndex][<span class="number">1</span>]</div><div class="line">	<span class="keyword">this</span>.props.ipcRenderer.send(<span class="string">'mediaShowThumb'</span>, <span class="keyword">this</span>.session, <span class="keyword">this</span>.digest, <span class="number">210</span>, <span class="number">210</span>)</div><div class="line"><span class="comment">//	...</span></div></pre></td></tr></table></figure>
   	</div>
 	  

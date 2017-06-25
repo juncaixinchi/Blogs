@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-06-25T11:05:37.627Z</updated>
+  <updated>2017-06-25T11:26:42.725Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -20,14 +20,13 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/06/24/%E7%BC%A9%E6%94%BE%E6%9F%A5%E7%9C%8B%E5%9B%BE%E7%89%87%E5%8A%9F%E8%83%BD%E5%B0%8F%E8%AE%B0/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/06/24/缩放查看图片功能小记/</id>
     <published>2017-06-24T13:50:46.000Z</published>
-    <updated>2017-06-25T11:05:37.627Z</updated>
+    <updated>2017-06-25T11:26:42.725Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;放大查看图片&quot;&gt;&lt;a href=&quot;#放大查看图片&quot; class=&quot;headerlink&quot; title=&quot;放大查看图片&quot;&gt;&lt;/a&gt;放大查看图片&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;滚轮滚动时改变图片的&lt;code&gt;zoom&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure c
     
     </summary>
     
@@ -55,11 +54,11 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/06/07/this-in-js/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/06/07/this-in-js/</id>
     <published>2017-06-07T11:10:45.000Z</published>
-    <updated>2017-06-25T10:58:42.418Z</updated>
+    <updated>2017-06-25T11:27:30.804Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;浅谈js里的this&quot;&gt;&lt;a href=&quot;#浅谈js里的this&quot; class=&quot;headerlink&quot; title=&quot;浅谈js里的this&quot;&gt;&lt;/a&gt;浅谈js里的this&lt;/h2&gt;&lt;p&gt;this是Javascript中的一个关键字，它代表函数运行时，自动生成的一
+      &lt;h2 id=&quot;浅谈js里的this&quot;&gt;&lt;a href=&quot;#浅谈js里的this&quot; class=&quot;headerlink&quot; title=&quot;浅谈js里的this&quot;&gt;&lt;/a&gt;浅谈js里的this&lt;/h2&gt;&lt;p&gt;this是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象&lt;/p&gt;
     
     </summary>
     
@@ -87,12 +86,16 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/04/15/Ipc-Message-with-Session-Id/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/04/15/Ipc-Message-with-Session-Id/</id>
     <published>2017-04-15T12:22:50.000Z</published>
-    <updated>2017-06-25T11:11:15.011Z</updated>
+    <updated>2017-06-25T11:27:11.324Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;使用带session的ipc通讯&quot;&gt;&lt;a href=&quot;#使用带session的ipc通讯&quot; class=&quot;headerlink&quot; title=&quot;使用带session的ipc通讯&quot;&gt;&lt;/a&gt;使用带session的ipc通讯&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在发送的信
+&lt;li&gt;&lt;p&gt;在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -104,12 +107,20 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/04/13/Large-List-in-React/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/04/13/Large-List-in-React/</id>
     <published>2017-04-13T13:11:39.000Z</published>
-    <updated>2017-06-25T11:21:01.404Z</updated>
+    <updated>2017-06-25T11:27:20.628Z</updated>
     
     <summary type="html">
     
       &lt;h2 id=&quot;超大列表的显示&quot;&gt;&lt;a href=&quot;#超大列表的显示&quot; class=&quot;headerlink&quot; title=&quot;超大列表的显示&quot;&gt;&lt;/a&gt;超大列表的显示&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;直接全部显示一个超大的列表是十分消耗资源的，所以必须要采取对策，主流的有两种对策：
+&lt;li&gt;&lt;p&gt;直接全部显示一个超大的列表是十分消耗资源的，所以必须要采取对策，主流的有两种对策：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Lazyloading: 即开始至加载一部分，每次需要的时候再加载新的内容，一个形象的例子就是“刷微博”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;局部加载: 每次计算当前页面应当展示的内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -143,11 +154,13 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/04/09/Dialog-in-React-Material-UI/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/04/09/Dialog-in-React-Material-UI/</id>
     <published>2017-04-09T03:39:47.000Z</published>
-    <updated>2017-06-25T10:58:29.849Z</updated>
+    <updated>2017-06-25T11:26:51.012Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;解析Material-UI中的Dialog组件&quot;&gt;&lt;a href=&quot;#解析Material-UI中的Dialog组件&quot; class=&quot;headerlink&quot; title=&quot;解析Material-UI中的Dialog组件&quot;&gt;&lt;/a&gt;解析Material-UI中的Di
+      &lt;h2 id=&quot;解析Material-UI中的Dialog组件&quot;&gt;&lt;a href=&quot;#解析Material-UI中的Dialog组件&quot; class=&quot;headerlink&quot; title=&quot;解析Material-UI中的Dialog组件&quot;&gt;&lt;/a&gt;解析Material-UI中的Dialog组件&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;dialog是常见组件，前段时间研究了一下&lt;a href=&quot;&quot;&gt;Material-UI&lt;/a&gt;的Dialog组件的代码&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -201,7 +214,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/03/18/Vim-Setting/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/03/18/Vim-Setting/</id>
     <published>2017-03-18T12:57:18.000Z</published>
-    <updated>2017-05-03T12:26:20.615Z</updated>
+    <updated>2017-06-25T11:27:34.507Z</updated>
     
     <summary type="html">
     
@@ -381,18 +394,12 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/Github-Git-Cheat-Sheet/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/02/12/Github-Git-Cheat-Sheet/</id>
     <published>2017-02-12T08:42:19.000Z</published>
-    <updated>2017-05-03T12:22:42.024Z</updated>
+    <updated>2017-06-25T11:27:00.789Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;GitHub-Git-备忘单&quot;&gt;&lt;a href=&quot;#GitHub-Git-备忘单&quot; class=&quot;headerlink&quot; title=&quot;GitHub Git 备忘单&quot;&gt;&lt;/a&gt;GitHub Git 备忘单&lt;/h1&gt;&lt;p&gt;Git是一个开源的分布式版本控制系统，方便你在笔记本或桌面端进行GitHub的操作，这个备忘单总结了常用的Git命令行指令，以便快速查询。&lt;/p&gt;
 &lt;p&gt;转载自&lt;a href=&quot;https://services.github.com/on-demand/downloads/zh_CN/github-git-cheat-sheet/&quot;&gt;GitHub Git 备忘单&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;要点&quot;&gt;&lt;a href=&quot;#要点&quot; class=&quot;headerlink&quot; title=&quot;要点&quot;&gt;&lt;/a&gt;要点&lt;/h2&gt;&lt;p&gt;将所有文件进行快照处理用于版本控制&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git add *&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;将文件快照永久地记录在版本历史中&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git commit -m &amp;quot;upload files&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上传所有本地分支commit到GitHub上&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git push&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
