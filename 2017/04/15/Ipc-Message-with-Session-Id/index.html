@@ -12,16 +12,34 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知疲倦的翻越，每一个山丘！">
+  <meta name="description" content="使用带session的ipc通讯
+在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。
+
+适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。
+
+
+123456789import UUID from &apos;node-uuid&apos;import &amp;#123; ipcRenderer &amp;#125; from electron//	...	this.session =">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ipc Message with Session Id">
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/04/15/Ipc-Message-with-Session-Id/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="不知疲倦的翻越，每一个山丘！">
-<meta property="og:updated_time" content="2017-04-15T12:22:50.793Z">
+<meta property="og:description" content="使用带session的ipc通讯
+在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。
+
+适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。
+
+
+123456789import UUID from &apos;node-uuid&apos;import &amp;#123; ipcRenderer &amp;#125; from electron//	...	this.session =">
+<meta property="og:updated_time" content="2017-06-25T11:11:15.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ipc Message with Session Id">
-<meta name="twitter:description" content="不知疲倦的翻越，每一个山丘！">
+<meta name="twitter:description" content="使用带session的ipc通讯
+在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。
+
+适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。
+
+
+123456789import UUID from &apos;node-uuid&apos;import &amp;#123; ipcRenderer &amp;#125; from electron//	...	this.session =">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -125,11 +143,17 @@
 	
 	</section>
 	
-		<section class="tog"></section>
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用带session的ipc通讯"><span class="toc-number">1.</span> <span class="toc-text">使用带session的ipc通讯</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	
+    	<h1 id="使用带session的ipc通讯"><a href="#使用带session的ipc通讯" class="headerlink" title="使用带session的ipc通讯"></a>使用带session的ipc通讯</h1><ul>
+<li><p>在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。</p>
+</li>
+<li><p>适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> UUID <span class="keyword">from</span> <span class="string">'node-uuid'</span></div><div class="line"><span class="keyword">import</span> &#123; ipcRenderer &#125; <span class="keyword">from</span> electron</div><div class="line"></div><div class="line"><span class="comment">//	...</span></div><div class="line">	<span class="keyword">this</span>.session = UUID.v4()</div><div class="line">	<span class="keyword">this</span>.digest = <span class="keyword">this</span>.props.items[currentIndex][<span class="number">0</span>]</div><div class="line">	<span class="keyword">this</span>.photo = <span class="keyword">this</span>.props.items[currentIndex][<span class="number">1</span>]</div><div class="line">	<span class="keyword">this</span>.props.ipcRenderer.send(<span class="string">'mediaShowThumb'</span>, <span class="keyword">this</span>.session, <span class="keyword">this</span>.digest, <span class="number">210</span>, <span class="number">210</span>)</div><div class="line"><span class="comment">//	...</span></div></pre></td></tr></table></figure>
   	</div>
 	  
 	</section>
@@ -153,7 +177,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/React-Dialog/" style="font-size: 14px; color: #808080">-- React -- Dialog</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">-- js</a> <a href="/Blogs/tags/Blog/" style="font-size: 16px; color: #555">Blog</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 18px; color: #2b2b2b">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/ES6/" style="font-size: 16px; color: #555">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 16px; color: #555">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 16px; color: #555">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 18px; color: #2b2b2b">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18px; color: #2b2b2b">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a>
+        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a>
     </div>
 </div>
 

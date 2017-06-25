@@ -12,16 +12,55 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知疲倦的翻越，每一个山丘！">
+  <meta name="description" content="超大列表的显示
+直接全部显示一个超大的列表是十分消耗资源的，所以必须要采取对策，主流的有两种对策：
+
+Lazyloading: 即开始至加载一部分，每次需要的时候再加载新的内容，一个形象的例子就是“刷微博”
+
+局部加载: 每次计算当前页面应当展示的内容
+
+
+
+
+react-virtualized
+react-virtualized list 是一个对付超大列表很有用的react组件
+
+页面中显示固">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Large List in React">
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/04/13/Large-List-in-React/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="不知疲倦的翻越，每一个山丘！">
-<meta property="og:updated_time" content="2017-04-13T13:11:39.986Z">
+<meta property="og:description" content="超大列表的显示
+直接全部显示一个超大的列表是十分消耗资源的，所以必须要采取对策，主流的有两种对策：
+
+Lazyloading: 即开始至加载一部分，每次需要的时候再加载新的内容，一个形象的例子就是“刷微博”
+
+局部加载: 每次计算当前页面应当展示的内容
+
+
+
+
+react-virtualized
+react-virtualized list 是一个对付超大列表很有用的react组件
+
+页面中显示固">
+<meta property="og:updated_time" content="2017-06-25T11:21:01.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Large List in React">
-<meta name="twitter:description" content="不知疲倦的翻越，每一个山丘！">
+<meta name="twitter:description" content="超大列表的显示
+直接全部显示一个超大的列表是十分消耗资源的，所以必须要采取对策，主流的有两种对策：
+
+Lazyloading: 即开始至加载一部分，每次需要的时候再加载新的内容，一个形象的例子就是“刷微博”
+
+局部加载: 每次计算当前页面应当展示的内容
+
+
+
+
+react-virtualized
+react-virtualized list 是一个对付超大列表很有用的react组件
+
+页面中显示固">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -125,13 +164,37 @@
 	
 	</section>
 	
-		<section class="tog"></section>
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#超大列表的显示"><span class="toc-number">1.</span> <span class="toc-text">超大列表的显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react-virtualized"><span class="toc-number">2.</span> <span class="toc-text">react-virtualized</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	
+    	<h2 id="超大列表的显示"><a href="#超大列表的显示" class="headerlink" title="超大列表的显示"></a>超大列表的显示</h2><ul>
+<li><p>直接全部显示一个超大的列表是十分消耗资源的，所以必须要采取对策，主流的有两种对策：</p>
+<ol>
+<li><p>Lazyloading: 即开始至加载一部分，每次需要的时候再加载新的内容，一个形象的例子就是“刷微博”</p>
+</li>
+<li><p>局部加载: 每次计算当前页面应当展示的内容</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="react-virtualized"><a href="#react-virtualized" class="headerlink" title="react-virtualized"></a><a href="https://github.com/bvaughn/react-virtualized" target="_blank" rel="external">react-virtualized</a></h2><ul>
+<li><p>react-virtualized list 是一个对付超大列表很有用的react组件</p>
+</li>
+<li><p>页面中显示固定数目的div，如20个，每次用户操作滚动条时，再对这20个div的内容进行实时改变，使得当前页面显示正确的内容</p>
+</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</div><div class="line"><span class="keyword">import</span> &#123; List &#125; <span class="keyword">from</span> <span class="string">'react-virtualized'</span>;</div><div class="line"></div><div class="line"><span class="comment">// List data as an array of strings</span></div><div class="line"><span class="keyword">const</span> list = [</div><div class="line">  <span class="string">'Brian Vaughn'</span></div><div class="line">  <span class="comment">// And so on...</span></div><div class="line">];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">rowRenderer</span> (<span class="params">&#123;</span></span></div><div class="line">  key,         <span class="regexp">//</span> Unique key within array of rows</div><div class="line">  index,       <span class="regexp">//</span> Index of row within collection</div><div class="line">  isScrolling, <span class="regexp">//</span> The List is currently being scrolled</div><div class="line">  isVisible,   <span class="regexp">//</span> This row is visible within the List (eg it is not an overscanned row)</div><div class="line">  <span class="title">style</span>        // <span class="title">Style</span> <span class="title">object</span> <span class="title">to</span> <span class="title">be</span> <span class="title">applied</span> <span class="title">to</span> <span class="title">row</span> (<span class="params">to position it</span>)</div><div class="line">&#125;) &#123;</div><div class="line">  <span class="keyword">return</span> (</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span></span></span></div><div class="line">      <span class="attr">key</span>=<span class="string">&#123;key&#125;</span></div><div class="line">      <span class="attr">style</span>=<span class="string">&#123;style&#125;</span></div><div class="line">    &gt;</div><div class="line">      &#123;list[index]&#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  )</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Render your list</span></div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">List</span></span></span></div><div class="line">    <span class="attr">width</span>=<span class="string">&#123;300&#125;</span></div><div class="line">    <span class="attr">height</span>=<span class="string">&#123;300&#125;</span></div><div class="line">    <span class="attr">rowCount</span>=<span class="string">&#123;list.length&#125;</span></div><div class="line">    <span class="attr">rowHeight</span>=<span class="string">&#123;20&#125;</span></div><div class="line">    <span class="attr">rowRenderer</span>=<span class="string">&#123;rowRenderer&#125;</span></div><div class="line">  /&gt;,</div><div class="line">  document.getElementById('example')</div><div class="line">);</div></pre></td></tr></table></figure>
   	</div>
 	  
+	  <div class="article-tags tags">
+      
+        <a href="/Blogs/tags/React/">React</a>
+      
+        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
+      
+	  </div>
+    
 	</section>
 	
 </article>
@@ -153,7 +216,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/React-Dialog/" style="font-size: 14px; color: #808080">-- React -- Dialog</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">-- js</a> <a href="/Blogs/tags/Blog/" style="font-size: 16px; color: #555">Blog</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 18px; color: #2b2b2b">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/ES6/" style="font-size: 16px; color: #555">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 16px; color: #555">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 16px; color: #555">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 18px; color: #2b2b2b">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18px; color: #2b2b2b">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a>
+        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a>
     </div>
 </div>
 
