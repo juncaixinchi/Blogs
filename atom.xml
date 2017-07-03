@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-06-25T11:26:42.725Z</updated>
+  <updated>2017-07-03T14:12:05.010Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linear-gradient in CSS3</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/07/03/linear-gradient-in-CSS3/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/07/03/linear-gradient-in-CSS3/</id>
+    <published>2017-07-03T14:12:04.000Z</published>
+    <updated>2017-07-03T14:12:05.010Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>缩放查看图片功能小记</title>
@@ -409,24 +423,6 @@
       <category term="Github" scheme="https://juncaixinchi.github.io/Blogs/tags/Github/"/>
     
       <category term="Cheat-sheet" scheme="https://juncaixinchi.github.io/Blogs/tags/Cheat-sheet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Todo List</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/Todo-List/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/12/Todo-List/</id>
-    <published>2017-02-12T08:42:01.000Z</published>
-    <updated>2017-05-03T12:23:18.535Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Todo-List&quot;&gt;&lt;a href=&quot;#Todo-List&quot; class=&quot;headerlink&quot; title=&quot;Todo List&quot;&gt;&lt;/a&gt;Todo List&lt;/h1&gt;&lt;h2 id=&quot;Node-React&quot;&gt;&lt;a href=&quot;#Node-React&quot; cla
-    
-    </summary>
-    
-    
-      <category term="Blog" scheme="https://juncaixinchi.github.io/Blogs/tags/Blog/"/>
     
   </entry>
   
