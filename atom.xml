@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-07-03T14:12:05.010Z</updated>
+  <updated>2017-07-05T11:03:17.135Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>animation in react</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/07/05/animation-in-react/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/07/05/animation-in-react/</id>
+    <published>2017-07-05T11:03:17.000Z</published>
+    <updated>2017-07-05T11:03:17.135Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>linear-gradient in CSS3</title>
@@ -400,29 +414,6 @@
       <category term="GitHub Pages" scheme="https://juncaixinchi.github.io/Blogs/tags/GitHub-Pages/"/>
     
       <category term="Blog" scheme="https://juncaixinchi.github.io/Blogs/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Git Cheat Sheet</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/12/Github-Git-Cheat-Sheet/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/12/Github-Git-Cheat-Sheet/</id>
-    <published>2017-02-12T08:42:19.000Z</published>
-    <updated>2017-06-25T11:27:00.789Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;GitHub-Git-备忘单&quot;&gt;&lt;a href=&quot;#GitHub-Git-备忘单&quot; class=&quot;headerlink&quot; title=&quot;GitHub Git 备忘单&quot;&gt;&lt;/a&gt;GitHub Git 备忘单&lt;/h1&gt;&lt;p&gt;Git是一个开源的分布式版本控制系统，方便你在笔记本或桌面端进行GitHub的操作，这个备忘单总结了常用的Git命令行指令，以便快速查询。&lt;/p&gt;
-&lt;p&gt;转载自&lt;a href=&quot;https://services.github.com/on-demand/downloads/zh_CN/github-git-cheat-sheet/&quot;&gt;GitHub Git 备忘单&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://juncaixinchi.github.io/Blogs/tags/Git/"/>
-    
-      <category term="Github" scheme="https://juncaixinchi.github.io/Blogs/tags/Github/"/>
-    
-      <category term="Cheat-sheet" scheme="https://juncaixinchi.github.io/Blogs/tags/Cheat-sheet/"/>
     
   </entry>
   
