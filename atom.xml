@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-07-05T11:03:17.135Z</updated>
+  <updated>2017-07-05T11:06:28.673Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Brtfs Filesystem</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/07/05/Brtfs-Filesystem/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/07/05/Brtfs-Filesystem/</id>
+    <published>2017-07-05T11:06:28.000Z</published>
+    <updated>2017-07-05T11:06:28.673Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>animation in react</title>
@@ -382,38 +396,6 @@
       <category term="Git" scheme="https://juncaixinchi.github.io/Blogs/tags/Git/"/>
     
       <category term="Github" scheme="https://juncaixinchi.github.io/Blogs/tags/Github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于Hexo+Next+GitHub搭建个人博客</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/14/Blog-driven-by-hexo/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/14/Blog-driven-by-hexo/</id>
-    <published>2017-02-14T08:24:56.000Z</published>
-    <updated>2017-03-06T14:34:40.293Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;基于Hexo-Next-GitHub搭建个人博客&quot;&gt;&lt;a href=&quot;#基于Hexo-Next-GitHub搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;基于Hexo+Next+GitHub搭建个人博客&quot;&gt;&lt;/a&gt;基于Hexo+Next+GitHub搭建个人博客&lt;/h1&gt;&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;Hexo是依赖于node.js的个人博客生成引擎，可以把基于Markdown的文件生成博客页面，所以整个项目分为两部分：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;网页生成&lt;/p&gt;
-&lt;p&gt; 安装配置Hexo及其主题Next，撰写整理博客文档，生成静态页面 &lt;a href=&quot;https://github.com/juncaixinchi/blog-generater&quot;&gt;blog-generater&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;网页部署&lt;/p&gt;
-&lt;p&gt; 生成的网页存在于public文件夹内，将其部署到Github Pages或其他服务器即可 &lt;a href=&quot;https://juncaixinchi.github.io/Blogs/&quot;&gt;Blogs&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="https://juncaixinchi.github.io/Blogs/tags/Hexo/"/>
-    
-      <category term="Next" scheme="https://juncaixinchi.github.io/Blogs/tags/Next/"/>
-    
-      <category term="GitHub Pages" scheme="https://juncaixinchi.github.io/Blogs/tags/GitHub-Pages/"/>
-    
-      <category term="Blog" scheme="https://juncaixinchi.github.io/Blogs/tags/Blog/"/>
     
   </entry>
   
