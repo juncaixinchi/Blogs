@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-07-05T11:06:28.673Z</updated>
+  <updated>2017-07-08T09:42:35.680Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Data Structures and Algorithms</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/07/08/Data-Structures-and-Algorithms-in-JS/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/07/08/Data-Structures-and-Algorithms-in-JS/</id>
+    <published>2017-07-08T09:42:35.000Z</published>
+    <updated>2017-07-08T09:42:35.680Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Brtfs Filesystem</title>
@@ -376,26 +390,6 @@
       <category term="Game" scheme="https://juncaixinchi.github.io/Blogs/tags/Game/"/>
     
       <category term="Demo" scheme="https://juncaixinchi.github.io/Blogs/tags/Demo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git_note</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/14/Git-note/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/14/Git-note/</id>
-    <published>2017-02-14T11:36:07.000Z</published>
-    <updated>2017-06-25T10:58:32.561Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Git-note&quot;&gt;&lt;a href=&quot;#Git-note&quot; class=&quot;headerlink&quot; title=&quot;Git note&quot;&gt;&lt;/a&gt;Git note&lt;/h1&gt;&lt;p&gt;学习Git的笔记，完整文档见&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot;&gt;Git-scm&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://juncaixinchi.github.io/Blogs/tags/Git/"/>
-    
-      <category term="Github" scheme="https://juncaixinchi.github.io/Blogs/tags/Github/"/>
     
   </entry>
   
