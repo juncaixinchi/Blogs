@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-07-08T09:42:35.680Z</updated>
+  <updated>2017-07-10T12:21:23.487Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>filter in CSS</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/07/10/filter-in-CSS/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/07/10/filter-in-CSS/</id>
+    <published>2017-07-10T12:21:23.000Z</published>
+    <updated>2017-07-10T12:21:23.487Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Data Structures and Algorithms</title>
@@ -329,9 +343,9 @@
     
       <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
     
-      <category term="JSX" scheme="https://juncaixinchi.github.io/Blogs/tags/JSX/"/>
-    
       <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
+    
+      <category term="JSX" scheme="https://juncaixinchi.github.io/Blogs/tags/JSX/"/>
     
   </entry>
   
@@ -374,28 +388,6 @@
       <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
       <category term="ES6" scheme="https://juncaixinchi.github.io/Blogs/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Simple-Canvas-Game</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/18/Simple-Canvas-Game/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/18/Simple-Canvas-Game/</id>
-    <published>2017-02-18T15:10:08.000Z</published>
-    <updated>2017-05-03T12:14:26.056Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;利用HTML5 Canvas制作小游戏的简单教程，详见 &lt;a href=&quot;https://github.com/juncaixinchi/simple_canvas_game&quot;&gt;simple_canvas_game&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Canvas" scheme="https://juncaixinchi.github.io/Blogs/tags/Canvas/"/>
-    
-      <category term="Game" scheme="https://juncaixinchi.github.io/Blogs/tags/Game/"/>
-    
-      <category term="Demo" scheme="https://juncaixinchi.github.io/Blogs/tags/Demo/"/>
     
   </entry>
   

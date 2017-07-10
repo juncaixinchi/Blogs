@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[filter in CSS]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/07/10/filter-in-CSS/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Data Structures and Algorithms]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/07/08/Data-Structures-and-Algorithms-in-JS/</url>
       <content type="html"></content>
@@ -611,9 +619,9 @@
             
             <tag> React </tag>
             
-            <tag> JSX </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> JSX </tag>
             
         </tags>
         
