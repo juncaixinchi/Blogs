@@ -34,7 +34,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/07/05/Brtfs-Filesystem/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/07/05/Brtfs-Filesystem/</id>
     <published>2017-07-05T11:06:28.000Z</published>
-    <updated>2017-07-09T15:06:54.206Z</updated>
+    <updated>2017-07-10T12:18:16.692Z</updated>
     
     <summary type="html">
     
@@ -42,6 +42,10 @@
     
     </summary>
     
+    
+      <category term="Brtfs" scheme="https://juncaixinchi.github.io/Blogs/tags/Brtfs/"/>
+    
+      <category term="Linux" scheme="https://juncaixinchi.github.io/Blogs/tags/Linux/"/>
     
   </entry>
   
@@ -281,9 +285,9 @@
     </summary>
     
     
-      <category term="Vim" scheme="https://juncaixinchi.github.io/Blogs/tags/Vim/"/>
-    
       <category term="Linux" scheme="https://juncaixinchi.github.io/Blogs/tags/Linux/"/>
+    
+      <category term="Vim" scheme="https://juncaixinchi.github.io/Blogs/tags/Vim/"/>
     
   </entry>
   
@@ -325,9 +329,9 @@
     
       <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
     
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
       <category term="JSX" scheme="https://juncaixinchi.github.io/Blogs/tags/JSX/"/>
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   

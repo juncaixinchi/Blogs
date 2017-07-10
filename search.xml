@@ -49,13 +49,13 @@
 </ul>
 <p>RAID 1通过磁盘数据镜像实现数据冗余，在成对的独立磁盘上产生互为备份的数据。当一个磁盘失效时，系统可以自动切换到镜像磁盘上读写，而不需要重组失效的数据。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkfs.btrfs -m raid1 -d raid1 /dev/sdb /dev/sdc</div></pre></td></tr></table></figure>
-<p>结果如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">Label:              (null)</div><div class="line">UUID:               ff22ad9f-de13-4430-9a51-b776bff0162e</div><div class="line">Node size:          16384</div><div class="line">Sector size:        4096</div><div class="line">Filesystem size:    20.00GiB</div><div class="line">Block group profiles:</div><div class="line">  Data:             RAID1             1.01GiB</div><div class="line">  Metadata:         RAID1             1.01GiB</div><div class="line">  System:           RAID1            12.00MiB</div><div class="line">SSD detected:       no</div><div class="line">Incompat features:  extref, skinny-metadata</div><div class="line">Number of devices:  2</div><div class="line">Devices:</div><div class="line">   ID        SIZE  PATH</div><div class="line">    1    10.00GiB  /dev/sdb</div><div class="line">    2    10.00GiB  /dev/sdc</div></pre></td></tr></table></figure></p>
+<p>结果如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">Label:              (null)</div><div class="line">UUID:               ff22ad9f-de13-4430-9a51-b776bff0162e</div><div class="line">Node size:          16384</div><div class="line">Sector size:        4096</div><div class="line">Filesystem size:    20.00GiB</div><div class="line">Block group profiles:</div><div class="line">Data:             RAID1             1.01GiB</div><div class="line">Metadata:         RAID1             1.01GiB</div><div class="line">System:           RAID1            12.00MiB</div><div class="line">SSD detected:       no</div><div class="line">Incompat features:  extref, skinny-metadata</div><div class="line">Number of devices:  2</div><div class="line">Devices:</div><div class="line">ID        SIZE  PATH</div><div class="line">1    10.00GiB  /dev/sdb</div><div class="line">2    10.00GiB  /dev/sdc</div></pre></td></tr></table></figure></p>
 <ul>
 <li>创建RAID10阵列，需要至少四个盘</li>
 </ul>
 <p>RAID10也被称为镜象阵列条带。像RAID0一样，数据跨磁盘抽取；像RAID1一样，每个磁盘都有一个镜象磁盘</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkfs.btrfs -m raid10 -d raid10 /dev/sdc /dev/sdd /dev/sde /dev/sdf</div></pre></td></tr></table></figure>
-<p>结果如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Label:              (null)</div><div class="line">UUID:               5f1e8ab4-bcd7-42f6-9aee-53acabfdce8c</div><div class="line">Node size:          16384</div><div class="line">Sector size:        4096</div><div class="line">Filesystem size:    40.00GiB</div><div class="line">Block group profiles:</div><div class="line">  Data:             RAID10            2.01GiB</div><div class="line">  Metadata:         RAID10            2.01GiB</div><div class="line">  System:           RAID10           20.00MiB</div><div class="line">SSD detected:       no</div><div class="line">Incompat features:  extref, skinny-metadata</div><div class="line">Number of devices:  4</div><div class="line">Devices:</div><div class="line">   ID        SIZE  PATH</div><div class="line">    1    10.00GiB  /dev/sdb</div><div class="line">    2    10.00GiB  /dev/sdd</div><div class="line">    3    10.00GiB  /dev/sde</div><div class="line">    4    10.00GiB  /dev/sdf</div></pre></td></tr></table></figure></p>
+<p>结果如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Label:              (null)</div><div class="line">UUID:               5f1e8ab4-bcd7-42f6-9aee-53acabfdce8c</div><div class="line">Node size:          16384</div><div class="line">Sector size:        4096</div><div class="line">Filesystem size:    40.00GiB</div><div class="line">Block group profiles:</div><div class="line">Data:             RAID10            2.01GiB</div><div class="line">Metadata:         RAID10            2.01GiB</div><div class="line">System:           RAID10           20.00MiB</div><div class="line">SSD detected:       no</div><div class="line">Incompat features:  extref, skinny-metadata</div><div class="line">Number of devices:  4</div><div class="line">Devices:</div><div class="line">ID        SIZE  PATH</div><div class="line">1    10.00GiB  /dev/sdb</div><div class="line">2    10.00GiB  /dev/sdd</div><div class="line">3    10.00GiB  /dev/sde</div><div class="line">4    10.00GiB  /dev/sdf</div></pre></td></tr></table></figure></p>
 <ul>
 <li>查看所有磁盘挂载情况</li>
 </ul>
@@ -68,11 +68,11 @@
 <ul>
 <li>磁盘缺失时，<code>btrfs fi show</code>会报错 Some devices missing</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">warning, device 2 is missing</div><div class="line">warning devid 2 not found already</div><div class="line">Label: none  uuid: 5f1e8ab4-bcd7-42f6-9aee-53acabfdce8c</div><div class="line">        Total devices 2 FS bytes used 1.38MiB</div><div class="line">        devid    1 size 10.00GiB used 2.04GiB path /dev/sdb</div><div class="line">        *** Some devices missing</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">warning, device 2 is missing</div><div class="line">warning devid 2 not found already</div><div class="line">Label: none  uuid: 5f1e8ab4-bcd7-42f6-9aee-53acabfdce8c</div><div class="line">Total devices 2 FS bytes used 1.38MiB</div><div class="line">devid    1 size 10.00GiB used 2.04GiB path /dev/sdb</div><div class="line">*** Some devices missing</div></pre></td></tr></table></figure>
 <ul>
 <li>磁盘缺失的情况，同时mount时会报错</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mount: wrong fs type, bad option, bad superblock on /dev/sdb,</div><div class="line">       missing codepage or helper program, or other error</div><div class="line"></div><div class="line">       In some cases useful info is found in syslog - try</div><div class="line">       dmesg | tail or so.</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mount: wrong fs type, bad option, bad superblock on /dev/sdb,</div><div class="line">missing codepage or helper program, or other error</div><div class="line"></div><div class="line">In some cases useful info is found in syslog - try</div><div class="line">dmesg | tail or so.</div></pre></td></tr></table></figure>
 <ul>
 <li>出现磁盘缺失的情况，需要在降级模式下挂载raid1或raid10阵列，</li>
 </ul>
@@ -80,15 +80,19 @@
 <ul>
 <li>加入新盘替代missing的device, start 后面指定missing的磁盘序列号（如何在复杂情况下找到实际缺失的序列号是个问题）</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo btrfs replace start 2 -f /dev/sdf /mnt</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">btrfs replace start 2 -f /dev/sdf /mnt</div></pre></td></tr></table></figure>
 <ul>
-<li>添加新的盘入磁盘阵列</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">btrfs dev add -f /dev/sdc /mnt</div></pre></td></tr></table></figure>
-<ul>
-<li>添加新盘后。metadata等只在一个盘上，故需要balance</li>
+<li>添加新盘后，metadata等只在一个盘上，故需要balance</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">btrfs filesystem balance /mnt</div></pre></td></tr></table></figure>
+<ul>
+<li>出现磁盘缺失时，也可以先添加新的替代盘，再删除missing的磁盘</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">btrfs dev add -f /dev/sdc /mnt</div><div class="line">btrfs device delete missing /mnt</div><div class="line">btrfs filesystem balance /mnt</div></pre></td></tr></table></figure>
+<ul>
+<li>单纯添加新的盘入磁盘阵列</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">btrfs dev add -f /dev/sdc /mnt</div><div class="line">btrfs filesystem balance /mnt</div></pre></td></tr></table></figure>
 <ul>
 <li>删除磁盘阵列中的磁盘</li>
 </ul>
@@ -96,8 +100,20 @@
 <ul>
 <li>将一个single的disk转化为raid1阵列</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mount /dev/sdb /mnt</div><div class="line">btrfs device add /dev/sdc /mnt</div><div class="line">btrfs balance start -dconvert=raid1 -mconvert=raid1 /mnt</div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mount /dev/sdb /mnt</div><div class="line">btrfs device add /dev/sdc /mnt</div><div class="line">btrfs balance start -dconvert=raid1 -mconvert=raid1 /mnt</div></pre></td></tr></table></figure>
+<ul>
+<li>从损坏的btrfs文件系统中restore数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">btrfs restore /dev/sdd ~/pathToRestoreFile</div></pre></td></tr></table></figure>]]></content>
       
+        
+        <tags>
+            
+            <tag> Brtfs </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
         
     </entry>
     
@@ -450,9 +466,9 @@
         
         <tags>
             
-            <tag> Vim </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Vim </tag>
             
         </tags>
         
@@ -595,9 +611,9 @@
             
             <tag> React </tag>
             
-            <tag> JavaScript </tag>
-            
             <tag> JSX </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
         
