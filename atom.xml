@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-07-10T12:21:23.487Z</updated>
+  <updated>2017-07-12T12:11:49.882Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>handle error in js</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/07/12/handle-error-in-js/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/07/12/handle-error-in-js/</id>
+    <published>2017-07-12T12:11:49.000Z</published>
+    <updated>2017-07-12T12:11:49.882Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>filter in CSS</title>
@@ -360,27 +374,6 @@
     
       &lt;h1 id=&quot;学习ES6的笔记&quot;&gt;&lt;a href=&quot;#学习ES6的笔记&quot; class=&quot;headerlink&quot; title=&quot;学习ES6的笔记&quot;&gt;&lt;/a&gt;学习ES6的笔记&lt;/h1&gt;&lt;p&gt;ECMAScript 6.0 是JavaScript语言的下一代标准，已经在2015年6月正式发布&lt;/p&gt;
 &lt;p&gt;主要学习了阮一峰老师的&lt;a href=&quot;http://es6.ruanyifeng.com/&quot;&gt;ECMAScript 6 入门&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-      <category term="ES6" scheme="https://juncaixinchi.github.io/Blogs/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript-note</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/02/22/Javascript-note/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/02/22/Javascript-note/</id>
-    <published>2017-02-22T13:57:57.000Z</published>
-    <updated>2017-03-04T14:30:24.963Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;学习javascript的笔记&quot;&gt;&lt;a href=&quot;#学习javascript的笔记&quot; class=&quot;headerlink&quot; title=&quot;学习javascript的笔记&quot;&gt;&lt;/a&gt;学习javascript的笔记&lt;/h1&gt;&lt;p&gt;主要学习了&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000&quot;&gt;JavaScript教程&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
