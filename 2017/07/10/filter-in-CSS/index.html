@@ -12,16 +12,24 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知疲倦的翻越，每一个山丘！">
+  <meta name="description" content="CSS3 中 Filter的应用Filter是CSS3中对图片添加特效的方法，可以认为是一种滤镜
+基本语法是：
+123456789filter: &amp;lt;filter-function&amp;gt; [&amp;lt;filter-function&amp;gt;]* | none/* examples */.mydiv &amp;#123; filter: grayscale(50%) &amp;#125;img &amp;#123;  f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="filter in CSS">
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/07/10/filter-in-CSS/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="不知疲倦的翻越，每一个山丘！">
-<meta property="og:updated_time" content="2017-07-10T12:21:23.487Z">
+<meta property="og:description" content="CSS3 中 Filter的应用Filter是CSS3中对图片添加特效的方法，可以认为是一种滤镜
+基本语法是：
+123456789filter: &amp;lt;filter-function&amp;gt; [&amp;lt;filter-function&amp;gt;]* | none/* examples */.mydiv &amp;#123; filter: grayscale(50%) &amp;#125;img &amp;#123;  f">
+<meta property="og:image" content="https://juncaixinchi.github.io/Blogs/../images/filter.png">
+<meta property="og:updated_time" content="2017-07-16T12:39:04.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="filter in CSS">
-<meta name="twitter:description" content="不知疲倦的翻越，每一个山丘！">
+<meta name="twitter:description" content="CSS3 中 Filter的应用Filter是CSS3中对图片添加特效的方法，可以认为是一种滤镜
+基本语法是：
+123456789filter: &amp;lt;filter-function&amp;gt; [&amp;lt;filter-function&amp;gt;]* | none/* examples */.mydiv &amp;#123; filter: grayscale(50%) &amp;#125;img &amp;#123;  f">
+<meta name="twitter:image" content="https://juncaixinchi.github.io/Blogs/../images/filter.png">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -125,13 +133,64 @@
 	
 	</section>
 	
-		<section class="tog"></section>
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3-中-Filter的应用"><span class="toc-number">1.</span> <span class="toc-text">CSS3 中 Filter的应用</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	
+    	<h3 id="CSS3-中-Filter的应用"><a href="#CSS3-中-Filter的应用" class="headerlink" title="CSS3 中 Filter的应用"></a>CSS3 中 Filter的应用</h3><p>Filter是CSS3中对图片添加特效的方法，可以认为是一种滤镜</p>
+<p>基本语法是：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">filter: &lt;filter-function&gt; [&lt;filter-function&gt;]* | none</div><div class="line"></div><div class="line"></div><div class="line">/* examples */</div><div class="line">.mydiv &#123; filter: grayscale(50%) &#125;</div><div class="line"></div><div class="line">img &#123;</div><div class="line">  filter: grayscale(0.5) blur(10px);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>主要有以下10种功能：</p>
+<p><img src="../images/filter.png" alt="filter results"></p>
+<ul>
+<li>blur: 虚化</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">blur</span>(2<span class="selector-tag">px</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>brightness: 亮度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">brightness</span>(0<span class="selector-class">.4</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>contrast： 对比度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">contrast</span>(200%);</div></pre></td></tr></table></figure>
+<ul>
+<li>grayscale： 灰度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">grayscale</span>(80%);</div></pre></td></tr></table></figure>
+<ul>
+<li>opacity: 透明度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">opacity</span>(60%);</div></pre></td></tr></table></figure>
+<ul>
+<li>saturate: 饱和度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">saturate</span>(70%);</div></pre></td></tr></table></figure>
+<ul>
+<li>invert: 反色</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">invert</span>(85%);</div></pre></td></tr></table></figure>
+<ul>
+<li>sepia: 褐色</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">sepia</span>(30%);</div></pre></td></tr></table></figure>
+<ul>
+<li>hue-rotate: 色相旋转</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">hue-rotate</span>(90<span class="selector-tag">deg</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>drop-shadow: 添加阴影</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* h-shadow v-shadow blur color */</span></div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">drop-shadow</span>(4<span class="selector-tag">px</span> 4<span class="selector-tag">px</span> 8<span class="selector-tag">px</span> <span class="selector-tag">blue</span>);</div></pre></td></tr></table></figure>
   	</div>
 	  
+	  <div class="article-tags tags">
+      
+        <a href="/Blogs/tags/CSS/">CSS</a>
+      
+	  </div>
+    
 	</section>
 	
 </article>
@@ -153,7 +212,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a>
+        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 14px; color: #808080">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a>
     </div>
 </div>
 

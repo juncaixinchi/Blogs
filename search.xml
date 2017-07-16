@@ -6,16 +6,73 @@
     <entry>
       <title><![CDATA[handle error in js]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/07/12/handle-error-in-js/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">  something</div><div class="line">&#125; <span class="keyword">catch</span> (e) &#123;</div><div class="line">  <span class="built_in">window</span>.location.href = <span class="string">`http://stackoverflow.com/search?q=[js]<span class="subst">$&#123;e.message&#125;</span>`</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
       
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
         
     </entry>
     
     <entry>
       <title><![CDATA[filter in CSS]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/07/10/filter-in-CSS/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h3 id="CSS3-中-Filter的应用"><a href="#CSS3-中-Filter的应用" class="headerlink" title="CSS3 中 Filter的应用"></a>CSS3 中 Filter的应用</h3><p>Filter是CSS3中对图片添加特效的方法，可以认为是一种滤镜</p>
+<p>基本语法是：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">filter: &lt;filter-function&gt; [&lt;filter-function&gt;]* | none</div><div class="line"></div><div class="line"></div><div class="line">/* examples */</div><div class="line">.mydiv &#123; filter: grayscale(50%) &#125;</div><div class="line"></div><div class="line">img &#123;</div><div class="line">  filter: grayscale(0.5) blur(10px);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>主要有以下10种功能：</p>
+<p><img src="../images/filter.png" alt="filter results"></p>
+<ul>
+<li>blur: 虚化</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">blur</span>(2<span class="selector-tag">px</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>brightness: 亮度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">brightness</span>(0<span class="selector-class">.4</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>contrast： 对比度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">contrast</span>(200%);</div></pre></td></tr></table></figure>
+<ul>
+<li>grayscale： 灰度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">grayscale</span>(80%);</div></pre></td></tr></table></figure>
+<ul>
+<li>opacity: 透明度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">opacity</span>(60%);</div></pre></td></tr></table></figure>
+<ul>
+<li>saturate: 饱和度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">saturate</span>(70%);</div></pre></td></tr></table></figure>
+<ul>
+<li>invert: 反色</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">invert</span>(85%);</div></pre></td></tr></table></figure>
+<ul>
+<li>sepia: 褐色</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">sepia</span>(30%);</div></pre></td></tr></table></figure>
+<ul>
+<li>hue-rotate: 色相旋转</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">hue-rotate</span>(90<span class="selector-tag">deg</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>drop-shadow: 添加阴影</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* h-shadow v-shadow blur color */</span></div><div class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">drop-shadow</span>(4<span class="selector-tag">px</span> 4<span class="selector-tag">px</span> 8<span class="selector-tag">px</span> <span class="selector-tag">blue</span>);</div></pre></td></tr></table></figure>]]></content>
       
+        
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
         
     </entry>
     
