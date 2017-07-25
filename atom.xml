@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-07-16T12:42:43.801Z</updated>
+  <updated>2017-07-25T10:44:59.115Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Stream in node</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/07/25/Stream-in-node/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/07/25/Stream-in-node/</id>
+    <published>2017-07-25T10:44:59.000Z</published>
+    <updated>2017-07-25T10:44:59.115Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>file hash in node</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/07/25/file-hash-in-node/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/07/25/file-hash-in-node/</id>
+    <published>2017-07-25T10:44:44.000Z</published>
+    <updated>2017-07-25T10:44:44.848Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>handle error in js</title>
@@ -348,49 +376,6 @@
       <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
       <category term="state" scheme="https://juncaixinchi.github.io/Blogs/tags/state/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JSX-Syntax</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/03/04/JSX-Syntax/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/03/04/JSX-Syntax/</id>
-    <published>2017-03-04T11:26:35.000Z</published>
-    <updated>2017-03-04T14:30:23.194Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;JSX-语法&quot;&gt;&lt;a href=&quot;#JSX-语法&quot; class=&quot;headerlink&quot; title=&quot;JSX 语法&quot;&gt;&lt;/a&gt;JSX 语法&lt;/h1&gt;&lt;p&gt;JSX是React的核心组成部分，它使用XML标记的方式去直接声明界面，界面组件之间可以互相嵌套。可以理解为在JS中编写与XML类似的语言,一种定义带属性树结构（DOM结构）的语法，它的目的不是要在浏览器或者引擎中实现，它的目的是通过各种编译器将这些标记编译成标准的JS语言。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-      <category term="JSX" scheme="https://juncaixinchi.github.io/Blogs/tags/JSX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ECMAScript-6-note</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/03/02/ECMAScript-6-note/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/03/02/ECMAScript-6-note/</id>
-    <published>2017-03-02T12:38:44.000Z</published>
-    <updated>2017-03-04T14:30:19.645Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;学习ES6的笔记&quot;&gt;&lt;a href=&quot;#学习ES6的笔记&quot; class=&quot;headerlink&quot; title=&quot;学习ES6的笔记&quot;&gt;&lt;/a&gt;学习ES6的笔记&lt;/h1&gt;&lt;p&gt;ECMAScript 6.0 是JavaScript语言的下一代标准，已经在2015年6月正式发布&lt;/p&gt;
-&lt;p&gt;主要学习了阮一峰老师的&lt;a href=&quot;http://es6.ruanyifeng.com/&quot;&gt;ECMAScript 6 入门&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-      <category term="ES6" scheme="https://juncaixinchi.github.io/Blogs/tags/ES6/"/>
     
   </entry>
   
