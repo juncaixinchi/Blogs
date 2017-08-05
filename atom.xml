@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-07-31T12:24:12.751Z</updated>
+  <updated>2017-08-05T11:25:04.400Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xattr and ads</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/08/05/xattr-and-ads/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/08/05/xattr-and-ads/</id>
+    <published>2017-08-05T11:25:04.000Z</published>
+    <updated>2017-08-05T11:25:04.400Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>upload files or folds recrusively</title>
@@ -267,9 +281,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
       <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   
@@ -348,26 +362,6 @@
     
     
       <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim-Setting</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/03/18/Vim-Setting/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/03/18/Vim-Setting/</id>
-    <published>2017-03-18T12:57:18.000Z</published>
-    <updated>2017-06-25T11:27:34.507Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Vim 是高效的文本编辑器，以下是我整理的日常中经常用到的命令与插件&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="https://juncaixinchi.github.io/Blogs/tags/Linux/"/>
-    
-      <category term="Vim" scheme="https://juncaixinchi.github.io/Blogs/tags/Vim/"/>
     
   </entry>
   
