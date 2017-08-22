@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-08-20T12:59:18.793Z</updated>
+  <updated>2017-08-22T11:26:51.472Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Re:ZERO - Publish a JS Package</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/08/22/Re-ZERO-Publish-a-JS-Package/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/08/22/Re-ZERO-Publish-a-JS-Package/</id>
+    <published>2017-08-22T11:26:51.000Z</published>
+    <updated>2017-08-22T11:26:51.472Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>setTimeout, setImmediate and process.nextTick</title>
@@ -338,26 +352,6 @@
       <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
     
       <category term="Dialog" scheme="https://juncaixinchi.github.io/Blogs/tags/Dialog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm and googleapis mirror</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/03/20/npm-mirror/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/03/20/npm-mirror/</id>
-    <published>2017-03-20T14:55:06.000Z</published>
-    <updated>2017-05-03T12:15:09.295Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近家里网络很糟糕，上不了npm，很是纠结，于是修改设置使用国内的taobao镜像&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="npm" scheme="https://juncaixinchi.github.io/Blogs/tags/npm/"/>
-    
-      <category term="googleapis" scheme="https://juncaixinchi.github.io/Blogs/tags/googleapis/"/>
     
   </entry>
   
