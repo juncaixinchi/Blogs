@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-08-22T11:26:51.472Z</updated>
+  <updated>2017-09-17T13:58:26.012Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>copy in JS</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/09/17/copy-in-JS/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/09/17/copy-in-JS/</id>
+    <published>2017-09-17T13:58:25.000Z</published>
+    <updated>2017-09-17T13:58:26.012Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Re:ZERO - Publish a JS Package</title>
@@ -330,28 +344,6 @@
     
     
       <category term="css" scheme="https://juncaixinchi.github.io/Blogs/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dialog in React Material-UI</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/04/09/Dialog-in-React-Material-UI/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/04/09/Dialog-in-React-Material-UI/</id>
-    <published>2017-04-09T03:39:47.000Z</published>
-    <updated>2017-06-25T11:26:51.012Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;解析Material-UI中的Dialog组件&quot;&gt;&lt;a href=&quot;#解析Material-UI中的Dialog组件&quot; class=&quot;headerlink&quot; title=&quot;解析Material-UI中的Dialog组件&quot;&gt;&lt;/a&gt;解析Material-UI中的Dialog组件&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;dialog是常见组件，前段时间研究了一下&lt;a href=&quot;&quot;&gt;Material-UI&lt;/a&gt;的Dialog组件的代码&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
-    
-      <category term="Dialog" scheme="https://juncaixinchi.github.io/Blogs/tags/Dialog/"/>
     
   </entry>
   
