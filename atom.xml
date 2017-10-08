@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-09-17T13:58:26.012Z</updated>
+  <updated>2017-10-08T13:52:30.423Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些厉害的 CSS 动画</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/10/08/%E4%B8%80%E4%BA%9B%E5%8E%89%E5%AE%B3%E7%9A%84-CSS-%E5%8A%A8%E7%94%BB/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/10/08/一些厉害的-CSS-动画/</id>
+    <published>2017-10-08T12:39:32.000Z</published>
+    <updated>2017-10-08T13:52:30.423Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一些厉害的-CSS-动画&quot;&gt;&lt;a href=&quot;#一些厉害的-CSS-动画&quot; class=&quot;headerlink&quot; title=&quot;一些厉害的 CSS 动画&quot;&gt;&lt;/a&gt;一些厉害的 CSS 动画&lt;/h1&gt;&lt;h2 id=&quot;0&quot;&gt;&lt;a href=&quot;#0&quot; class=&quot;he
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://juncaixinchi.github.io/Blogs/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>copy in JS</title>
@@ -323,27 +341,9 @@
     </summary>
     
     
-      <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
-    
       <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Display flex in css</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/04/09/Display-flex-in-css/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/04/09/Display-flex-in-css/</id>
-    <published>2017-04-09T03:40:08.000Z</published>
-    <updated>2017-05-01T12:44:17.677Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;CSS3-弹性盒子-——-Flex-布局&quot;&gt;&lt;a href=&quot;#CSS3-弹性盒子-——-Flex-布局&quot; class=&quot;headerlink&quot; title=&quot;CSS3 弹性盒子 —— Flex 布局&quot;&gt;&lt;/a&gt;CSS3 弹性盒子 —— Flex 布局&lt;/h1&gt;&lt;p&gt;Flex 布局，是一种用于在页面上布置元素的布局模式，使得当页面布局必须适应不同的屏幕尺寸和不同的显示设备时，元素可预测地运行&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="css" scheme="https://juncaixinchi.github.io/Blogs/tags/css/"/>
+      <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
     
   </entry>
   
