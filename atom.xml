@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-10-08T13:59:31.736Z</updated>
+  <updated>2017-11-05T09:54:26.512Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Reactor model in JS</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/11/05/Reactor-model-in-JS/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/11/05/Reactor-model-in-JS/</id>
+    <published>2017-11-05T09:54:26.000Z</published>
+    <updated>2017-11-05T09:54:26.512Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>一些厉害的 CSS 动画</title>
@@ -315,35 +329,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Large List in React</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/04/13/Large-List-in-React/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/04/13/Large-List-in-React/</id>
-    <published>2017-04-13T13:11:39.000Z</published>
-    <updated>2017-06-25T11:27:20.628Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;超大列表的显示&quot;&gt;&lt;a href=&quot;#超大列表的显示&quot; class=&quot;headerlink&quot; title=&quot;超大列表的显示&quot;&gt;&lt;/a&gt;超大列表的显示&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;直接全部显示一个超大的列表是十分消耗资源的，所以必须要采取对策，主流的有两种对策：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Lazyloading: 即开始至加载一部分，每次需要的时候再加载新的内容，一个形象的例子就是“刷微博”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;局部加载: 每次计算当前页面应当展示的内容&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="React" scheme="https://juncaixinchi.github.io/Blogs/tags/React/"/>
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   
