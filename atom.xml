@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-11-05T09:54:26.512Z</updated>
+  <updated>2017-11-13T11:23:54.508Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>electron 101</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/11/13/electron-101/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/11/13/electron-101/</id>
+    <published>2017-11-13T11:23:54.000Z</published>
+    <updated>2017-11-13T11:23:54.508Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Reactor model in JS</title>
@@ -305,27 +319,6 @@
     <updated>2017-05-15T13:23:15.375Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Ipc Message with Session Id</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/04/15/Ipc-Message-with-Session-Id/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/04/15/Ipc-Message-with-Session-Id/</id>
-    <published>2017-04-15T12:22:50.000Z</published>
-    <updated>2017-06-25T11:27:11.324Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;使用带session的ipc通讯&quot;&gt;&lt;a href=&quot;#使用带session的ipc通讯&quot; class=&quot;headerlink&quot; title=&quot;使用带session的ipc通讯&quot;&gt;&lt;/a&gt;使用带session的ipc通讯&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
