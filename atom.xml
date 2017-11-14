@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-11-13T11:23:54.508Z</updated>
+  <updated>2017-11-14T14:54:52.071Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -20,9 +20,17 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/11/13/electron-101/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/11/13/electron-101/</id>
     <published>2017-11-13T11:23:54.000Z</published>
-    <updated>2017-11-13T11:23:54.508Z</updated>
+    <updated>2017-11-14T14:54:52.071Z</updated>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;electron相关-tips&quot;&gt;&lt;a href=&quot;#electron相关-tips&quot; class=&quot;headerlink&quot; title=&quot;electron相关 tips&quot;&gt;&lt;/a&gt;electron相关 tips&lt;/h2&gt;&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;electron是用web技术编译原生桌面应用的框架，其基于&lt;code&gt;node.js&lt;/code&gt;与&lt;code&gt;Chromium&lt;/code&gt;。简单来讲就是让程序跑在&lt;code&gt;Chromium&lt;/code&gt;中，然后结合&lt;code&gt;node.js&lt;/code&gt;，通过&lt;code&gt;ipc&lt;/code&gt;通讯，使应用可以突破浏览器沙盒的限制，访问本地资源。electron最重要的特点主要以下两个：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;基于web技术，开放效率高。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;跨平台能力强，一套代码可以几乎无成本生成windows、mac、linux三个平台应用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
