@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-11-14T14:54:52.071Z</updated>
+  <updated>2017-11-18T14:36:05.930Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CircularProgress</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/11/18/CircularProgress/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/11/18/CircularProgress/</id>
+    <published>2017-11-18T14:36:05.000Z</published>
+    <updated>2017-11-18T14:36:05.930Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>electron 101</title>
@@ -316,20 +330,6 @@
     
     
       <category term="js" scheme="https://juncaixinchi.github.io/Blogs/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>electron app</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/05/15/electron-app/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/05/15/electron-app/</id>
-    <published>2017-05-15T13:23:15.000Z</published>
-    <updated>2017-05-15T13:23:15.375Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
