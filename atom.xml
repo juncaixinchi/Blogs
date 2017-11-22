@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-11-18T14:36:05.930Z</updated>
+  <updated>2017-11-22T14:41:29.108Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>String method in JavaScript</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/11/22/String-method-in-JavaScript/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/11/22/String-method-in-JavaScript/</id>
+    <published>2017-11-22T14:41:29.000Z</published>
+    <updated>2017-11-22T14:41:29.108Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CircularProgress</title>
@@ -312,24 +326,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>this in js</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/06/07/this-in-js/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/06/07/this-in-js/</id>
-    <published>2017-06-07T11:10:45.000Z</published>
-    <updated>2017-06-25T11:27:30.804Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;浅谈js里的this&quot;&gt;&lt;a href=&quot;#浅谈js里的this&quot; class=&quot;headerlink&quot; title=&quot;浅谈js里的this&quot;&gt;&lt;/a&gt;浅谈js里的this&lt;/h2&gt;&lt;p&gt;this是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="js" scheme="https://juncaixinchi.github.io/Blogs/tags/js/"/>
     
   </entry>
   
