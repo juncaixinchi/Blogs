@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-11-22T14:41:29.108Z</updated>
+  <updated>2017-11-26T13:42:38.857Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Array method in JavaScript</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/11/26/Array-method-in-JavaScript/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/11/26/Array-method-in-JavaScript/</id>
+    <published>2017-11-26T13:42:38.000Z</published>
+    <updated>2017-11-26T13:42:38.857Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>String method in JavaScript</title>
@@ -312,20 +326,6 @@
     
     
       <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS里的异步及Promise</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/06/20/JS%E9%87%8C%E7%9A%84%E5%BC%82%E6%AD%A5%E5%8F%8APromise/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/06/20/JS里的异步及Promise/</id>
-    <published>2017-06-20T12:48:30.000Z</published>
-    <updated>2017-06-20T12:48:30.716Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
