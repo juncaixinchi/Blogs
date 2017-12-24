@@ -4,10 +4,84 @@
   
     
     <entry>
-      <title><![CDATA[Array method in JavaScript]]></title>
-      <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/11/26/Array-method-in-JavaScript/</url>
+      <title><![CDATA[An interview question of JavaScript]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/12/24/An-interview-question-of-JavaScript/</url>
       <content type="html"></content>
       
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Array method in JavaScript]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2017/11/26/Array-method-in-JavaScript/</url>
+      <content type="html"><![CDATA[<h1 id="Array-method-学习笔记"><a href="#Array-method-学习笔记" class="headerlink" title="Array method 学习笔记"></a>Array method 学习笔记</h1><p>系统地学习一下JS中Array的方法，并做个简单的笔记</p>
+<a id="more"></a>
+<h3 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from()"></a>Array.from()</h3><p>从<code>array-like</code> or <code>iterable object</code>创建一个新的数组，等价于<code>...</code>运算符</p>
+<ul>
+<li>Syntax</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from(arrayLike[, mapFn[, thisArg]])</div></pre></td></tr></table></figure>
+<ul>
+<li>from Array</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
+<ul>
+<li>from string</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from(<span class="string">'string'</span>) <span class="comment">// [ 's', 't', 'r', 'i', 'n', 'g' ]</span></div><div class="line">[...<span class="string">'string'</span>]</div></pre></td></tr></table></figure>
+<ul>
+<li>fromm a <code>Map</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>([[<span class="number">1</span>, <span class="string">'bar'</span>], [<span class="number">2</span>, <span class="string">'foo'</span>]])</div><div class="line"><span class="built_in">Array</span>.from(m)</div><div class="line">[...m]</div></pre></td></tr></table></figure>
+<ul>
+<li>from an Array-like object (arguments)</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="built_in">arguments</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">f(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
+<ul>
+<li>使用箭头函数，相当于<code>map</code>方法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Using an arrow function as the map function to manipulate the elements */</span></div><div class="line"><span class="built_in">Array</span>.from([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], x =&gt; x * x) <span class="comment">// [2, 4, 6]</span></div></pre></td></tr></table></figure>
+<ul>
+<li>生成数列，注意 <code>v</code> 的值为<code>undefined</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from(&#123;<span class="attr">length</span>: <span class="number">5</span>&#125;, (v, i) =&gt; i + <span class="number">1</span>) <span class="comment">// [1, 2, 3, 4, 5]</span></div></pre></td></tr></table></figure>
+<h3 id="Array-isArray"><a href="#Array-isArray" class="headerlink" title="Array.isArray()"></a>Array.isArray()</h3><p>判断一个变量是否是一个数组</p>
+<ul>
+<li>Syntax</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.isArray(obj)</div></pre></td></tr></table></figure>
+<ul>
+<li>例子</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.isArray([]) <span class="comment">// true</span></div><div class="line"><span class="built_in">Array</span>.isArray(<span class="built_in">Array</span>.prototype) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">Array</span>.isArray(<span class="literal">null</span>) <span class="comment">// false</span></div><div class="line"><span class="built_in">Array</span>.isArray(<span class="literal">undefined</span>) <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<h3 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of()"></a>Array.of()</h3><p>与Array()类似，但是处理单个整数变量的结果不同</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.of(<span class="number">7</span>);       <span class="comment">// [7] </span></div><div class="line"><span class="built_in">Array</span>.of(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></div><div class="line"></div><div class="line"><span class="built_in">Array</span>(<span class="number">7</span>);          <span class="comment">// [ , , , , , , ]</span></div><div class="line"><span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);    <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
+<h3 id="Array-prototype-concat"><a href="#Array-prototype-concat" class="headerlink" title="Array.prototype.concat()"></a>Array.prototype.concat()</h3><p>合并两个或更多数组，形成一个新的数组</p>
+<ul>
+<li>Syntax</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> new_array = old_array.concat(value1[, value2[, ...[, valueN]]])</div></pre></td></tr></table></figure>
+<ul>
+<li>例子</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> alpha = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</div><div class="line"><span class="keyword">const</span> alphaNumeric = alpha.concat(<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>]) <span class="comment">// ['a', 'b', 'c', 1, 2, 3]</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> num = [<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>]]</div><div class="line"><span class="keyword">const</span> alphaNumeric2 = alpha.concat(num) <span class="comment">// ['a', 'b', 'c', 1, [2, 3]]</span></div></pre></td></tr></table></figure>
+<h3 id="Array-prototype-copyWithin"><a href="#Array-prototype-copyWithin" class="headerlink" title="Array.prototype.copyWithin()"></a>Array.prototype.copyWithin()</h3><p>在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。使用这个方法，会修改当前数组。</p>
+<ul>
+<li>Syntax</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.copyWithin(target, start, end)</div></pre></td></tr></table></figure>
+<p><code>target</code>: 序列将被复制到的目标位置<br><code>start</code>: 被复制序列的起点，默认为<code>0</code><br><code>end</code>: 被复制序列的终点，默认为<code>arr.length</code></p>
+<ul>
+<li>例子</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[<span class="string">'alpha'</span>, <span class="string">'bravo'</span>, <span class="string">'charlie'</span>, <span class="string">'delta'</span>].copyWithin(<span class="number">2</span>, <span class="number">0</span>) <span class="comment">// ["alpha", "bravo", "alpha", "bravo"]</span></div><div class="line"></div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].copyWithin(<span class="number">-2</span>, <span class="number">-3</span>, <span class="number">-1</span>) <span class="comment">// [1, 2, 3, 3, 4]</span></div></pre></td></tr></table></figure>]]></content>
+      
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
         
     </entry>
     
@@ -489,9 +563,9 @@
         
         <tags>
             
-            <tag> React </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> React </tag>
             
         </tags>
         
@@ -732,9 +806,9 @@
         
         <tags>
             
-            <tag> React </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> React </tag>
             
             <tag> state </tag>
             
@@ -850,9 +924,9 @@
         
         <tags>
             
-            <tag> React </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> React </tag>
             
             <tag> JSX </tag>
             

@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2017-11-26T13:42:38.857Z</updated>
+  <updated>2017-12-24T11:52:29.597Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -16,16 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Array method in JavaScript</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/11/26/Array-method-in-JavaScript/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/11/26/Array-method-in-JavaScript/</id>
-    <published>2017-11-26T13:42:38.000Z</published>
-    <updated>2017-11-26T13:42:38.857Z</updated>
+    <title>An interview question of JavaScript</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/12/24/An-interview-question-of-JavaScript/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/12/24/An-interview-question-of-JavaScript/</id>
+    <published>2017-12-24T11:52:29.000Z</published>
+    <updated>2017-12-24T11:52:29.597Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Array method in JavaScript</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2017/11/26/Array-method-in-JavaScript/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2017/11/26/Array-method-in-JavaScript/</id>
+    <published>2017-11-26T13:42:38.000Z</published>
+    <updated>2017-11-27T15:08:55.364Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Array-method-学习笔记&quot;&gt;&lt;a href=&quot;#Array-method-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Array method 学习笔记&quot;&gt;&lt;/a&gt;Array method 学习笔记&lt;/h1&gt;&lt;p&gt;系统地学习一下JS中Array的方法，并做个简单的笔记&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   
@@ -306,26 +324,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>缩放查看图片功能小记</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/06/24/%E7%BC%A9%E6%94%BE%E6%9F%A5%E7%9C%8B%E5%9B%BE%E7%89%87%E5%8A%9F%E8%83%BD%E5%B0%8F%E8%AE%B0/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/06/24/缩放查看图片功能小记/</id>
-    <published>2017-06-24T13:50:46.000Z</published>
-    <updated>2017-06-25T11:26:42.725Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;放大查看图片&quot;&gt;&lt;a href=&quot;#放大查看图片&quot; class=&quot;headerlink&quot; title=&quot;放大查看图片&quot;&gt;&lt;/a&gt;放大查看图片&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;滚轮滚动时改变图片的&lt;code&gt;zoom&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   
