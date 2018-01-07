@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-01-02T12:15:21.317Z</updated>
+  <updated>2018-01-07T12:28:44.676Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EventListener in JavaScript</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/01/07/EventListener-in-JavaScript/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/01/07/EventListener-in-JavaScript/</id>
+    <published>2018-01-07T12:28:44.000Z</published>
+    <updated>2018-01-07T12:28:44.676Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Some scripts about manipulating arrays</title>
@@ -310,20 +324,6 @@
       <category term="Brtfs" scheme="https://juncaixinchi.github.io/Blogs/tags/Brtfs/"/>
     
       <category term="Linux" scheme="https://juncaixinchi.github.io/Blogs/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>animation in react</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/07/05/animation-in-react/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/07/05/animation-in-react/</id>
-    <published>2017-07-05T11:03:17.000Z</published>
-    <updated>2017-07-05T11:03:17.135Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
