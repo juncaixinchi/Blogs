@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-01-28T11:14:15.819Z</updated>
+  <updated>2018-01-28T12:18:39.858Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -16,20 +16,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CharCode in JS</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/01/28/CharCode-in-JS/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/01/28/CharCode-in-JS/</id>
+    <title>Unicode and JS</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/01/28/Unicode-and-JS/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/01/28/Unicode-and-JS/</id>
     <published>2018-01-28T11:13:25.000Z</published>
-    <updated>2018-01-28T11:14:15.819Z</updated>
+    <updated>2018-01-28T12:18:39.858Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;
+      &lt;p&gt;之前处理中文字符与emoji时遇到了一些坑，查阅了资料整理了一下要点。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="JS" scheme="https://juncaixinchi.github.io/Blogs/tags/JS/"/>
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   
@@ -112,9 +112,11 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/11/18/CircularProgress/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/11/18/CircularProgress/</id>
     <published>2017-11-18T14:36:05.000Z</published>
-    <updated>2017-11-18T14:36:05.930Z</updated>
+    <updated>2018-01-28T11:36:25.741Z</updated>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;A-CircularProgress-Component&quot;&gt;&lt;a href=&quot;#A-CircularProgress-Component&quot; class=&quot;headerlink&quot; title=&quot;A CircularProgress Component&quot;&gt;&lt;/a&gt;A CircularProgress Component&lt;/h1&gt;&lt;p&gt;一个环进度条组件，主要是利用了两个半圆，旋转不同角度来展现不同的进度&lt;/p&gt;
     
     </summary>
     
@@ -162,7 +164,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/10/08/%E4%B8%80%E4%BA%9B%E5%8E%89%E5%AE%B3%E7%9A%84-CSS-%E5%8A%A8%E7%94%BB/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/10/08/一些厉害的-CSS-动画/</id>
     <published>2017-10-08T12:39:32.000Z</published>
-    <updated>2017-10-08T13:59:31.736Z</updated>
+    <updated>2018-01-28T11:27:05.341Z</updated>
     
     <summary type="html">
     

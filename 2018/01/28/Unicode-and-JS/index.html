@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Unicode and JS | 俊采新驰</title>
+  <meta name="description" content="不知疲倦的翻越，每一个山丘！" />
+  <meta name="keywords" content="俊采新驰" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
+  <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="之前处理中文字符与emoji时遇到了一些坑，查阅了资料整理了一下要点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unicode and JS">
+<meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2018/01/28/Unicode-and-JS/index.html">
+<meta property="og:site_name" content="俊采新驰">
+<meta property="og:description" content="之前处理中文字符与emoji时遇到了一些坑，查阅了资料整理了一下要点。">
+<meta property="og:updated_time" content="2018-01-28T12:18:39.858Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unicode and JS">
+<meta name="twitter:description" content="之前处理中文字符与emoji时遇到了一些坑，查阅了资料整理了一下要点。">
+    
+  <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/Blogs/style.css">
+  
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+		<div class="wrapper container">
+			<a class="logo flat-box" href='/Blogs/' >
+				俊采新驰
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/Blogs/'>
+								Home
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/Blogs/archives'>
+								Archives
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/Blogs/about'>
+								About
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu"></span></a></li>
+			</ul>
+		</div>
+		<aside class="menu-phone">
+			<nav>
+				
+					<a href="/Blogs/" class="nav-home nav">
+						Home
+					</a>
+				
+					<a href="/Blogs/archives" class="nav-archives nav">
+						Archives
+					</a>
+				
+					<a href="/Blogs/about" class="nav-about nav">
+						About
+					</a>
+				
+			</nav>
+		</aside>
+</header>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container'>
+      <div class='l_main'>
+        <article id="post-Unicode-and-JS"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/Blogs/2018/01/28/Unicode-and-JS/">
+    	Unicode and JS
+    </a>
+  </h2>
+	<time>
+	  1月 28, 2018
+	</time>
+	
+	</section>
+	
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Unicode"><span class="toc-number">1.</span> <span class="toc-text">Unicode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS的编码"><span class="toc-number">2.</span> <span class="toc-text">JS的编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#潜在的问题"><span class="toc-number">3.</span> <span class="toc-text">潜在的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#length属性"><span class="toc-number">3.1.</span> <span class="toc-text">length属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#码点与字符互转"><span class="toc-number">3.2.</span> <span class="toc-text">码点与字符互转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则匹配"><span class="toc-number">3.3.</span> <span class="toc-text">正则匹配</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#汉字编码"><span class="toc-number">4.</span> <span class="toc-text">汉字编码</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>之前处理中文字符与emoji时遇到了一些坑，查阅了资料整理了一下要点。</p>
+<a id="more"></a>
+<h3 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h3><p>Unicode是目前绝大多数程序使用的字符编码，定义也很简单，用一个码点(code point)映射一个字符。码点值的范围是从U+0000到U+10FFFF，可以表示超过110万个符号。Unicode源于一个很简单的想法：将全世界所有的字符包含在一个集合里，计算机只要支持这一个字符集，就能显示所有的字符，再也不会有乱码了。</p>
+<p>目前，Unicode的最新版本是7.0版，一共收入了109449个符号，其中的中日韩文字为74500个。可以近似认为，全世界现有的符号当中，三分之二以上来自东亚文字。比如，中文”好”的码点是十六进制的597D。</p>
+<p>Unicode最前面的65536个字符位，称为基本平面（BMP-—Basic Multilingual Plane），它的码点范围是从U+0000到U+FFFF。最常见的字符都放在这个平面，这是Unicode最先定义和公布的一个平面。<br>剩下的字符都放在补充平面（Supplementary Plane），码点范围从U+010000一直到U+10FFFF，共16个。</p>
+<h3 id="JS的编码"><a href="#JS的编码" class="headerlink" title="JS的编码"></a>JS的编码</h3><p>UTF（Unicode transformation format）Unicode转换格式，是服务于Unicode的，用于将一个Unicode码点转换为特定的字节序列。常见的UTF有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">UTF-8 可变字节序列，用1到4个字节表示一个码点 </div><div class="line">UTF-16 可变字节序列，用2或4个字节表示一个码点 </div><div class="line">UTF-32 固定字节序列，用4个字节表示一个码点</div></pre></td></tr></table></figure>
+<p>UTF-8对ASCⅡ编码是兼容的，都是一个字节，超过U+07FF的部分则用了复杂的转换方式来映射Unicode。</p>
+<p>然而js用的编码却是已经过时了的UCS-2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1990 UCS-2 诞生 </div><div class="line">1995.5 JavaScript 诞生 </div><div class="line">1996.7 UTF-16 诞生</div></pre></td></tr></table></figure>
+<p>也就是说，Brendan Eich在写JS的时候，UTF-16还没问世，所以只能用UCS-2的方式来处理字符，也因此留下了隐患。</p>
+<h3 id="潜在的问题"><a href="#潜在的问题" class="headerlink" title="潜在的问题"></a>潜在的问题</h3><h4 id="length属性"><a href="#length属性" class="headerlink" title="length属性"></a>length属性</h4><p>emoji等16位的字符的长度会被认为是2，slice等函数也会因此出现问题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="string">'😀'</span>.length <span class="comment">// 2</span></div><div class="line"></div><div class="line"><span class="comment">// 正确方法</span></div><div class="line"><span class="built_in">Array</span>.from(<span class="string">'😀'</span>).length</div><div class="line"></div><div class="line"><span class="string">'😀😀'</span>.slice(<span class="number">0</span>,<span class="number">1</span>) <span class="comment">// "�"</span></div><div class="line"></div><div class="line"><span class="string">'😀😀'</span>.slice(<span class="number">0</span>,<span class="number">2</span>) <span class="comment">// "😀"</span></div></pre></td></tr></table></figure>
+<p>使用正则匹配，将字符串转化为数组，可解决该问题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> slice = <span class="function">(<span class="params">str, start, end</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> arr = str.match(<span class="regexp">/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^\uD800-\uDFFF]/g</span>) || []</div><div class="line">  <span class="keyword">return</span> arr.slice(start, end).join(<span class="string">''</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">slice(<span class="string">'😀😀'</span>,<span class="number">0</span>,<span class="number">1</span>) <span class="comment">// 😀</span></div></pre></td></tr></table></figure>
+<p>ES6可以自动识别4字节的码点，遍历字符串的方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> s <span class="keyword">of</span> string ) &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="码点与字符互转"><a href="#码点与字符互转" class="headerlink" title="码点与字符互转"></a>码点与字符互转</h4><p>String.fromCharCode可以将一个码点转换为字符,charCodeAt则反之。</p>
+<p>但是用在emoji上就会出问题，要使用es6的fromCodePoint和codePointAt才行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="string">'好'</span>.charCodeAt(<span class="number">0</span>).toString(<span class="number">16</span>) <span class="comment">// '597d'</span></div><div class="line"><span class="built_in">String</span>.fromCharCode(<span class="number">0x597d</span>) <span class="comment">// 好</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/* error */</span></div><div class="line"><span class="string">'😀'</span>.charCodeAt(<span class="number">0</span>).toString(<span class="number">16</span>) <span class="comment">//d83d</span></div><div class="line"><span class="string">'😀'</span>.codePointAt(<span class="number">0</span>).toString(<span class="number">16</span>) <span class="comment">// 1f600</span></div><div class="line"></div><div class="line"><span class="comment">/* correct */</span></div><div class="line"><span class="built_in">String</span>.fromCharCode(<span class="number">0x1f600</span>) <span class="comment">// ''</span></div><div class="line"><span class="built_in">String</span>.fromCodePoint(<span class="number">0x1f600</span>) <span class="comment">// '😀'</span></div></pre></td></tr></table></figure>
+<h4 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h4><p>正则匹配符.只能匹配单个“字符”，但js将代理对当成两个单独的“字符”处理，所以匹配不到任何辅助平面字符。<br>ES6通过增加一个u标志来解决这个问题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/foo.bar/u.test(<span class="string">'foo😀bar'</span>)</div></pre></td></tr></table></figure>
+<h3 id="汉字编码"><a href="#汉字编码" class="headerlink" title="汉字编码"></a>汉字编码</h3><p>Unicode中的汉字是CJK统一汉字，可以通过以下正则判断字符是否包含汉字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> isCJK = <span class="regexp">/[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+/g</span></div><div class="line"><span class="string">'somestring'</span>.test(isCJK) <span class="comment">// false</span></div><div class="line"><span class="string">'somestring啊'</span>.test(isCJK) <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<p>产生随机的汉字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* produce random chinese words */</span></div><div class="line"><span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="built_in">Math</span>.random() * <span class="number">10</span> + <span class="number">1</span> &#125;).map(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">String</span>.fromCharCode(<span class="number">0x597D</span> - <span class="built_in">Math</span>.random() * <span class="number">100</span>))</div></pre></td></tr></table></figure>
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
+      
+	  </div>
+    
+	</section>
+	
+</article>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/Blogs/images/avatar.jpg' />
+
+<div class='header'>俊采新驰</div>
+<div class='content'>
+<div></div>
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">Tags</div>
+    <div class='content'>
+        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/juncaixinchi" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/Blogs/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/Blogs/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/Blogs/js/search.js"></script>
+<script src="/Blogs/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
