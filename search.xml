@@ -4,6 +4,20 @@
   
     
     <entry>
+      <title><![CDATA[CharCode in JS]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/01/28/CharCode-in-JS/</url>
+      <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'好'</span>.charCodeAt(<span class="number">0</span>).toString(<span class="number">16</span>) <span class="comment">// '597d'</span></div><div class="line"><span class="built_in">String</span>.fromCharCode(<span class="number">0x597d</span>) <span class="comment">// 好</span></div><div class="line"></div><div class="line"><span class="comment">/* produce random chinese words */</span></div><div class="line"><span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="built_in">Math</span>.random() * <span class="number">10</span> &#125;).map(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">String</span>.fromCharCode(<span class="number">0x597D</span> - <span class="built_in">Math</span>.random() * <span class="number">100</span>))</div></pre></td></tr></table></figure>]]></content>
+      
+        
+        <tags>
+            
+            <tag> JS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[EventListener in JavaScript]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/01/07/EventListener-in-JavaScript/</url>
       <content type="html"></content>
