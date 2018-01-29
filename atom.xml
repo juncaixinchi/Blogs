@@ -266,12 +266,18 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/07/25/file-hash-in-node/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/07/25/file-hash-in-node/</id>
     <published>2017-07-25T10:44:44.000Z</published>
-    <updated>2017-07-25T10:44:44.848Z</updated>
+    <updated>2018-01-29T15:00:38.050Z</updated>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;利用node中的加密模块crypto计算文件的hash值&quot;&gt;&lt;a href=&quot;#利用node中的加密模块crypto计算文件的hash值&quot; class=&quot;headerlink&quot; title=&quot;利用node中的加密模块crypto计算文件的hash值&quot;&gt;&lt;/a&gt;利用
+    
     </summary>
     
+    
+      <category term="sha256" scheme="https://juncaixinchi.github.io/Blogs/tags/sha256/"/>
+    
+      <category term="node" scheme="https://juncaixinchi.github.io/Blogs/tags/node/"/>
     
   </entry>
   
