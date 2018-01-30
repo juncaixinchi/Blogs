@@ -196,12 +196,16 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/08/22/Re-ZERO-Publish-a-JS-Package/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/08/22/Re-ZERO-Publish-a-JS-Package/</id>
     <published>2017-08-22T11:26:51.000Z</published>
-    <updated>2017-08-22T11:26:51.472Z</updated>
+    <updated>2018-01-30T14:37:51.442Z</updated>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;My-First-Javascript-Package-in-Npm&quot;&gt;&lt;a href=&quot;#My-First-Javascript-Package-in-Npm&quot; class=&quot;headerlink&quot; title=&quot;My First Javascript Package in Npm&quot;&gt;&lt;/a&gt;My First Javascript Package in Npm&lt;/h1&gt;&lt;p&gt;写了个基于node的操作&lt;code&gt;NTFS Alternate Data Stream&lt;/code&gt;的库，发布在了npm，特此记录一下流程&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="npm" scheme="https://juncaixinchi.github.io/Blogs/tags/npm/"/>
     
   </entry>
   
