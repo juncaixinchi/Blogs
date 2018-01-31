@@ -12,16 +12,28 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知疲倦的翻越，每一个山丘！">
+  <meta name="description" content="扩展文件属性（extended attributes）Extended AttributesExtended Attributes即扩展文件属性， 是文件系统的一个功能。它允许用户将计算机文件与未被文件系统所解释的元数据关联起来。其典型应用包括存储文档作者、普通文本文件的字符编码或者校验码。
+
+Linux or macOS
+
+在Linux操作系统中，如果libattr功能在内核设置中被打开，ext">
 <meta property="og:type" content="article">
 <meta property="og:title" content="xattr and ads">
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/08/05/xattr-and-ads/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="不知疲倦的翻越，每一个山丘！">
-<meta property="og:updated_time" content="2017-08-05T11:25:04.400Z">
+<meta property="og:description" content="扩展文件属性（extended attributes）Extended AttributesExtended Attributes即扩展文件属性， 是文件系统的一个功能。它允许用户将计算机文件与未被文件系统所解释的元数据关联起来。其典型应用包括存储文档作者、普通文本文件的字符编码或者校验码。
+
+Linux or macOS
+
+在Linux操作系统中，如果libattr功能在内核设置中被打开，ext">
+<meta property="og:updated_time" content="2018-01-31T13:05:37.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xattr and ads">
-<meta name="twitter:description" content="不知疲倦的翻越，每一个山丘！">
+<meta name="twitter:description" content="扩展文件属性（extended attributes）Extended AttributesExtended Attributes即扩展文件属性， 是文件系统的一个功能。它允许用户将计算机文件与未被文件系统所解释的元数据关联起来。其典型应用包括存储文档作者、普通文本文件的字符编码或者校验码。
+
+Linux or macOS
+
+在Linux操作系统中，如果libattr功能在内核设置中被打开，ext">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -125,13 +137,35 @@
 	
 	</section>
 	
-		<section class="tog"></section>
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#扩展文件属性（extended-attributes）"><span class="toc-number">1.</span> <span class="toc-text">扩展文件属性（extended attributes）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Extended-Attributes"><span class="toc-number">1.0.1.</span> <span class="toc-text">Extended Attributes</span></a></li></ol></li></ol></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	
+    	<h1 id="扩展文件属性（extended-attributes）"><a href="#扩展文件属性（extended-attributes）" class="headerlink" title="扩展文件属性（extended attributes）"></a>扩展文件属性（extended attributes）</h1><h3 id="Extended-Attributes"><a href="#Extended-Attributes" class="headerlink" title="Extended Attributes"></a>Extended Attributes</h3><p><code>Extended Attributes</code>即扩展文件属性， 是文件系统的一个功能。它允许用户将计算机文件与未被文件系统所解释的元数据关联起来。其典型应用包括存储文档作者、普通文本文件的字符编码或者校验码。</p>
+<ul>
+<li>Linux or macOS</li>
+</ul>
+<p>在Linux操作系统中，如果libattr功能在内核设置中被打开，ext2、ext3、ext4、JFS、ReiserFS以及XFS文件系统都支持扩展属性（英文简写为xattr）</p>
+<p>Mac OS X 10.4 及以上版本在 HFS+ 文件系统上也支持xattr</p>
+<p>JS中可以使用<a href="https://www.npmjs.com/package/fs-xattr" target="_blank" rel="external">fs-xattr</a> 读取和写入xattr</p>
+<p>修改xattr不会修改文件的mtime，故可以将需要存储的数据及time stamp一起存入xattr，读取时通过比较mtime，可以检验数据的时效性。</p>
+<ul>
+<li>Windows</li>
+</ul>
+<p>windows不支持xattr，但是可以使用NTFS的<code>Alternate Data Streams</code>来代替，对应的JS库是 <a href="https://www.npmjs.com/package/fs-ads" target="_blank" rel="external">fs-ads</a></p>
+<p>但是需要注意的是，修改ads会改变文件的mtime，所以在保证数据的时效性方面比较麻烦。</p>
+<p>采用 <code>atime + size</code>的方法大部分情况可以保证准确性，但并不完备。</p>
+
   	</div>
 	  
+	  <div class="article-tags tags">
+      
+        <a href="/Blogs/tags/xattr/">xattr</a>
+      
+        <a href="/Blogs/tags/ads/">ads</a>
+      
+	  </div>
+    
 	</section>
 	
 </article>
@@ -153,7 +187,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a>
+        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
     </div>
 </div>
 
