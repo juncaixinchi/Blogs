@@ -12,16 +12,16 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知疲倦的翻越，每一个山丘！">
+  <meta name="description" content="JavaScript 中的拷贝操作学习整理了js中数据拷贝相关的知识，做个笔记记录一下。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="copy in JS">
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2017/09/17/copy-in-JS/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="不知疲倦的翻越，每一个山丘！">
-<meta property="og:updated_time" content="2017-09-17T13:58:26.012Z">
+<meta property="og:description" content="JavaScript 中的拷贝操作学习整理了js中数据拷贝相关的知识，做个笔记记录一下。">
+<meta property="og:updated_time" content="2018-02-01T14:15:15.572Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="copy in JS">
-<meta name="twitter:description" content="不知疲倦的翻越，每一个山丘！">
+<meta name="twitter:description" content="JavaScript 中的拷贝操作学习整理了js中数据拷贝相关的知识，做个笔记记录一下。">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -125,13 +125,35 @@
 	
 	</section>
 	
-		<section class="tog"></section>
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript-中的拷贝操作"><span class="toc-number">1.</span> <span class="toc-text">JavaScript 中的拷贝操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#js的数据类型"><span class="toc-number">1.0.1.</span> <span class="toc-text">js的数据类型</span></a></li></ol></li></ol></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	
+    	<h1 id="JavaScript-中的拷贝操作"><a href="#JavaScript-中的拷贝操作" class="headerlink" title="JavaScript 中的拷贝操作"></a>JavaScript 中的拷贝操作</h1><p>学习整理了js中数据拷贝相关的知识，做个笔记记录一下。</p>
+<a id="more"></a>
+<h3 id="js的数据类型"><a href="#js的数据类型" class="headerlink" title="js的数据类型"></a>js的数据类型</h3><p>Js中共有六种原型数据类型:</p>
+<ul>
+<li>Boolean.  布尔值，true 和 false.</li>
+<li>null. 一个表明 null 值的特殊关键字。 JavaScript 是大小写敏感的，因此 null 与 Null、NULL或其他变量完全不同。</li>
+<li>undefined.  变量未定义时的属性。</li>
+<li>Number.  表示数字，例如： 42 或者 3.14159。</li>
+<li>String.  表示字符串，例如：”Howdy”</li>
+<li>Symbol ( 在 ECMAScript 6 中新添加的类型).。一种数据类型，它的实例是唯一且不可改变的。</li>
+</ul>
+<p>以及 Object 对象，其他引用类型（Array、Date、RegExp、Function、基本包装类型（Boolean、String、Number）、Math等）都是Object类型的实例对象</p>
+<p>对于copy操作，基本逻辑是：</p>
+<p><strong>原始数据 =&gt; 复制这个变量；引用数据 =&gt; 拷贝引用</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// primitives</span></div><div class="line">str1 = <span class="number">1</span></div><div class="line">str2 = str1</div><div class="line">str2 = <span class="number">2</span></div><div class="line">str1 <span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="comment">// array</span></div><div class="line">arr1 = [<span class="number">1</span>, <span class="number">2</span>]</div><div class="line">arr2 = arr1</div><div class="line">arr2.push(<span class="number">3</span>)</div><div class="line">arr1 <span class="comment">// [1, 2, 3]</span></div><div class="line"></div><div class="line"><span class="comment">// map or filter will not change the raw array</span></div><div class="line">arr3 = arr2.map(<span class="function"><span class="params">v</span> =&gt;</span> v * v)</div><div class="line">arr3 <span class="comment">// [1, 4, 9]</span></div><div class="line">arr2 <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
   	</div>
 	  
+	  <div class="article-tags tags">
+      
+        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
+      
+        <a href="/Blogs/tags/Copy/">Copy</a>
+      
+	  </div>
+    
 	</section>
 	
 </article>
@@ -153,7 +175,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
+        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
     </div>
 </div>
 

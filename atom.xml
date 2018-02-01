@@ -182,12 +182,18 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/09/17/copy-in-JS/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/09/17/copy-in-JS/</id>
     <published>2017-09-17T13:58:25.000Z</published>
-    <updated>2017-09-17T13:58:26.012Z</updated>
+    <updated>2018-02-01T14:15:15.572Z</updated>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;JavaScript-中的拷贝操作&quot;&gt;&lt;a href=&quot;#JavaScript-中的拷贝操作&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 中的拷贝操作&quot;&gt;&lt;/a&gt;JavaScript 中的拷贝操作&lt;/h1&gt;&lt;p&gt;学习整理了js中数据拷贝相关的知识，做个笔记记录一下。&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
+    
+      <category term="Copy" scheme="https://juncaixinchi.github.io/Blogs/tags/Copy/"/>
     
   </entry>
   
@@ -248,9 +254,12 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/07/31/upload-files-or-folds-recrusively/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/07/31/upload-files-or-folds-recrusively/</id>
     <published>2017-07-31T12:24:12.000Z</published>
-    <updated>2017-07-31T12:24:12.751Z</updated>
+    <updated>2018-02-01T13:51:22.893Z</updated>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;利用Async-await读取并上传本地文件夹&quot;&gt;&lt;a href=&quot;#利用Async-await读取并上传本地文件夹&quot; class=&quot;headerlink&quot; title=&quot;利用Async-await读取并上传本地文件夹&quot;&gt;&lt;/a&gt;利用Async-await读取并上传本地文件夹&lt;/h1&gt;&lt;p&gt;利用Async-await写了读取本地文件并上传至服务器的程序。&lt;/p&gt;
+&lt;p&gt;Async-await写起来有种一气呵成的感觉，然而实际业务中要考虑到更为复杂的状态管理却用不了，故记录在这里。&lt;/p&gt;
     
     </summary>
     
@@ -276,11 +285,11 @@
     <link href="https://juncaixinchi.github.io/Blogs/2017/07/25/file-hash-in-node/"/>
     <id>https://juncaixinchi.github.io/Blogs/2017/07/25/file-hash-in-node/</id>
     <published>2017-07-25T10:44:44.000Z</published>
-    <updated>2018-01-29T15:00:38.050Z</updated>
+    <updated>2018-02-01T13:52:13.501Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;利用node中的加密模块crypto计算文件的hash值&quot;&gt;&lt;a href=&quot;#利用node中的加密模块crypto计算文件的hash值&quot; class=&quot;headerlink&quot; title=&quot;利用node中的加密模块crypto计算文件的hash值&quot;&gt;&lt;/a&gt;利用
+      &lt;h1 id=&quot;利用node中的加密模块crypto计算文件的hash值&quot;&gt;&lt;a href=&quot;#利用node中的加密模块crypto计算文件的hash值&quot; class=&quot;headerlink&quot; title=&quot;利用node中的加密模块crypto计算文件的hash值&quot;&gt;&lt;/a&gt;利用node中的加密模块crypto计算文件的hash值&lt;/h1&gt;&lt;p&gt;用&lt;code&gt;readStream&lt;/code&gt;的方式读取文件并同时使用&lt;code&gt;crypto.createHash&lt;/code&gt;计算hash值。&lt;/p&gt;
     
     </summary>
     
