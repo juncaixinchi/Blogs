@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-02-05T12:56:29.655Z</updated>
+  <updated>2018-02-11T14:22:34.546Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Custom scrollBar</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/02/11/Custom-scrollBar/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/02/11/Custom-scrollBar/</id>
+    <published>2018-02-11T14:22:34.000Z</published>
+    <updated>2018-02-11T14:22:34.546Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Introduction to PouchDB</title>
@@ -329,26 +343,6 @@
     
     
       <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>filter in CSS</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/07/10/filter-in-CSS/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/07/10/filter-in-CSS/</id>
-    <published>2017-07-10T12:21:23.000Z</published>
-    <updated>2017-07-16T12:56:08.107Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;CSS3-中-Filter的应用&quot;&gt;&lt;a href=&quot;#CSS3-中-Filter的应用&quot; class=&quot;headerlink&quot; title=&quot;CSS3 中 Filter的应用&quot;&gt;&lt;/a&gt;CSS3 中 Filter的应用&lt;/h3&gt;&lt;p&gt;Filter是CSS3中对图片添加特效的方法，可以认为是一种滤镜&lt;/p&gt;
-&lt;p&gt;基本语法是：&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;filter: &amp;lt;filter-function&amp;gt; [&amp;lt;filter-function&amp;gt;]* | none&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/* examples */&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;.mydiv &amp;#123; filter: grayscale(50%) &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;img &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  filter: grayscale(0.5) blur(10px);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="CSS" scheme="https://juncaixinchi.github.io/Blogs/tags/CSS/"/>
     
   </entry>
   
