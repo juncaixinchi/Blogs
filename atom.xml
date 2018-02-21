@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-02-11T14:22:34.546Z</updated>
+  <updated>2018-02-21T12:56:51.394Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2048-AI</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/02/21/2048-AI/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/02/21/2048-AI/</id>
+    <published>2018-02-21T12:56:51.000Z</published>
+    <updated>2018-02-21T12:56:51.394Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Custom scrollBar</title>
@@ -325,24 +339,6 @@
       <category term="sha256" scheme="https://juncaixinchi.github.io/Blogs/tags/sha256/"/>
     
       <category term="node" scheme="https://juncaixinchi.github.io/Blogs/tags/node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>handle error in js</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/07/12/handle-error-in-js/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/07/12/handle-error-in-js/</id>
-    <published>2017-07-12T12:11:49.000Z</published>
-    <updated>2017-07-16T12:42:43.802Z</updated>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   
