@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-02-21T12:56:51.394Z</updated>
+  <updated>2018-02-23T11:10:50.201Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Floating Point in JS</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/02/23/Floating-Point-in-JS/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/02/23/Floating-Point-in-JS/</id>
+    <published>2018-02-23T11:04:41.000Z</published>
+    <updated>2018-02-23T11:10:50.201Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;0-1-0-2-0-3&quot;&gt;&lt;a href=&quot;#0-1-0-2-0-3&quot; class=&quot;headerlink&quot; title=&quot;0.1 + 0.2 !== 0.3 ?&quot;&gt;&lt;/a&gt;0.1 + 0.2 !== 0.3 ?&lt;/h1&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; !== &lt;span class=&quot;number&quot;&gt;0.3&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; - &lt;span class=&quot;number&quot;&gt;0.3&lt;/span&gt; = &lt;span class=&quot;number&quot;&gt;5.551115123125783e-17&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>2048-AI</title>
@@ -319,26 +337,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>file hash in node</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/07/25/file-hash-in-node/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/07/25/file-hash-in-node/</id>
-    <published>2017-07-25T10:44:44.000Z</published>
-    <updated>2018-02-01T13:52:13.501Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;利用node中的加密模块crypto计算文件的hash值&quot;&gt;&lt;a href=&quot;#利用node中的加密模块crypto计算文件的hash值&quot; class=&quot;headerlink&quot; title=&quot;利用node中的加密模块crypto计算文件的hash值&quot;&gt;&lt;/a&gt;利用node中的加密模块crypto计算文件的hash值&lt;/h1&gt;&lt;p&gt;用&lt;code&gt;readStream&lt;/code&gt;的方式读取文件并同时使用&lt;code&gt;crypto.createHash&lt;/code&gt;计算hash值。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="sha256" scheme="https://juncaixinchi.github.io/Blogs/tags/sha256/"/>
-    
-      <category term="node" scheme="https://juncaixinchi.github.io/Blogs/tags/node/"/>
     
   </entry>
   
