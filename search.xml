@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[Random Number Generator]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/03/01/Random-Number-Generator/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Floating Point in JS]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/02/23/Floating-Point-in-JS/</url>
       <content type="html"><![CDATA[<h1 id="0-1-0-2-0-3"><a href="#0-1-0-2-0-3" class="headerlink" title="0.1 + 0.2 !== 0.3 ?"></a>0.1 + 0.2 !== 0.3 ?</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">0.1</span> + <span class="number">0.2</span> !== <span class="number">0.3</span> <span class="comment">// true</span></div><div class="line"><span class="number">0.1</span> + <span class="number">0.2</span> - <span class="number">0.3</span> = <span class="number">5.551115123125783e-17</span></div></pre></td></tr></table></figure>
