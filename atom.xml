@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-03-01T12:49:52.970Z</updated>
+  <updated>2018-03-03T11:53:34.894Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript Standard Style</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/03/03/JavaScript-Standard-Style/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/03/03/JavaScript-Standard-Style/</id>
+    <published>2018-03-03T11:53:34.000Z</published>
+    <updated>2018-03-03T11:53:34.894Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Random Number Generator</title>
@@ -320,23 +334,6 @@
       <category term="xattr" scheme="https://juncaixinchi.github.io/Blogs/tags/xattr/"/>
     
       <category term="ads" scheme="https://juncaixinchi.github.io/Blogs/tags/ads/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>upload files or folds recrusively</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/07/31/upload-files-or-folds-recrusively/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/07/31/upload-files-or-folds-recrusively/</id>
-    <published>2017-07-31T12:24:12.000Z</published>
-    <updated>2018-02-01T13:51:22.894Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;利用Async-await读取并上传本地文件夹&quot;&gt;&lt;a href=&quot;#利用Async-await读取并上传本地文件夹&quot; class=&quot;headerlink&quot; title=&quot;利用Async-await读取并上传本地文件夹&quot;&gt;&lt;/a&gt;利用Async-await读取并上传本地文件夹&lt;/h1&gt;&lt;p&gt;利用Async-await写了读取本地文件并上传至服务器的程序。&lt;/p&gt;
-&lt;p&gt;Async-await写起来有种一气呵成的感觉，然而实际业务中要考虑到更为复杂的状态管理却用不了，故记录在这里。&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
