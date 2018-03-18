@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-03-12T14:18:59.425Z</updated>
+  <updated>2018-03-18T14:42:41.533Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Import vs Require</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/03/18/Import-vs-Require/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/03/18/Import-vs-Require/</id>
+    <published>2018-03-18T14:42:41.000Z</published>
+    <updated>2018-03-18T14:42:41.533Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Facade Adapter and Mediator</title>
@@ -314,20 +328,6 @@
     
     
       <category term="npm" scheme="https://juncaixinchi.github.io/Blogs/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>setTimeout, setImmediate and process.nextTick</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/08/20/setTimeout-setImmediate-and-process-nextTick/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/08/20/setTimeout-setImmediate-and-process-nextTick/</id>
-    <published>2017-08-20T12:59:18.000Z</published>
-    <updated>2017-08-20T12:59:18.793Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
