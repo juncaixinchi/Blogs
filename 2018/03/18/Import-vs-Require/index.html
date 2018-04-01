@@ -12,16 +12,16 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知疲倦的翻越，每一个山丘！">
+  <meta name="description" content="node编程中最重要的思想之一就是模块，而正是这个思想，让JavaScript的大规模工程成为可能。但是由于JS发展历史的原因，发展出了不同的模块化规范，require与import就是这种环境下的产物。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Import vs Require">
 <meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2018/03/18/Import-vs-Require/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="不知疲倦的翻越，每一个山丘！">
-<meta property="og:updated_time" content="2018-03-18T14:42:41.533Z">
+<meta property="og:description" content="node编程中最重要的思想之一就是模块，而正是这个思想，让JavaScript的大规模工程成为可能。但是由于JS发展历史的原因，发展出了不同的模块化规范，require与import就是这种环境下的产物。">
+<meta property="og:updated_time" content="2018-04-01T14:17:34.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Import vs Require">
-<meta name="twitter:description" content="不知疲倦的翻越，每一个山丘！">
+<meta name="twitter:description" content="node编程中最重要的思想之一就是模块，而正是这个思想，让JavaScript的大规模工程成为可能。但是由于JS发展历史的原因，发展出了不同的模块化规范，require与import就是这种环境下的产物。">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -129,9 +129,38 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	
+    	<p>node编程中最重要的思想之一就是模块，而正是这个思想，让JavaScript的大规模工程成为可能。<br>但是由于JS发展历史的原因，发展出了不同的模块化规范，<code>require</code>与<code>import</code>就是这种环境下的产物。</p>
+<a id="more"></a>
+<ul>
+<li>不同的模块化规范</li>
+</ul>
+<p><code>require/exports</code>出自CommonJS，这是JavaScript 社区中的开发者自己草拟的规则，但得到了大家的承认或者广泛的应用。</p>
+<p><code>import/export</code>TC39 制定的新的 ECMAScript 版本，即 ES6（ES2015）中包含进来。</p>
+<ul>
+<li>形式差异</li>
+</ul>
+<p>require/exports 的用法相对简单但可以条件调用而更灵活：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</div><div class="line"><span class="keyword">const</span> mod = process.env.NODE_ENV = <span class="string">'dev'</span> ? <span class="built_in">require</span>(<span class="string">'./dev'</span>) : <span class="built_in">require</span>(<span class="string">'./prod'</span>)</div><div class="line">exports.fs = fs</div><div class="line"><span class="built_in">module</span>.exports = &#123; a, b &#125;</div></pre></td></tr></table></figure>
+<p>而 import/export 的写法就多种多样，但一般要写在模块最前面：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> fs <span class="keyword">from</span> <span class="string">'fs'</span></div><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> fs <span class="keyword">from</span> <span class="string">'fs'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> fs</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> fs</div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">readFile</span></span></div><div class="line"><span class="title">export</span> &#123; readFile, read &#125;</div><div class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">'fs'</span></div></pre></td></tr></table></figure>
+<ul>
+<li>本质差异</li>
+</ul>
+<p>require/exports 模块输出的是一个值的拷贝，import/export 模块输出的是值的引用。<br>require/exports 模块是运行时加载，import/export 模块是编译时输出接口。</p>
+<p>这部分可以看阮一峰老师的详解 <a href="http://es6.ruanyifeng.com/#docs/module-loader#ES6-%E6%A8%A1%E5%9D%97%E4%B8%8E-CommonJS-%E6%A8%A1%E5%9D%97%E7%9A%84%E5%B7%AE%E5%BC%82" target="_blank" rel="external">module</a></p>
+<ul>
+<li>现实状况</li>
+</ul>
+<p>截止2018年3月，并没有任何JS的runtime完全实现了import/export，node也只是部分实现，<br>所以现有的import/export都是通过babel转码成require/exports，希望相应的支持能更快到来吧。</p>
+
   	</div>
 	  
+	  <div class="article-tags tags">
+      
+        <a href="/Blogs/tags/Node-js/">-- Node.js</a>
+      
+	  </div>
+    
 	</section>
 	
 </article>
@@ -153,7 +182,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
+        <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">-- Node.js</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 14px; color: #808080">--JavaScript</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 14px; color: #808080">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
     </div>
 </div>
 
