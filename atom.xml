@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-04-28T14:52:19.637Z</updated>
+  <updated>2018-05-27T14:23:56.231Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Code Complete Note 001</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/05/27/Code-Complete-Note-001/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/05/27/Code-Complete-Note-001/</id>
+    <published>2018-05-27T14:13:54.000Z</published>
+    <updated>2018-05-27T14:23:56.231Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;代码大全读书笔记001-变量名的力量&quot;&gt;&lt;a href=&quot;#代码大全读书笔记001-变量名的力量&quot; class=&quot;headerlink&quot; title=&quot;代码大全读书笔记001-变量名的力量&quot;&gt;&lt;/a&gt;代码大全读书笔记001-变量名的力量&lt;/h1&gt;&lt;p&gt;好的变量名是可读的、易于记忆和恰如其分的&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="-- Code Complete" scheme="https://juncaixinchi.github.io/Blogs/tags/Code-Complete/"/>
+    
+  </entry>
   
   <entry>
     <title>Web Spider</title>
@@ -309,20 +327,6 @@
 &lt;li&gt;&lt;p&gt;跨平台能力强，一套代码可以几乎无成本生成windows、mac、linux三个平台应用。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Reactor model in JS</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/11/05/Reactor-model-in-JS/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/11/05/Reactor-model-in-JS/</id>
-    <published>2017-11-05T09:54:26.000Z</published>
-    <updated>2017-11-05T09:54:26.512Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
