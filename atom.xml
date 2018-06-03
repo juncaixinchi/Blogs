@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-05-27T14:23:56.231Z</updated>
+  <updated>2018-06-03T15:29:29.937Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -16,11 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Code Complete Note 002</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/06/03/Code-Complete-Note-002/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/06/03/Code-Complete-Note-002/</id>
+    <published>2018-06-03T15:18:40.000Z</published>
+    <updated>2018-06-03T15:29:29.937Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;代码大全读书笔记002-防御性编程&quot;&gt;&lt;a href=&quot;#代码大全读书笔记002-防御性编程&quot; class=&quot;headerlink&quot; title=&quot;代码大全读书笔记002-防御性编程&quot;&gt;&lt;/a&gt;代码大全读书笔记002-防御性编程&lt;/h1&gt;&lt;p&gt;保护程序免遭非法输入数据的破坏&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Code Complete" scheme="https://juncaixinchi.github.io/Blogs/tags/Code-Complete/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Code Complete Note 001</title>
     <link href="https://juncaixinchi.github.io/Blogs/2018/05/27/Code-Complete-Note-001/"/>
     <id>https://juncaixinchi.github.io/Blogs/2018/05/27/Code-Complete-Note-001/</id>
     <published>2018-05-27T14:13:54.000Z</published>
-    <updated>2018-05-27T14:23:56.231Z</updated>
+    <updated>2018-05-27T14:26:55.437Z</updated>
     
     <summary type="html">
     
@@ -29,7 +47,7 @@
     </summary>
     
     
-      <category term="-- Code Complete" scheme="https://juncaixinchi.github.io/Blogs/tags/Code-Complete/"/>
+      <category term="Code Complete" scheme="https://juncaixinchi.github.io/Blogs/tags/Code-Complete/"/>
     
   </entry>
   
@@ -66,7 +84,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2018/03/25/Debounce-and-Throttle/"/>
     <id>https://juncaixinchi.github.io/Blogs/2018/03/25/Debounce-and-Throttle/</id>
     <published>2018-03-25T14:02:50.000Z</published>
-    <updated>2018-04-01T13:52:16.086Z</updated>
+    <updated>2018-05-27T14:27:08.181Z</updated>
     
     <summary type="html">
     
@@ -79,7 +97,7 @@
     </summary>
     
     
-      <category term="--JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   
@@ -88,7 +106,7 @@
     <link href="https://juncaixinchi.github.io/Blogs/2018/03/18/Import-vs-Require/"/>
     <id>https://juncaixinchi.github.io/Blogs/2018/03/18/Import-vs-Require/</id>
     <published>2018-03-18T14:42:41.000Z</published>
-    <updated>2018-04-01T14:17:34.728Z</updated>
+    <updated>2018-05-27T14:27:12.604Z</updated>
     
     <summary type="html">
     
@@ -97,7 +115,7 @@
     </summary>
     
     
-      <category term="-- Node.js" scheme="https://juncaixinchi.github.io/Blogs/tags/Node-js/"/>
+      <category term="Node.js" scheme="https://juncaixinchi.github.io/Blogs/tags/Node-js/"/>
     
   </entry>
   
@@ -305,28 +323,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;A-CircularProgress-Component&quot;&gt;&lt;a href=&quot;#A-CircularProgress-Component&quot; class=&quot;headerlink&quot; title=&quot;A CircularProgress Component&quot;&gt;&lt;/a&gt;A CircularProgress Component&lt;/h1&gt;&lt;p&gt;一个环进度条组件，主要是利用了两个半圆，旋转不同角度来展现不同的进度&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>electron 101</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/11/13/electron-101/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/11/13/electron-101/</id>
-    <published>2017-11-13T11:23:54.000Z</published>
-    <updated>2017-11-14T14:54:52.071Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;electron相关-tips&quot;&gt;&lt;a href=&quot;#electron相关-tips&quot; class=&quot;headerlink&quot; title=&quot;electron相关 tips&quot;&gt;&lt;/a&gt;electron相关 tips&lt;/h2&gt;&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;electron是用web技术编译原生桌面应用的框架，其基于&lt;code&gt;node.js&lt;/code&gt;与&lt;code&gt;Chromium&lt;/code&gt;。简单来讲就是让程序跑在&lt;code&gt;Chromium&lt;/code&gt;中，然后结合&lt;code&gt;node.js&lt;/code&gt;，通过&lt;code&gt;ipc&lt;/code&gt;通讯，使应用可以突破浏览器沙盒的限制，访问本地资源。electron最重要的特点主要以下两个：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;基于web技术，开放效率高。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;跨平台能力强，一套代码可以几乎无成本生成windows、mac、linux三个平台应用。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
     
     </summary>
     

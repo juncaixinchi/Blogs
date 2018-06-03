@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Archives: 2017/6 | 俊采新驰</title>
+  <title>Code Complete Note 002 | 俊采新驰</title>
   <meta name="description" content="不知疲倦的翻越，每一个山丘！" />
   <meta name="keywords" content="俊采新驰" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,15 +12,16 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知疲倦的翻越，每一个山丘！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="俊采新驰">
-<meta property="og:url" content="https://juncaixinchi.github.io/Blogs/archives/2017/06/index.html">
+  <meta name="description" content="代码大全读书笔记002-防御性编程保护程序免遭非法输入数据的破坏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code Complete Note 002">
+<meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2018/06/03/Code-Complete-Note-002/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="不知疲倦的翻越，每一个山丘！">
+<meta property="og:description" content="代码大全读书笔记002-防御性编程保护程序免遭非法输入数据的破坏">
+<meta property="og:updated_time" content="2018-06-03T15:29:29.937Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="俊采新驰">
-<meta name="twitter:description" content="不知疲倦的翻越，每一个山丘！">
+<meta name="twitter:title" content="Code Complete Note 002">
+<meta name="twitter:description" content="代码大全读书笔记002-防御性编程保护程序免遭非法输入数据的破坏">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -109,114 +110,55 @@
   <div class="l_body">
     <div class='container'>
       <div class='l_main'>
-        
+        <article id="post-Code-Complete-Note-002"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/Blogs/2018/06/03/Code-Complete-Note-002/">
+    	Code Complete Note 002
+    </a>
+  </h2>
+	<time>
+	  6月 3, 2018
+	</time>
 	
-	<section class="page-header archive banner waves-image">
-    <h1>Year : <span>2017.6</span></h1>
-  </section>
-
-<section class="post-list">
+	</section>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2017/06/24/缩放查看图片功能小记/">
-        缩放查看图片功能小记
-      </a>
-    </h2>
-    
-    <time>
-      6月 24, 2017
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h3 id="放大查看图片"><a href="#放大查看图片" class="headerlink" title="放大查看图片"></a>放大查看图片</h3><ul>
-<li>滚轮滚动时改变图片的<code>zoom</code></li>
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#代码大全读书笔记002-防御性编程"><span class="toc-number">1.</span> <span class="toc-text">代码大全读书笔记002-防御性编程</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h1 id="代码大全读书笔记002-防御性编程"><a href="#代码大全读书笔记002-防御性编程" class="headerlink" title="代码大全读书笔记002-防御性编程"></a>代码大全读书笔记002-防御性编程</h1><p>保护程序免遭非法输入数据的破坏</p>
+<a id="more"></a>
+<ul>
+<li><p>检查所有来源于外部的数据的值</p>
+</li>
+<li><p>检查子程序所有输入参数的值</p>
+</li>
+<li><p>决定如何处理错误的输入数据</p>
+</li>
+<li><p>选择错误处理方式时要注意健壮性和正确性的取舍</p>
+</li>
+<li><p>运用隔栏：使程序相隔离，能够包容由错误造成的损害</p>
+</li>
+<li><p>对防御式编程采取防御的姿态</p>
+</li>
+<li><p>如何处理错误输入的决策是一项关键的错误处理决策，是关键的高层设计决策</p>
+</li>
 </ul>
 
-    
-	  <div class="readmore">
-      <a href="/Blogs/2017/06/24/缩放查看图片功能小记/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2017/06/20/JS里的异步及Promise/">
-        JS里的异步及Promise
-      </a>
-    </h2>
-    
-    <time>
-      6月 20, 2017
-    </time>
-		
-  </section>
-  <section class="article typo">
+  	</div>
 	  
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2017/06/07/this-in-js/">
-        this in js
-      </a>
-    </h2>
-    
-    <time>
-      6月 7, 2017
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h2 id="浅谈js里的this"><a href="#浅谈js里的this" class="headerlink" title="浅谈js里的this"></a>浅谈js里的this</h2><p>this是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象</p>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2017/06/07/this-in-js/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+	  <div class="article-tags tags">
       
-        <a href="/Blogs/tags/js/">js</a>
+        <a href="/Blogs/tags/Code-Complete/">Code Complete</a>
       
 	  </div>
     
-  </section>
+	</section>
+	
 </article>
-    </div>
-  
-</section>
-
-
 
       </div>
       <aside class='l_side'>
