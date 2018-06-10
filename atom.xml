@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-06-03T15:29:29.937Z</updated>
+  <updated>2018-06-10T11:27:57.486Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Code Complete Note 003</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/06/10/Code-Complete-Note-003/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/06/10/Code-Complete-Note-003/</id>
+    <published>2018-06-10T11:15:37.000Z</published>
+    <updated>2018-06-10T11:27:57.486Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;代码大全读书笔记003-条件语句&quot;&gt;&lt;a href=&quot;#代码大全读书笔记003-条件语句&quot; class=&quot;headerlink&quot; title=&quot;代码大全读书笔记003-条件语句&quot;&gt;&lt;/a&gt;代码大全读书笔记003-条件语句&lt;/h1&gt;&lt;p&gt;条件语句是代码中非常基础的语法，以下是写成好的代码所需要遵循的指导原则&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Code Complete" scheme="https://juncaixinchi.github.io/Blogs/tags/Code-Complete/"/>
+    
+  </entry>
   
   <entry>
     <title>Code Complete Note 002</title>
@@ -307,22 +325,6 @@
     <updated>2017-11-22T14:41:29.108Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CircularProgress</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/11/18/CircularProgress/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/11/18/CircularProgress/</id>
-    <published>2017-11-18T14:36:05.000Z</published>
-    <updated>2018-01-28T11:36:25.742Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;A-CircularProgress-Component&quot;&gt;&lt;a href=&quot;#A-CircularProgress-Component&quot; class=&quot;headerlink&quot; title=&quot;A CircularProgress Component&quot;&gt;&lt;/a&gt;A CircularProgress Component&lt;/h1&gt;&lt;p&gt;一个环进度条组件，主要是利用了两个半圆，旋转不同角度来展现不同的进度&lt;/p&gt;
     
     </summary>
     

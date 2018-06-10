@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: state | 俊采新驰</title>
+  <title>Code Complete Note 003 | 俊采新驰</title>
   <meta name="description" content="不知疲倦的翻越，每一个山丘！" />
   <meta name="keywords" content="俊采新驰" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,15 +12,16 @@
   <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
   <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知疲倦的翻越，每一个山丘！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="俊采新驰">
-<meta property="og:url" content="https://juncaixinchi.github.io/Blogs/tags/state/index.html">
+  <meta name="description" content="代码大全读书笔记003-条件语句条件语句是代码中非常基础的语法，以下是写成好的代码所需要遵循的指导原则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code Complete Note 003">
+<meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2018/06/10/Code-Complete-Note-003/index.html">
 <meta property="og:site_name" content="俊采新驰">
-<meta property="og:description" content="不知疲倦的翻越，每一个山丘！">
+<meta property="og:description" content="代码大全读书笔记003-条件语句条件语句是代码中非常基础的语法，以下是写成好的代码所需要遵循的指导原则">
+<meta property="og:updated_time" content="2018-06-10T11:27:57.486Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="俊采新驰">
-<meta name="twitter:description" content="不知疲倦的翻越，每一个山丘！">
+<meta name="twitter:title" content="Code Complete Note 003">
+<meta name="twitter:description" content="代码大全读书笔记003-条件语句条件语句是代码中非常基础的语法，以下是写成好的代码所需要遵循的指导原则">
     
   <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
@@ -109,54 +110,51 @@
   <div class="l_body">
     <div class='container'>
       <div class='l_main'>
-        
-	<section class="page-header tag banner waves-image">
-    <h1>Tag : <span>state</span></h1>
-  </section>
-
-<section class="post-list">
+        <article id="post-Code-Complete-Note-003"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/Blogs/2018/06/10/Code-Complete-Note-003/">
+    	Code Complete Note 003
+    </a>
+  </h2>
+	<time>
+	  6月 10, 2018
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2017/03/10/Lifting-State-Up/">
-        Lifting-State-Up
-      </a>
-    </h2>
-    
-    <time>
-      3月 10, 2017
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>很多情况下，几个组件之间需要共享state。此时就可以利用提升共同state至附组件的方法来处理，参见：<a href="https://facebook.github.io/react/docs/lifting-state-up.html">Lifting State Up</a></p>
+	</section>
+	
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#代码大全读书笔记003-条件语句"><span class="toc-number">1.</span> <span class="toc-text">代码大全读书笔记003-条件语句</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h1 id="代码大全读书笔记003-条件语句"><a href="#代码大全读书笔记003-条件语句" class="headerlink" title="代码大全读书笔记003-条件语句"></a>代码大全读书笔记003-条件语句</h1><p>条件语句是代码中非常基础的语法，以下是写成好的代码所需要遵循的指导原则</p>
+<a id="more"></a>
+<ul>
+<li><p>先处理正常代码路径，再处理不常见的情况，通常正常情况放在if之后而不是else</p>
+</li>
+<li><p>确保对于等量的分支是正确的，避免off-by-one偏差</p>
+</li>
+<li><p>if语句后跟随一个有意义的语句</p>
+</li>
+<li><p>if子句与else子句的排序应该是清晰而易于理解的</p>
+</li>
+<li><p>if-else语句的最后一个else或case语句的default可以用来捕捉错误</p>
+</li>
+</ul>
 
-    
-	  <div class="readmore">
-      <a href="/Blogs/2017/03/10/Lifting-State-Up/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
-        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
-      
-        <a href="/Blogs/tags/React/">React</a>
-      
-        <a href="/Blogs/tags/state/">state</a>
+        <a href="/Blogs/tags/Code-Complete/">Code Complete</a>
       
 	  </div>
     
-  </section>
+	</section>
+	
 </article>
-    </div>
-  
-</section>
-
 
       </div>
       <aside class='l_side'>
