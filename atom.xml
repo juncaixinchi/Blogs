@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-06-10T11:27:57.486Z</updated>
+  <updated>2018-07-08T14:31:20.229Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shortest subarray with sum at least k</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/07/08/Shortest-subarray-with-sum-at-least-k/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/07/08/Shortest-subarray-with-sum-at-least-k/</id>
+    <published>2018-07-08T14:21:10.000Z</published>
+    <updated>2018-07-08T14:31:20.229Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在LeetCode刷算法题，记录一下一道比较难的题目&lt;a href=&quot;https://leetcode-cn.com/problems/shortest-subarray-with-sum-at-least-k/description/&quot; target=&quot;_blank&quot; r
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="https://juncaixinchi.github.io/Blogs/tags/Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>Code Complete Note 003</title>
@@ -314,20 +332,6 @@
     
     
       <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>String method in JavaScript</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/11/22/String-method-in-JavaScript/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/11/22/String-method-in-JavaScript/</id>
-    <published>2017-11-22T14:41:29.000Z</published>
-    <updated>2017-11-22T14:41:29.108Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
