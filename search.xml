@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[Hack Superagent]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/07/15/Hack-Superagent/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Shortest subarray with sum at least k]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/07/08/Shortest-subarray-with-sum-at-least-k/</url>
       <content type="html"><![CDATA[<p>在LeetCode刷算法题，记录一下一道比较难的题目<a href="https://leetcode-cn.com/problems/shortest-subarray-with-sum-at-least-k/description/" target="_blank" rel="external">和至少为 K 的最短子数组</a></p>

@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-07-08T14:31:20.229Z</updated>
+  <updated>2018-07-15T14:17:27.919Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hack Superagent</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/07/15/Hack-Superagent/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/07/15/Hack-Superagent/</id>
+    <published>2018-07-15T14:17:27.000Z</published>
+    <updated>2018-07-15T14:17:27.919Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Shortest subarray with sum at least k</title>
@@ -314,24 +328,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Array method in JavaScript</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/11/26/Array-method-in-JavaScript/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/11/26/Array-method-in-JavaScript/</id>
-    <published>2017-11-26T13:42:38.000Z</published>
-    <updated>2017-11-27T15:08:55.364Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Array-method-学习笔记&quot;&gt;&lt;a href=&quot;#Array-method-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Array method 学习笔记&quot;&gt;&lt;/a&gt;Array method 学习笔记&lt;/h1&gt;&lt;p&gt;系统地学习一下JS中Array的方法，并做个简单的笔记&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   
