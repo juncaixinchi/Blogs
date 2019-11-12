@@ -4,16 +4,135 @@
   
     
     <entry>
-      <title><![CDATA[Hack Superagent]]></title>
-      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/07/15/Hack-Superagent/</url>
-      <content type="html"></content>
+      <title><![CDATA[ffmpeg note]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/11/10/ffmpeg-note/</url>
+      <content type="html"><![CDATA[<h1 id="ffmpeg-note"><a href="#ffmpeg-note" class="headerlink" title="ffmpeg note"></a>ffmpeg note</h1><ul>
+<li><p>To Convert video to 720p</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.mp4 <span class="_">-s</span> 1280x720 -b:v 1024k -bufsize 1024k output.avi</div></pre></td></tr></table></figure>
+</li>
+<li><p>To set the video bitrate of the output file to 64 kbit/s:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.avi -b:v 64k -bufsize 64k output.avi</div></pre></td></tr></table></figure>
+</li>
+<li><p>To force the frame rate of the output file to 24 fps:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.avi -r 24 output.avi</div></pre></td></tr></table></figure>
+</li>
+<li><p>To remove audio</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -c:v copy copies the video stream.</span></div><div class="line"><span class="comment"># -an removes the audio stream.</span></div><div class="line">ffmpeg -i input.mp4 -c:v copy -an output.mp4</div></pre></td></tr></table></figure>
+</li>
+<li><p>To cut mp3</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.mp3 -ss 00:00:00 -t 00:00:01 -acodec copy output.mp3</div></pre></td></tr></table></figure>]]></content>
       
         
     </entry>
     
     <entry>
+      <title><![CDATA[前端性能优化方案]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/10/30/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</url>
+      <content type="html"><![CDATA[<h3 id="前端性能优化方案"><a href="#前端性能优化方案" class="headerlink" title="前端性能优化方案"></a>前端性能优化方案</h3><ul>
+<li><p>减少DOM的访问次数，可以将DOM缓存到变量中；</p>
+</li>
+<li><p>减少重绘和回流，任何会导致重绘和回流的操作都应减少执行，可将多次操作合并为一次；</p>
+</li>
+<li><p>尽量采用事件委托的方式进行事件绑定，避免大量绑定导致内存占用过多；</p>
+</li>
+<li><p>css层级尽量扁平化，避免过多的层级嵌套，尽量使用特定的选择器来区分；</p>
+</li>
+<li><p>动画尽量使用CSS3动画属性来实现，开启GPU硬件加速；</p>
+</li>
+<li><p>图片在加载前提前指定宽高或者脱离文档流，可避免加载后的重新计算导致的页面回流；</p>
+</li>
+<li><p>css文件在<head>标签中引入，js文件在</head><body>标签中引入，优化关键渲染路径；</body></p>
+</li>
+<li><p>加速或者减少HTTP请求，使用CDN加载静态资源，合理使用浏览器强缓存和协商缓存，小图片可以使用Base64来代替，合理使用浏览器的预取指令prefetch和预加载指令preload；</p>
+</li>
+<li><p>压缩混淆代码，删除无用代码，代码拆分来减少文件体积；</p>
+</li>
+<li><p>小图片使用雪碧图，图片选择合适的质量、尺寸和格式，避免流量浪费。使用<a href="https://www.picdiet.com/zh-cn" target="_blank" rel="external">picdiet</a>压缩图片，使用ffmpeg压缩视频</p>
+</li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CSS 居中]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/10/12/CSS-%E5%B1%85%E4%B8%AD/</url>
+      <content type="html"><![CDATA[<h3 id="css居中"><a href="#css居中" class="headerlink" title="css居中"></a>css居中</h3><p>记录多种CSS居中方式</p>
+<a id="more"></a>
+<ul>
+<li>文字居中, 设置 line-height = height</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">   <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">   <span class="attribute">line-height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>绝对定位: 需要提前知道尺寸，margin-top: -(高度的一半); margin-left: -(宽度的一半)</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child</span> &#123;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">margin-top</span>: -<span class="number">20px</span>;</div><div class="line">    <span class="attribute">margin-left</span>: -<span class="number">40px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>绝对定位 + transform: 根据百分比</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child</span> &#123;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>绝对定位 + margin: auto</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child</span> &#123;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">margin</span>: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>display: flex<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">    <span class="attribute">display</span>: flex;</div><div class="line">    <span class="attribute">align-items</span>: center;        <span class="comment">/* 垂直居中 */</span></div><div class="line">    <span class="attribute">justify-content</span>: center;    <span class="comment">/* 水平居中 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[birthday problem]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/09/04/birthday-problem/</url>
+      <content type="html"><![CDATA[<h1 id="birthday-problem"><a href="#birthday-problem" class="headerlink" title="birthday problem"></a>birthday problem</h1><p>生日问题是指在随机选择的一群人当中有两人的生日相同的概率。如果一个房间里有23个或23个以上的人，那么至少有两个人的生日相同的概率要大于50%；对于60或者更多的人，这种概率要大于99%。</p>
+<p>该问题的计算公式就是 <code>从365个元素中取出n个元素的排列</code> 除以 <code>365的n次方</code></p>
+<p>通用计算方式如下，即计算拥有<code>all</code>个数量属性取值的个体<code>count</code> 个时，出现属性值相同的概率，这里考虑到值会比较大，所以使用BigInt<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> calc = <span class="function">(<span class="params">count, all</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> c = count</div><div class="line">  <span class="keyword">let</span> result = <span class="number">1</span>n</div><div class="line">  <span class="keyword">while</span> (c &gt; <span class="number">0</span>n) &#123;</div><div class="line">    c -= <span class="number">1</span>n</div><div class="line">    result *= (all - c)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;<span class="built_in">Number</span>(<span class="number">1000</span>n - result * <span class="number">1000</span>n <span class="regexp">/ (all ** count)) /</span> <span class="number">10</span>&#125;</span>%`</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">calc(<span class="number">23</span>n, <span class="number">365</span>n) <span class="comment">// "50.8%"</span></div><div class="line">calc(<span class="number">60</span>n, <span class="number">365</span>n) <span class="comment">// "99.5%"</span></div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Custom systemd service in Linux]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/07/17/custom-systemd-service-in-Linux/</url>
+      <content type="html"><![CDATA[<h1 id="custom-systemd-service"><a href="#custom-systemd-service" class="headerlink" title="custom systemd service"></a>custom systemd service</h1><ul>
+<li>service file in <code>/lib/systemd/system</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[Unit]</div><div class="line">Description=ss local server</div><div class="line">After=network.target network-online.target systemd-networkd.service NetworkManager.service connman.service</div><div class="line"></div><div class="line">[Service]</div><div class="line">Type=simple</div><div class="line">RemainAfterExit=yes</div><div class="line">ExecStart=/usr/bin/ss-local</div><div class="line">ExecStop=/bin/kill -s QUIT $MAINPID</div><div class="line"></div><div class="line">[Install]</div><div class="line">WantedBy=multi-user.target</div></pre></td></tr></table></figure>
+<ul>
+<li>operations<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># make change take effect</span></div><div class="line">sudo systemctl daemon-reload</div><div class="line"></div><div class="line"><span class="comment"># start service</span></div><div class="line">sudo service ss-local start</div><div class="line"></div><div class="line"><span class="comment"># stop service</span></div><div class="line">sudo service ss-local stop</div><div class="line"></div><div class="line"><span class="comment"># view log</span></div><div class="line">journalctl -xe</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Shortest subarray with sum at least k]]></title>
-      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/07/08/Shortest-subarray-with-sum-at-least-k/</url>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/07/08/Shortest-subarray-with-sum-at-least-k/</url>
       <content type="html"><![CDATA[<p>在LeetCode刷算法题，记录一下一道比较难的题目<a href="https://leetcode-cn.com/problems/shortest-subarray-with-sum-at-least-k/description/" target="_blank" rel="external">和至少为 K 的最短子数组</a></p>
 <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>返回 A 的最短的非空连续子数组的长度，该子数组的和至少为 K 。</p>
 <p>如果没有和至少为 K 的非空子数组，返回 -1 。</p>
@@ -34,6 +153,201 @@
             <tag> Algorithm </tag>
             
         </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Some bash scripts]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/04/02/Some-bash-scripts/</url>
+      <content type="html"><![CDATA[<h1 id="setInterval-in-bash"><a href="#setInterval-in-bash" class="headerlink" title="setInterval in bash"></a>setInterval in bash</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> <span class="literal">true</span>; <span class="keyword">do</span> ls <span class="_">-l</span>; sleep 2; <span class="keyword">done</span></div></pre></td></tr></table></figure>
+<h1 id="count-files-fastly"><a href="#count-files-fastly" class="headerlink" title="count files fastly"></a>count files fastly</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -type f | wc -l</div></pre></td></tr></table></figure>
+<h1 id="find-files-that-large-than-1-GiB"><a href="#find-files-that-large-than-1-GiB" class="headerlink" title="find files that large than 1 GiB"></a>find files that large than 1 GiB</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -type f -size +1G</div></pre></td></tr></table></figure>
+<h1 id="test-if-file-exist"><a href="#test-if-file-exist" class="headerlink" title="test if file exist"></a>test if file exist</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">myFile=<span class="string">"/home/lxw/abc"</span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span></div><div class="line">touch <span class="string">"<span class="variable">$myFile</span>"</span></div><div class="line"><span class="keyword">else</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"skip"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<h1 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h1><p>find all <code>dart</code> process and kill them all<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># find</span></div><div class="line">ps -aux | grep dart</div><div class="line"><span class="comment"># find &amp;&amp; kill</span></div><div class="line">pgrep <span class="_">-f</span> dart | xargs <span class="built_in">kill</span></div></pre></td></tr></table></figure></p>
+<h1 id="Wifi"><a href="#Wifi" class="headerlink" title="Wifi"></a>Wifi</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># connect to wifi</span></div><div class="line">sudo nmcli d wifi connect iPhone password 11345678</div><div class="line"></div><div class="line"><span class="comment"># show saved connections</span></div><div class="line">ls -sail /etc/NetworkManager/system-connections/</div></pre></td></tr></table></figure>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Bash </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[show colored word in bash]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/02/12/show-colored-word-in-bash/</url>
+      <content type="html"><![CDATA[<h1 id="echo-color-in-bash-console"><a href="#echo-color-in-bash-console" class="headerlink" title="echo color in bash console"></a>echo color in bash console</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[01;32m 绿色字体 √ \033[0m"</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'\033[01;32m'</span>, <span class="string">'绿色字体 √'</span>)</div></pre></td></tr></table></figure>
+<h1 id="color-matrix"><a href="#color-matrix" class="headerlink" title="color matrix"></a>color matrix</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">64</span>; i++) &#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">32</span>; j &lt; <span class="number">48</span>; j++) &#123;</div><div class="line">    <span class="keyword">const</span> ii = i.toString().padStart(<span class="number">2</span>, <span class="string">'0'</span>)</div><div class="line">    <span class="keyword">const</span> jj = j.toString().padStart(<span class="number">2</span>, <span class="string">'0'</span>)</div><div class="line">    <span class="keyword">const</span> str = <span class="string">'\033'</span> + <span class="string">`[<span class="subst">$&#123;ii&#125;</span>;<span class="subst">$&#123;jj&#125;</span>m`</span> + <span class="string">`[<span class="subst">$&#123;ii&#125;</span>;<span class="subst">$&#123;jj&#125;</span>m`</span> + <span class="string">'\033[0m '</span></div><div class="line">    process.stdout.write(str)</div><div class="line">  &#125;</div><div class="line">  process.stdout.write(<span class="string">'\n'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Check Chinese Word]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/01/07/Check-Chinese-Word/</url>
+      <content type="html"><![CDATA[<p>使用<code>grep -r</code>读取当前文件夹下的所有文件内容，使用正则匹配筛选中文<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> child = <span class="built_in">require</span>(<span class="string">'child_process'</span>)</div><div class="line"><span class="keyword">const</span> all = child.execSync(<span class="string">`grep -r ''`</span>).toString().split(<span class="string">'\n'</span>).map(<span class="function"><span class="params">l</span> =&gt;</span> l.trim()).filter(<span class="function"><span class="params">l</span> =&gt;</span> l.length)</div><div class="line"><span class="keyword">const</span> chinese = all.filter(<span class="function"><span class="params">l</span> =&gt;</span> /[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+<span class="regexp">/.test(l))</span></div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Common Http Code]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/01/02/Common-Http-Code/</url>
+      <content type="html"><![CDATA[<h3 id="常见的HTTP-Code"><a href="#常见的HTTP-Code" class="headerlink" title="常见的HTTP Code"></a>常见的HTTP Code</h3><a id="more"></a>
+<ul>
+<li><p>2**开头 （请求成功）表示成功处理了请求的状态代码。</p>
+<ul>
+<li><p>200 （成功） 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。</p>
+</li>
+<li><p>206 （部分内容） 服务器成功处理了部分 GET 请求。</p>
+</li>
+</ul>
+</li>
+<li><p>3** 开头 （请求被重定向）表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。</p>
+<ul>
+<li><p>301 （永久移动） 请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。</p>
+</li>
+<li><p>302 （临时移动） 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。</p>
+</li>
+<li><p>304 （未修改） 自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。</p>
+</li>
+</ul>
+</li>
+<li><p>4**开头 （请求错误）这些状态代码表示请求可能出错，妨碍了服务器的处理。</p>
+<ul>
+<li><p>400 （错误请求） 服务器不理解请求的语法。</p>
+</li>
+<li><p>401 （未授权） 请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。</p>
+</li>
+<li><p>403 （禁止） 服务器拒绝请求。</p>
+</li>
+<li><p>404 （未找到） 服务器找不到请求的网页。</p>
+</li>
+<li><p>414 （请求的 URI 过长） 请求的 URI（通常为网址）过长，服务器无法处理。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>5**开头（服务器错误）这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。</p>
+<ul>
+<li><p>500 （服务器内部错误） 服务器遇到错误，无法完成请求。</p>
+</li>
+<li><p>501 （尚未实施） 服务器不具备完成请求的功能。 例如，服务器无法识别请求方法时可能会返回此代码。</p>
+</li>
+<li><p>502 （错误网关） 服务器作为网关或代理，从上游服务器收到无效响应。</p>
+</li>
+<li><p>503 （服务不可用） 服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。</p>
+</li>
+<li><p>504 （网关超时） 服务器作为网关或代理，但是没有及时从上游服务器收到请求。</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[call(), apply() and bind()]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/11/19/call-apply-and-bind/</url>
+      <content type="html"><![CDATA[<h3 id="call-apply-和bind"><a href="#call-apply-和bind" class="headerlink" title="call(), apply()和bind()"></a>call(), apply()和bind()</h3><p>js中的call(), apply()和bind()是Function.prototype下的方法，都是用于改变函数运行时上下文，最终的返回值是你调用的方法的返回值，若该方法没有返回值，则返回undefined。</p>
+<ul>
+<li>apply()</li>
+</ul>
+<p>使用 apply， 你可以继承其他对象的方法：注意这里apply()的第一个参数是null，在非严格模式下，第一个参数为null或者undefined时会自动替换为指向全局对象，apply()的第二个参数为<code>数组或类数组</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]</div><div class="line"><span class="keyword">const</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, arr)</div></pre></td></tr></table></figure>
+<ul>
+<li>call()</li>
+</ul>
+<p>call()是apply()的一颗语法糖，作用和apply()一样，同样可实现继承，唯一的区别就在于call()接收的是<code>参数列表</code>，而apply()则接收参数数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]</div><div class="line"><span class="keyword">const</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, ...arr)</div></pre></td></tr></table></figure>
+<ul>
+<li>bind()</li>
+</ul>
+<p>bind()的作用与call()和apply()一样，都是可以改变函数运行时上下文，区别是call()和apply()在调用函数之后会立即执行，而bind()方法调用并改变函数运行时上下文后， <code>返回一个新的函数，供我们需要时再调用</code>。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Browser Cache]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/10/12/Browser-Cache/</url>
+      <content type="html"><![CDATA[<h3 id="浏览器缓存"><a href="#浏览器缓存" class="headerlink" title="浏览器缓存"></a>浏览器缓存</h3><p>浏览器缓存分为强缓存和协商缓存</p>
+<a id="more"></a>
+<p>浏览器加载一个页面的简单流程如下：</p>
+<ol>
+<li><p>浏览器先根据这个资源的http头信息来判断是否命中强缓存。如果命中则直接加在缓存中的资源，并不会将请求发送到服务器。强缓存是利用http的返回头中的Expires或者Cache-Control两个字段来控制的，用来表示资源的缓存时间。</p>
+<p> <code>Cache-Control: no-store</code> 禁止缓存</p>
+<p> <code>Cache-Control: no-cache</code> 强制所有缓存了该响应的用户，但在使用已缓存的数据前，发送带验证器的请求到服务器验证后使用</p>
+</li>
+<li><p>如果未命中强缓存，则浏览器会将资源加载请求发送到服务器。服务器来判断浏览器本地缓存是否失效。若可以使用，则服务器并不会返回资源信息（返回304）浏览器继续从缓存加载资源。</p>
+<p> <code>Last-Modify（服务器返回）/If-Modify-Since（浏览器第二次请求）</code> 根据修改时间来判断</p>
+<p> <code>ETag（服务器返回）/If-None-Match（浏览器第二次请求</code> 根据文件hash值来判断</p>
+</li>
+<li><p>如果未命中协商缓存，则服务器会将完整的资源返回给浏览器，浏览器加载新资源，并更新缓存</p>
+</li>
+</ol>
+<p>流程图如下</p>
+<ul>
+<li>第一次请求</li>
+</ul>
+<p><img src="/Blogs/img/first_request.png" alt="第一次请求"></p>
+<ul>
+<li>第二次请求</li>
+</ul>
+<p><img src="/Blogs/img/second_request.png" alt="第二次请求"></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CSS Flex布局]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/09/21/CSS-Flex%E5%B8%83%E5%B1%80/</url>
+      <content type="html"><![CDATA[<h3 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h3><p>Flex是Flexible Box的缩写，即“弹性盒子”</p>
+<ul>
+<li><p>flex-direction，决定主轴的方向（即项目的排列方向）: row | row-reverse | column | column-reverse;</p>
+</li>
+<li><p>flex-wrap，定义换行情况: nowrap | wrap | wrap-reverse;</p>
+</li>
+<li><p>flex-flow：flex-direction和flex-wrap的简写，默认row nowrap</p>
+</li>
+<li><p>justify-content属性，定义项目在主轴上的对齐方式：flex-start | flex-end | center space-between | space-around</p>
+</li>
+<li><p>align-items属性，定义在交叉轴上的对齐方式：flex-start | flex-end | center | baseline | stretch;</p>
+</li>
+<li><p>子项目： flex-grow，定义项目的放大比例，默认值为0，即如果空间有剩余，也不放大</p>
+</li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hack Superagent]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2018/07/15/Hack-Superagent/</url>
+      <content type="html"></content>
+      
         
     </entry>
     

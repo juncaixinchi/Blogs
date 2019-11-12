@@ -121,18 +121,34 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2018/07/15/Hack-Superagent/">
-        Hack Superagent
+      <a href="/Blogs/2019/11/10/ffmpeg-note/">
+        ffmpeg note
       </a>
     </h2>
     
     <time>
-      7月 15, 2018
+      11月 10, 2019
     </time>
 		
   </section>
   <section class="article typo">
-	  
+	  <h1 id="ffmpeg-note"><a href="#ffmpeg-note" class="headerlink" title="ffmpeg note"></a>ffmpeg note</h1><ul>
+<li><p>To Convert video to 720p</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.mp4 <span class="_">-s</span> 1280x720 -b:v 1024k -bufsize 1024k output.avi</div></pre></td></tr></table></figure>
+</li>
+<li><p>To set the video bitrate of the output file to 64 kbit/s:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.avi -b:v 64k -bufsize 64k output.avi</div></pre></td></tr></table></figure>
+</li>
+<li><p>To force the frame rate of the output file to 24 fps:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.avi -r 24 output.avi</div></pre></td></tr></table></figure>
+</li>
+<li><p>To remove audio</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -c:v copy copies the video stream.</span></div><div class="line"><span class="comment"># -an removes the audio stream.</span></div><div class="line">ffmpeg -i input.mp4 -c:v copy -an output.mp4</div></pre></td></tr></table></figure>
+</li>
+<li><p>To cut mp3</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.mp3 -ss 00:00:00 -t 00:00:01 -acodec copy output.mp3</div></pre></td></tr></table></figure>
 
     
     
@@ -146,13 +162,167 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2018/07/08/Shortest-subarray-with-sum-at-least-k/">
+      <a href="/Blogs/2019/10/30/前端性能优化方案/">
+        前端性能优化方案
+      </a>
+    </h2>
+    
+    <time>
+      10月 30, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="前端性能优化方案"><a href="#前端性能优化方案" class="headerlink" title="前端性能优化方案"></a>前端性能优化方案</h3><ul>
+<li><p>减少DOM的访问次数，可以将DOM缓存到变量中；</p>
+</li>
+<li><p>减少重绘和回流，任何会导致重绘和回流的操作都应减少执行，可将多次操作合并为一次；</p>
+</li>
+<li><p>尽量采用事件委托的方式进行事件绑定，避免大量绑定导致内存占用过多；</p>
+</li>
+<li><p>css层级尽量扁平化，避免过多的层级嵌套，尽量使用特定的选择器来区分；</p>
+</li>
+<li><p>动画尽量使用CSS3动画属性来实现，开启GPU硬件加速；</p>
+</li>
+<li><p>图片在加载前提前指定宽高或者脱离文档流，可避免加载后的重新计算导致的页面回流；</p>
+</li>
+<li><p>css文件在<head>标签中引入，js文件在</head><body>标签中引入，优化关键渲染路径；</body></p>
+</li>
+<li><p>加速或者减少HTTP请求，使用CDN加载静态资源，合理使用浏览器强缓存和协商缓存，小图片可以使用Base64来代替，合理使用浏览器的预取指令prefetch和预加载指令preload；</p>
+</li>
+<li><p>压缩混淆代码，删除无用代码，代码拆分来减少文件体积；</p>
+</li>
+<li><p>小图片使用雪碧图，图片选择合适的质量、尺寸和格式，避免流量浪费。使用<a href="https://www.picdiet.com/zh-cn" target="_blank" rel="external">picdiet</a>压缩图片，使用ffmpeg压缩视频</p>
+</li>
+</ul>
+
+
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/10/12/CSS-居中/">
+        CSS 居中
+      </a>
+    </h2>
+    
+    <time>
+      10月 12, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="css居中"><a href="#css居中" class="headerlink" title="css居中"></a>css居中</h3><p>记录多种CSS居中方式</p>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2019/10/12/CSS-居中/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/CSS/">CSS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/09/04/birthday-problem/">
+        birthday problem
+      </a>
+    </h2>
+    
+    <time>
+      9月 4, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h1 id="birthday-problem"><a href="#birthday-problem" class="headerlink" title="birthday problem"></a>birthday problem</h1><p>生日问题是指在随机选择的一群人当中有两人的生日相同的概率。如果一个房间里有23个或23个以上的人，那么至少有两个人的生日相同的概率要大于50%；对于60或者更多的人，这种概率要大于99%。</p>
+<p>该问题的计算公式就是 <code>从365个元素中取出n个元素的排列</code> 除以 <code>365的n次方</code></p>
+<p>通用计算方式如下，即计算拥有<code>all</code>个数量属性取值的个体<code>count</code> 个时，出现属性值相同的概率，这里考虑到值会比较大，所以使用BigInt<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> calc = <span class="function">(<span class="params">count, all</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> c = count</div><div class="line">  <span class="keyword">let</span> result = <span class="number">1</span>n</div><div class="line">  <span class="keyword">while</span> (c &gt; <span class="number">0</span>n) &#123;</div><div class="line">    c -= <span class="number">1</span>n</div><div class="line">    result *= (all - c)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;<span class="built_in">Number</span>(<span class="number">1000</span>n - result * <span class="number">1000</span>n <span class="regexp">/ (all ** count)) /</span> <span class="number">10</span>&#125;</span>%`</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">calc(<span class="number">23</span>n, <span class="number">365</span>n) <span class="comment">// "50.8%"</span></div><div class="line">calc(<span class="number">60</span>n, <span class="number">365</span>n) <span class="comment">// "99.5%"</span></div></pre></td></tr></table></figure></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/Algorithm/">Algorithm</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/07/17/custom-systemd-service-in-Linux/">
+        Custom systemd service in Linux
+      </a>
+    </h2>
+    
+    <time>
+      7月 17, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h1 id="custom-systemd-service"><a href="#custom-systemd-service" class="headerlink" title="custom systemd service"></a>custom systemd service</h1><ul>
+<li>service file in <code>/lib/systemd/system</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[Unit]</div><div class="line">Description=ss local server</div><div class="line">After=network.target network-online.target systemd-networkd.service NetworkManager.service connman.service</div><div class="line"></div><div class="line">[Service]</div><div class="line">Type=simple</div><div class="line">RemainAfterExit=yes</div><div class="line">ExecStart=/usr/bin/ss-local</div><div class="line">ExecStop=/bin/kill -s QUIT $MAINPID</div><div class="line"></div><div class="line">[Install]</div><div class="line">WantedBy=multi-user.target</div></pre></td></tr></table></figure>
+<ul>
+<li>operations<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># make change take effect</span></div><div class="line">sudo systemctl daemon-reload</div><div class="line"></div><div class="line"><span class="comment"># start service</span></div><div class="line">sudo service ss-local start</div><div class="line"></div><div class="line"><span class="comment"># stop service</span></div><div class="line">sudo service ss-local stop</div><div class="line"></div><div class="line"><span class="comment"># view log</span></div><div class="line">journalctl -xe</div></pre></td></tr></table></figure></li>
+</ul>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/Linux/">Linux</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/07/08/Shortest-subarray-with-sum-at-least-k/">
         Shortest subarray with sum at least k
       </a>
     </h2>
     
     <time>
-      7月 8, 2018
+      7月 8, 2019
     </time>
 		
   </section>
@@ -189,29 +359,30 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2018/06/10/Code-Complete-Note-003/">
-        Code Complete Note 003
+      <a href="/Blogs/2019/04/02/Some-bash-scripts/">
+        Some bash scripts
       </a>
     </h2>
     
     <time>
-      6月 10, 2018
+      4月 2, 2019
     </time>
 		
   </section>
   <section class="article typo">
-	  <h1 id="代码大全读书笔记003-条件语句"><a href="#代码大全读书笔记003-条件语句" class="headerlink" title="代码大全读书笔记003-条件语句"></a>代码大全读书笔记003-条件语句</h1><p>条件语句是代码中非常基础的语法，以下是写成好的代码所需要遵循的指导原则</p>
+	  <h1 id="setInterval-in-bash"><a href="#setInterval-in-bash" class="headerlink" title="setInterval in bash"></a>setInterval in bash</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> <span class="literal">true</span>; <span class="keyword">do</span> ls <span class="_">-l</span>; sleep 2; <span class="keyword">done</span></div></pre></td></tr></table></figure>
+<h1 id="count-files-fastly"><a href="#count-files-fastly" class="headerlink" title="count files fastly"></a>count files fastly</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -type f | wc -l</div></pre></td></tr></table></figure>
+<h1 id="find-files-that-large-than-1-GiB"><a href="#find-files-that-large-than-1-GiB" class="headerlink" title="find files that large than 1 GiB"></a>find files that large than 1 GiB</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -type f -size +1G</div></pre></td></tr></table></figure>
+<h1 id="test-if-file-exist"><a href="#test-if-file-exist" class="headerlink" title="test if file exist"></a>test if file exist</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">myFile=<span class="string">"/home/lxw/abc"</span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span></div><div class="line">touch <span class="string">"<span class="variable">$myFile</span>"</span></div><div class="line"><span class="keyword">else</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"skip"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<h1 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h1><p>find all <code>dart</code> process and kill them all<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># find</span></div><div class="line">ps -aux | grep dart</div><div class="line"><span class="comment"># find &amp;&amp; kill</span></div><div class="line">pgrep <span class="_">-f</span> dart | xargs <span class="built_in">kill</span></div></pre></td></tr></table></figure></p>
+<h1 id="Wifi"><a href="#Wifi" class="headerlink" title="Wifi"></a>Wifi</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># connect to wifi</span></div><div class="line">sudo nmcli d wifi connect iPhone password 11345678</div><div class="line"></div><div class="line"><span class="comment"># show saved connections</span></div><div class="line">ls -sail /etc/NetworkManager/system-connections/</div></pre></td></tr></table></figure>
 
-    
-	  <div class="readmore">
-      <a href="/Blogs/2018/06/10/Code-Complete-Note-003/">Read More</a>
-    </div>
     
     
     
 	  <div class="full-width auto-padding tags">
       
-        <a href="/Blogs/tags/Code-Complete/">Code Complete</a>
+        <a href="/Blogs/tags/Bash/">Bash</a>
       
 	  </div>
     
@@ -224,213 +395,76 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2018/06/03/Code-Complete-Note-002/">
-        Code Complete Note 002
+      <a href="/Blogs/2019/02/12/show-colored-word-in-bash/">
+        show colored word in bash
       </a>
     </h2>
     
     <time>
-      6月 3, 2018
+      2月 12, 2019
     </time>
 		
   </section>
   <section class="article typo">
-	  <h1 id="代码大全读书笔记002-防御性编程"><a href="#代码大全读书笔记002-防御性编程" class="headerlink" title="代码大全读书笔记002-防御性编程"></a>代码大全读书笔记002-防御性编程</h1><p>保护程序免遭非法输入数据的破坏</p>
+	  <h1 id="echo-color-in-bash-console"><a href="#echo-color-in-bash-console" class="headerlink" title="echo color in bash console"></a>echo color in bash console</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[01;32m 绿色字体 √ \033[0m"</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'\033[01;32m'</span>, <span class="string">'绿色字体 √'</span>)</div></pre></td></tr></table></figure>
+<h1 id="color-matrix"><a href="#color-matrix" class="headerlink" title="color matrix"></a>color matrix</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">64</span>; i++) &#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">32</span>; j &lt; <span class="number">48</span>; j++) &#123;</div><div class="line">    <span class="keyword">const</span> ii = i.toString().padStart(<span class="number">2</span>, <span class="string">'0'</span>)</div><div class="line">    <span class="keyword">const</span> jj = j.toString().padStart(<span class="number">2</span>, <span class="string">'0'</span>)</div><div class="line">    <span class="keyword">const</span> str = <span class="string">'\033'</span> + <span class="string">`[<span class="subst">$&#123;ii&#125;</span>;<span class="subst">$&#123;jj&#125;</span>m`</span> + <span class="string">`[<span class="subst">$&#123;ii&#125;</span>;<span class="subst">$&#123;jj&#125;</span>m`</span> + <span class="string">'\033[0m '</span></div><div class="line">    process.stdout.write(str)</div><div class="line">  &#125;</div><div class="line">  process.stdout.write(<span class="string">'\n'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/01/07/Check-Chinese-Word/">
+        Check Chinese Word
+      </a>
+    </h2>
+    
+    <time>
+      1月 7, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>使用<code>grep -r</code>读取当前文件夹下的所有文件内容，使用正则匹配筛选中文<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> child = <span class="built_in">require</span>(<span class="string">'child_process'</span>)</div><div class="line"><span class="keyword">const</span> all = child.execSync(<span class="string">`grep -r ''`</span>).toString().split(<span class="string">'\n'</span>).map(<span class="function"><span class="params">l</span> =&gt;</span> l.trim()).filter(<span class="function"><span class="params">l</span> =&gt;</span> l.length)</div><div class="line"><span class="keyword">const</span> chinese = all.filter(<span class="function"><span class="params">l</span> =&gt;</span> /[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+<span class="regexp">/.test(l))</span></div></pre></td></tr></table></figure></p>
+
+
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/01/02/Common-Http-Code/">
+        Common Http Code
+      </a>
+    </h2>
+    
+    <time>
+      1月 2, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="常见的HTTP-Code"><a href="#常见的HTTP-Code" class="headerlink" title="常见的HTTP Code"></a>常见的HTTP Code</h3>
 
     
 	  <div class="readmore">
-      <a href="/Blogs/2018/06/03/Code-Complete-Note-002/">Read More</a>
+      <a href="/Blogs/2019/01/02/Common-Http-Code/">Read More</a>
     </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/Code-Complete/">Code Complete</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/05/27/Code-Complete-Note-001/">
-        Code Complete Note 001
-      </a>
-    </h2>
-    
-    <time>
-      5月 27, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h1 id="代码大全读书笔记001-变量名的力量"><a href="#代码大全读书笔记001-变量名的力量" class="headerlink" title="代码大全读书笔记001-变量名的力量"></a>代码大全读书笔记001-变量名的力量</h1><p>好的变量名是可读的、易于记忆和恰如其分的</p>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2018/05/27/Code-Complete-Note-001/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/Code-Complete/">Code Complete</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/04/28/Web-Spider/">
-        Web Spider
-      </a>
-    </h2>
-    
-    <time>
-      4月 28, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/04/15/CSS-Grid-Layout/">
-        CSS Grid Layout
-      </a>
-    </h2>
-    
-    <time>
-      4月 15, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/03/25/Debounce-and-Throttle/">
-        Debounce and Throttle
-      </a>
-    </h2>
-    
-    <time>
-      3月 25, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>防抖（Debounce）和节流（Throttle）都是用来控制某个函数在一定时间内执行多少次的技巧</p>
-<ul>
-<li>Debounce: 把触发非常频繁的事件合并成一次执行。</li>
-<li>Throttle: 把触发非常频繁的事件变成每隔一定时间触发一次。</li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2018/03/25/Debounce-and-Throttle/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/03/18/Import-vs-Require/">
-        Import vs Require
-      </a>
-    </h2>
-    
-    <time>
-      3月 18, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>node编程中最重要的思想之一就是模块，而正是这个思想，让JavaScript的大规模工程成为可能。<br>但是由于JS发展历史的原因，发展出了不同的模块化规范，<code>require</code>与<code>import</code>就是这种环境下的产物。</p>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2018/03/18/Import-vs-Require/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/Node-js/">Node.js</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/03/12/Facade-Adapter-and-Mediator/">
-        Facade Adapter and Mediator
-      </a>
-    </h2>
-    
-    <time>
-      3月 12, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  
-
     
     
     
@@ -469,7 +503,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/Algorithm/" style="font-size: 14px; color: #808080">Algorithm</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 17px; color: #404040">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.5px; color: #606060">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
+        <a href="/Blogs/tags/Algorithm/" style="font-size: 15.2px; color: #666">Algorithm</a> <a href="/Blogs/tags/Bash/" style="font-size: 14px; color: #808080">Bash</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.2px; color: #666">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 17.6px; color: #333">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 16.4px; color: #4d4d4d">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 16.4px; color: #4d4d4d">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.2px; color: #666">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.2px; color: #666">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.2px; color: #666">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 16.4px; color: #4d4d4d">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 16.4px; color: #4d4d4d">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.2px; color: #666">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.8px; color: #1a1a1a">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.2px; color: #666">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
     </div>
 </div>
 

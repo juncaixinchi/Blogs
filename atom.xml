@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2018-07-15T14:17:27.919Z</updated>
+  <updated>2019-11-12T11:09:10.059Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,234 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ffmpeg note</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/11/10/ffmpeg-note/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/11/10/ffmpeg-note/</id>
+    <published>2019-11-10T13:59:24.000Z</published>
+    <updated>2019-11-12T11:09:10.059Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ffmpeg-note&quot;&gt;&lt;a href=&quot;#ffmpeg-note&quot; class=&quot;headerlink&quot; title=&quot;ffmpeg note&quot;&gt;&lt;/a&gt;ffmpeg note&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;To Convert video to 720p&lt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端性能优化方案</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/10/30/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/10/30/前端性能优化方案/</id>
+    <published>2019-10-30T13:24:23.000Z</published>
+    <updated>2019-11-12T10:57:00.823Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前端性能优化方案&quot;&gt;&lt;a href=&quot;#前端性能优化方案&quot; class=&quot;headerlink&quot; title=&quot;前端性能优化方案&quot;&gt;&lt;/a&gt;前端性能优化方案&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;减少DOM的访问次数，可以将DOM缓存到变量中；&lt;/p&gt;
+&lt;/li&gt;
+&lt;l
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSS 居中</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/10/12/CSS-%E5%B1%85%E4%B8%AD/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/10/12/CSS-居中/</id>
+    <published>2019-10-12T11:52:56.000Z</published>
+    <updated>2019-11-12T11:47:47.969Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;css居中&quot;&gt;&lt;a href=&quot;#css居中&quot; class=&quot;headerlink&quot; title=&quot;css居中&quot;&gt;&lt;/a&gt;css居中&lt;/h3&gt;&lt;p&gt;记录多种CSS居中方式&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://juncaixinchi.github.io/Blogs/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>birthday problem</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/09/04/birthday-problem/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/09/04/birthday-problem/</id>
+    <published>2019-09-04T11:10:05.000Z</published>
+    <updated>2019-11-12T12:00:59.039Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;birthday-problem&quot;&gt;&lt;a href=&quot;#birthday-problem&quot; class=&quot;headerlink&quot; title=&quot;birthday problem&quot;&gt;&lt;/a&gt;birthday problem&lt;/h1&gt;&lt;p&gt;生日问题是指在随机选择的一群
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="https://juncaixinchi.github.io/Blogs/tags/Algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Custom systemd service in Linux</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/07/17/custom-systemd-service-in-Linux/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/07/17/custom-systemd-service-in-Linux/</id>
+    <published>2019-07-17T12:45:36.000Z</published>
+    <updated>2019-11-12T11:48:39.439Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;custom-systemd-service&quot;&gt;&lt;a href=&quot;#custom-systemd-service&quot; class=&quot;headerlink&quot; title=&quot;custom systemd service&quot;&gt;&lt;/a&gt;custom systemd servi
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://juncaixinchi.github.io/Blogs/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Shortest subarray with sum at least k</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/07/08/Shortest-subarray-with-sum-at-least-k/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/07/08/Shortest-subarray-with-sum-at-least-k/</id>
+    <published>2019-07-08T14:21:10.000Z</published>
+    <updated>2019-11-12T10:57:31.811Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在LeetCode刷算法题，记录一下一道比较难的题目&lt;a href=&quot;https://leetcode-cn.com/problems/shortest-subarray-with-sum-at-least-k/description/&quot; target=&quot;_blank&quot; r
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="https://juncaixinchi.github.io/Blogs/tags/Algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Some bash scripts</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/04/02/Some-bash-scripts/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/04/02/Some-bash-scripts/</id>
+    <published>2019-04-02T11:43:09.000Z</published>
+    <updated>2019-11-12T11:45:01.041Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;setInterval-in-bash&quot;&gt;&lt;a href=&quot;#setInterval-in-bash&quot; class=&quot;headerlink&quot; title=&quot;setInterval in bash&quot;&gt;&lt;/a&gt;setInterval in bash&lt;/h1&gt;&lt;figu
+    
+    </summary>
+    
+    
+      <category term="Bash" scheme="https://juncaixinchi.github.io/Blogs/tags/Bash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>show colored word in bash</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/02/12/show-colored-word-in-bash/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/02/12/show-colored-word-in-bash/</id>
+    <published>2019-02-12T11:39:59.000Z</published>
+    <updated>2019-11-12T11:41:08.827Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;echo-color-in-bash-console&quot;&gt;&lt;a href=&quot;#echo-color-in-bash-console&quot; class=&quot;headerlink&quot; title=&quot;echo color in bash console&quot;&gt;&lt;/a&gt;echo col
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Check Chinese Word</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/01/07/Check-Chinese-Word/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/01/07/Check-Chinese-Word/</id>
+    <published>2019-01-07T13:05:35.000Z</published>
+    <updated>2019-11-12T11:46:53.865Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用&lt;code&gt;grep -r&lt;/code&gt;读取当前文件夹下的所有文件内容，使用正则匹配筛选中文&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Common Http Code</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/01/02/Common-Http-Code/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/01/02/Common-Http-Code/</id>
+    <published>2019-01-02T11:50:27.000Z</published>
+    <updated>2019-11-12T10:52:13.254Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;常见的HTTP-Code&quot;&gt;&lt;a href=&quot;#常见的HTTP-Code&quot; class=&quot;headerlink&quot; title=&quot;常见的HTTP Code&quot;&gt;&lt;/a&gt;常见的HTTP Code&lt;/h3&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>call(), apply() and bind()</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/11/19/call-apply-and-bind/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/11/19/call-apply-and-bind/</id>
+    <published>2018-11-19T13:58:51.000Z</published>
+    <updated>2019-11-12T10:49:54.999Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;call-apply-和bind&quot;&gt;&lt;a href=&quot;#call-apply-和bind&quot; class=&quot;headerlink&quot; title=&quot;call(), apply()和bind()&quot;&gt;&lt;/a&gt;call(), apply()和bind()&lt;/h3&gt;&lt;p&gt;js
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Browser Cache</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/10/12/Browser-Cache/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/10/12/Browser-Cache/</id>
+    <published>2018-10-12T12:45:49.000Z</published>
+    <updated>2019-11-12T11:59:39.193Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;浏览器缓存&quot;&gt;&lt;a href=&quot;#浏览器缓存&quot; class=&quot;headerlink&quot; title=&quot;浏览器缓存&quot;&gt;&lt;/a&gt;浏览器缓存&lt;/h3&gt;&lt;p&gt;浏览器缓存分为强缓存和协商缓存&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSS Flex布局</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2018/09/21/CSS-Flex%E5%B8%83%E5%B1%80/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2018/09/21/CSS-Flex布局/</id>
+    <published>2018-09-21T10:55:29.000Z</published>
+    <updated>2019-11-12T10:56:19.268Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Flex布局&quot;&gt;&lt;a href=&quot;#Flex布局&quot; class=&quot;headerlink&quot; title=&quot;Flex布局&quot;&gt;&lt;/a&gt;Flex布局&lt;/h3&gt;&lt;p&gt;Flex是Flexible Box的缩写，即“弹性盒子”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;flex-dire
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://juncaixinchi.github.io/Blogs/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>Hack Superagent</title>
@@ -26,24 +254,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Shortest subarray with sum at least k</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/07/08/Shortest-subarray-with-sum-at-least-k/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/07/08/Shortest-subarray-with-sum-at-least-k/</id>
-    <published>2018-07-08T14:21:10.000Z</published>
-    <updated>2018-07-08T14:31:20.229Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在LeetCode刷算法题，记录一下一道比较难的题目&lt;a href=&quot;https://leetcode-cn.com/problems/shortest-subarray-with-sum-at-least-k/description/&quot; target=&quot;_blank&quot; r
-    
-    </summary>
-    
-    
-      <category term="Algorithm" scheme="https://juncaixinchi.github.io/Blogs/tags/Algorithm/"/>
     
   </entry>
   
@@ -148,186 +358,6 @@
     
     
       <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Import vs Require</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/03/18/Import-vs-Require/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/03/18/Import-vs-Require/</id>
-    <published>2018-03-18T14:42:41.000Z</published>
-    <updated>2018-05-27T14:27:12.604Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;node编程中最重要的思想之一就是模块，而正是这个思想，让JavaScript的大规模工程成为可能。&lt;br&gt;但是由于JS发展历史的原因，发展出了不同的模块化规范，&lt;code&gt;require&lt;/code&gt;与&lt;code&gt;import&lt;/code&gt;就是这种环境下的产物。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Node.js" scheme="https://juncaixinchi.github.io/Blogs/tags/Node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Facade Adapter and Mediator</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/03/12/Facade-Adapter-and-Mediator/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/03/12/Facade-Adapter-and-Mediator/</id>
-    <published>2018-03-12T14:18:59.000Z</published>
-    <updated>2018-03-12T14:18:59.425Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript Standard Style</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/03/03/JavaScript-Standard-Style/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/03/03/JavaScript-Standard-Style/</id>
-    <published>2018-03-03T11:53:34.000Z</published>
-    <updated>2018-03-03T11:53:34.894Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Random Number Generator</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/03/01/Random-Number-Generator/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/03/01/Random-Number-Generator/</id>
-    <published>2018-03-01T12:49:52.000Z</published>
-    <updated>2018-03-01T12:49:52.970Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Floating Point in JS</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/02/23/Floating-Point-in-JS/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/02/23/Floating-Point-in-JS/</id>
-    <published>2018-02-23T11:04:41.000Z</published>
-    <updated>2018-02-23T11:10:50.201Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;0-1-0-2-0-3&quot;&gt;&lt;a href=&quot;#0-1-0-2-0-3&quot; class=&quot;headerlink&quot; title=&quot;0.1 + 0.2 !== 0.3 ?&quot;&gt;&lt;/a&gt;0.1 + 0.2 !== 0.3 ?&lt;/h1&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; !== &lt;span class=&quot;number&quot;&gt;0.3&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; - &lt;span class=&quot;number&quot;&gt;0.3&lt;/span&gt; = &lt;span class=&quot;number&quot;&gt;5.551115123125783e-17&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2048-AI</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/02/21/2048-AI/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/02/21/2048-AI/</id>
-    <published>2018-02-21T12:56:51.000Z</published>
-    <updated>2018-02-21T12:56:51.394Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Custom scrollBar</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/02/11/Custom-scrollBar/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/02/11/Custom-scrollBar/</id>
-    <published>2018-02-11T14:22:34.000Z</published>
-    <updated>2018-02-11T14:22:34.546Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Introduction to PouchDB</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/02/05/Introduction-to-PouchDB/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/02/05/Introduction-to-PouchDB/</id>
-    <published>2018-02-05T12:56:29.000Z</published>
-    <updated>2018-02-05T12:56:29.655Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Unicode and JS</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/01/28/Unicode-and-JS/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/01/28/Unicode-and-JS/</id>
-    <published>2018-01-28T11:13:25.000Z</published>
-    <updated>2018-01-28T12:18:39.858Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前处理中文字符与emoji时遇到了一些坑，查阅了资料整理了一下要点。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EventListener in JavaScript</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/01/07/EventListener-in-JavaScript/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/01/07/EventListener-in-JavaScript/</id>
-    <published>2018-01-07T12:28:44.000Z</published>
-    <updated>2018-01-07T12:28:44.677Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Some scripts about manipulating arrays</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/01/02/Some-scripts-about-manipulating-arrays/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/01/02/Some-scripts-about-manipulating-arrays/</id>
-    <published>2018-01-02T12:15:21.000Z</published>
-    <updated>2018-01-02T12:15:21.317Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>An interview question of JavaScript</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2017/12/24/An-interview-question-of-JavaScript/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2017/12/24/An-interview-question-of-JavaScript/</id>
-    <published>2017-12-24T11:52:29.000Z</published>
-    <updated>2017-12-24T11:52:29.597Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   

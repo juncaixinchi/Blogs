@@ -121,73 +121,34 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2018/03/03/JavaScript-Standard-Style/">
-        JavaScript Standard Style
+      <a href="/Blogs/2018/11/19/call-apply-and-bind/">
+        call(), apply() and bind()
       </a>
     </h2>
     
     <time>
-      3月 3, 2018
+      11月 19, 2018
     </time>
 		
   </section>
   <section class="article typo">
-	  
+	  <h3 id="call-apply-和bind"><a href="#call-apply-和bind" class="headerlink" title="call(), apply()和bind()"></a>call(), apply()和bind()</h3><p>js中的call(), apply()和bind()是Function.prototype下的方法，都是用于改变函数运行时上下文，最终的返回值是你调用的方法的返回值，若该方法没有返回值，则返回undefined。</p>
+<ul>
+<li>apply()</li>
+</ul>
+<p>使用 apply， 你可以继承其他对象的方法：注意这里apply()的第一个参数是null，在非严格模式下，第一个参数为null或者undefined时会自动替换为指向全局对象，apply()的第二个参数为<code>数组或类数组</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]</div><div class="line"><span class="keyword">const</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, arr)</div></pre></td></tr></table></figure>
+<ul>
+<li>call()</li>
+</ul>
+<p>call()是apply()的一颗语法糖，作用和apply()一样，同样可实现继承，唯一的区别就在于call()接收的是<code>参数列表</code>，而apply()则接收参数数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]</div><div class="line"><span class="keyword">const</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, ...arr)</div></pre></td></tr></table></figure>
+<ul>
+<li>bind()</li>
+</ul>
+<p>bind()的作用与call()和apply()一样，都是可以改变函数运行时上下文，区别是call()和apply()在调用函数之后会立即执行，而bind()方法调用并改变函数运行时上下文后， <code>返回一个新的函数，供我们需要时再调用</code>。</p>
 
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/03/01/Random-Number-Generator/">
-        Random Number Generator
-      </a>
-    </h2>
-    
-    <time>
-      3月 1, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  
 
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/02/23/Floating-Point-in-JS/">
-        Floating Point in JS
-      </a>
-    </h2>
-    
-    <time>
-      2月 23, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h1 id="0-1-0-2-0-3"><a href="#0-1-0-2-0-3" class="headerlink" title="0.1 + 0.2 !== 0.3 ?"></a>0.1 + 0.2 !== 0.3 ?</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">0.1</span> + <span class="number">0.2</span> !== <span class="number">0.3</span> <span class="comment">// true</span></div><div class="line"><span class="number">0.1</span> + <span class="number">0.2</span> - <span class="number">0.3</span> = <span class="number">5.551115123125783e-17</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2018/02/23/Floating-Point-in-JS/">Read More</a>
-    </div>
     
     
     
@@ -206,104 +167,69 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2018/02/21/2048-AI/">
-        2048-AI
+      <a href="/Blogs/2018/10/12/Browser-Cache/">
+        Browser Cache
       </a>
     </h2>
     
     <time>
-      2月 21, 2018
+      10月 12, 2018
     </time>
 		
   </section>
   <section class="article typo">
-	  
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/02/11/Custom-scrollBar/">
-        Custom scrollBar
-      </a>
-    </h2>
-    
-    <time>
-      2月 11, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/02/05/Introduction-to-PouchDB/">
-        Introduction to PouchDB
-      </a>
-    </h2>
-    
-    <time>
-      2月 5, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2018/01/28/Unicode-and-JS/">
-        Unicode and JS
-      </a>
-    </h2>
-    
-    <time>
-      1月 28, 2018
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>之前处理中文字符与emoji时遇到了一些坑，查阅了资料整理了一下要点。</p>
+	  <h3 id="浏览器缓存"><a href="#浏览器缓存" class="headerlink" title="浏览器缓存"></a>浏览器缓存</h3><p>浏览器缓存分为强缓存和协商缓存</p>
 
     
 	  <div class="readmore">
-      <a href="/Blogs/2018/01/28/Unicode-and-JS/">Read More</a>
+      <a href="/Blogs/2018/10/12/Browser-Cache/">Read More</a>
     </div>
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2018/09/21/CSS-Flex布局/">
+        CSS Flex布局
+      </a>
+    </h2>
+    
+    <time>
+      9月 21, 2018
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h3><p>Flex是Flexible Box的缩写，即“弹性盒子”</p>
+<ul>
+<li><p>flex-direction，决定主轴的方向（即项目的排列方向）: row | row-reverse | column | column-reverse;</p>
+</li>
+<li><p>flex-wrap，定义换行情况: nowrap | wrap | wrap-reverse;</p>
+</li>
+<li><p>flex-flow：flex-direction和flex-wrap的简写，默认row nowrap</p>
+</li>
+<li><p>justify-content属性，定义项目在主轴上的对齐方式：flex-start | flex-end | center space-between | space-around</p>
+</li>
+<li><p>align-items属性，定义在交叉轴上的对齐方式：flex-start | flex-end | center | baseline | stretch;</p>
+</li>
+<li><p>子项目： flex-grow，定义项目的放大比例，默认值为0，即如果空间有剩余，也不放大</p>
+</li>
+</ul>
+
+
     
     
     
 	  <div class="full-width auto-padding tags">
       
-        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
+        <a href="/Blogs/tags/CSS/">CSS</a>
       
 	  </div>
     
@@ -316,13 +242,13 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2018/01/07/EventListener-in-JavaScript/">
-        EventListener in JavaScript
+      <a href="/Blogs/2018/07/15/Hack-Superagent/">
+        Hack Superagent
       </a>
     </h2>
     
     <time>
-      1月 7, 2018
+      7月 15, 2018
     </time>
 		
   </section>
@@ -341,13 +267,118 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2018/01/02/Some-scripts-about-manipulating-arrays/">
-        Some scripts about manipulating arrays
+      <a href="/Blogs/2018/06/10/Code-Complete-Note-003/">
+        Code Complete Note 003
       </a>
     </h2>
     
     <time>
-      1月 2, 2018
+      6月 10, 2018
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h1 id="代码大全读书笔记003-条件语句"><a href="#代码大全读书笔记003-条件语句" class="headerlink" title="代码大全读书笔记003-条件语句"></a>代码大全读书笔记003-条件语句</h1><p>条件语句是代码中非常基础的语法，以下是写成好的代码所需要遵循的指导原则</p>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2018/06/10/Code-Complete-Note-003/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/Code-Complete/">Code Complete</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2018/06/03/Code-Complete-Note-002/">
+        Code Complete Note 002
+      </a>
+    </h2>
+    
+    <time>
+      6月 3, 2018
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h1 id="代码大全读书笔记002-防御性编程"><a href="#代码大全读书笔记002-防御性编程" class="headerlink" title="代码大全读书笔记002-防御性编程"></a>代码大全读书笔记002-防御性编程</h1><p>保护程序免遭非法输入数据的破坏</p>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2018/06/03/Code-Complete-Note-002/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/Code-Complete/">Code Complete</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2018/05/27/Code-Complete-Note-001/">
+        Code Complete Note 001
+      </a>
+    </h2>
+    
+    <time>
+      5月 27, 2018
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h1 id="代码大全读书笔记001-变量名的力量"><a href="#代码大全读书笔记001-变量名的力量" class="headerlink" title="代码大全读书笔记001-变量名的力量"></a>代码大全读书笔记001-变量名的力量</h1><p>好的变量名是可读的、易于记忆和恰如其分的</p>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2018/05/27/Code-Complete-Note-001/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/Code-Complete/">Code Complete</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2018/04/28/Web-Spider/">
+        Web Spider
+      </a>
+    </h2>
+    
+    <time>
+      4月 28, 2018
     </time>
 		
   </section>
@@ -366,13 +397,13 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2017/12/24/An-interview-question-of-JavaScript/">
-        An interview question of JavaScript
+      <a href="/Blogs/2018/04/15/CSS-Grid-Layout/">
+        CSS Grid Layout
       </a>
     </h2>
     
     <time>
-      12月 24, 2017
+      4月 15, 2018
     </time>
 		
   </section>
@@ -381,6 +412,45 @@
 
     
     
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2018/03/25/Debounce-and-Throttle/">
+        Debounce and Throttle
+      </a>
+    </h2>
+    
+    <time>
+      3月 25, 2018
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>防抖（Debounce）和节流（Throttle）都是用来控制某个函数在一定时间内执行多少次的技巧</p>
+<ul>
+<li>Debounce: 把触发非常频繁的事件合并成一次执行。</li>
+<li>Throttle: 把触发非常频繁的事件变成每隔一定时间触发一次。</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2018/03/25/Debounce-and-Throttle/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
+      
+	  </div>
     
   </section>
 </article>
@@ -422,7 +492,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/Algorithm/" style="font-size: 14px; color: #808080">Algorithm</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 17px; color: #404040">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.5px; color: #606060">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
+        <a href="/Blogs/tags/Algorithm/" style="font-size: 15.2px; color: #666">Algorithm</a> <a href="/Blogs/tags/Bash/" style="font-size: 14px; color: #808080">Bash</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.2px; color: #666">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 17.6px; color: #333">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 16.4px; color: #4d4d4d">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 16.4px; color: #4d4d4d">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.2px; color: #666">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.2px; color: #666">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.2px; color: #666">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 16.4px; color: #4d4d4d">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 16.4px; color: #4d4d4d">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.2px; color: #666">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.8px; color: #1a1a1a">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.2px; color: #666">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
     </div>
 </div>
 

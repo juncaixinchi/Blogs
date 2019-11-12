@@ -121,13 +121,13 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2017/06/20/JS里的异步及Promise/">
-        JS里的异步及Promise
+      <a href="/Blogs/2017/08/20/setTimeout-setImmediate-and-process-nextTick/">
+        setTimeout, setImmediate and process.nextTick
       </a>
     </h2>
     
     <time>
-      6月 20, 2017
+      8月 20, 2017
     </time>
 		
   </section>
@@ -146,29 +146,41 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2017/06/07/this-in-js/">
-        this in js
+      <a href="/Blogs/2017/08/05/xattr-and-ads/">
+        xattr and ads
       </a>
     </h2>
     
     <time>
-      6月 7, 2017
+      8月 5, 2017
     </time>
 		
   </section>
   <section class="article typo">
-	  <h2 id="浅谈js里的this"><a href="#浅谈js里的this" class="headerlink" title="浅谈js里的this"></a>浅谈js里的this</h2><p>this是Javascript中的一个关键字，它代表函数运行时，自动生成的一个内部对象，指向调用函数的那个对象</p>
+	  <h1 id="扩展文件属性（extended-attributes）"><a href="#扩展文件属性（extended-attributes）" class="headerlink" title="扩展文件属性（extended attributes）"></a>扩展文件属性（extended attributes）</h1><h3 id="Extended-Attributes"><a href="#Extended-Attributes" class="headerlink" title="Extended Attributes"></a>Extended Attributes</h3><p><code>Extended Attributes</code>即扩展文件属性， 是文件系统的一个功能。它允许用户将计算机文件与未被文件系统所解释的元数据关联起来。其典型应用包括存储文档作者、普通文本文件的字符编码或者校验码。</p>
+<ul>
+<li>Linux or macOS</li>
+</ul>
+<p>在Linux操作系统中，如果libattr功能在内核设置中被打开，ext2、ext3、ext4、JFS、ReiserFS以及XFS文件系统都支持扩展属性（英文简写为xattr）</p>
+<p>Mac OS X 10.4 及以上版本在 HFS+ 文件系统上也支持xattr</p>
+<p>JS中可以使用<a href="https://www.npmjs.com/package/fs-xattr" target="_blank" rel="external">fs-xattr</a> 读取和写入xattr</p>
+<p>修改xattr不会修改文件的mtime，故可以将需要存储的数据及time stamp一起存入xattr，读取时通过比较mtime，可以检验数据的时效性。</p>
+<ul>
+<li>Windows</li>
+</ul>
+<p>windows不支持xattr，但是可以使用NTFS的<code>Alternate Data Streams</code>来代替，对应的JS库是 <a href="https://www.npmjs.com/package/fs-ads" target="_blank" rel="external">fs-ads</a></p>
+<p>但是需要注意的是，修改ads会改变文件的mtime，所以在保证数据的时效性方面比较麻烦。</p>
+<p>采用 <code>atime + size</code>的方法大部分情况可以保证准确性，但并不完备。</p>
 
-    
-	  <div class="readmore">
-      <a href="/Blogs/2017/06/07/this-in-js/">Read More</a>
-    </div>
+
     
     
     
 	  <div class="full-width auto-padding tags">
       
-        <a href="/Blogs/tags/js/">js</a>
+        <a href="/Blogs/tags/xattr/">xattr</a>
+      
+        <a href="/Blogs/tags/ads/">ads</a>
       
 	  </div>
     
@@ -181,13 +193,43 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2017/05/15/electron-app/">
-        electron app
+      <a href="/Blogs/2017/07/31/upload-files-or-folds-recrusively/">
+        upload files or folds recrusively
       </a>
     </h2>
     
     <time>
-      5月 15, 2017
+      7月 31, 2017
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h1 id="利用Async-await读取并上传本地文件夹"><a href="#利用Async-await读取并上传本地文件夹" class="headerlink" title="利用Async-await读取并上传本地文件夹"></a>利用Async-await读取并上传本地文件夹</h1><p>利用Async-await写了读取本地文件并上传至服务器的程序。</p>
+<p>Async-await写起来有种一气呵成的感觉，然而实际业务中要考虑到更为复杂的状态管理却用不了，故记录在这里。</p>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2017/07/31/upload-files-or-folds-recrusively/">Read More</a>
+    </div>
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2017/07/25/Stream-in-node/">
+        Stream in node
+      </a>
+    </h2>
+    
+    <time>
+      7月 25, 2017
     </time>
 		
   </section>
@@ -206,30 +248,33 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2017/04/15/Ipc-Message-with-Session-Id/">
-        Ipc Message with Session Id
+      <a href="/Blogs/2017/07/25/file-hash-in-node/">
+        file hash in node
       </a>
     </h2>
     
     <time>
-      4月 15, 2017
+      7月 25, 2017
     </time>
 		
   </section>
   <section class="article typo">
-	  <h1 id="使用带session的ipc通讯"><a href="#使用带session的ipc通讯" class="headerlink" title="使用带session的ipc通讯"></a>使用带session的ipc通讯</h1><ul>
-<li><p>在发送的信息中添加一个唯一的uuid，用于标记当前消息的id。</p>
-</li>
-<li><p>适用于多组件可能重复发送相同message的情况，如同一页面同时载入多张图片等情况。</p>
-</li>
-</ul>
+	  <h1 id="利用node中的加密模块crypto计算文件的hash值"><a href="#利用node中的加密模块crypto计算文件的hash值" class="headerlink" title="利用node中的加密模块crypto计算文件的hash值"></a>利用node中的加密模块crypto计算文件的hash值</h1><p>用<code>readStream</code>的方式读取文件并同时使用<code>crypto.createHash</code>计算hash值。</p>
 
     
 	  <div class="readmore">
-      <a href="/Blogs/2017/04/15/Ipc-Message-with-Session-Id/">Read More</a>
+      <a href="/Blogs/2017/07/25/file-hash-in-node/">Read More</a>
     </div>
     
     
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/sha256/">sha256</a>
+      
+        <a href="/Blogs/tags/node/">node</a>
+      
+	  </div>
     
   </section>
 </article>
@@ -240,32 +285,19 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2017/04/13/Large-List-in-React/">
-        Large List in React
+      <a href="/Blogs/2017/07/12/handle-error-in-js/">
+        handle error in js
       </a>
     </h2>
     
     <time>
-      4月 13, 2017
+      7月 12, 2017
     </time>
 		
   </section>
   <section class="article typo">
-	  <h2 id="超大列表的显示"><a href="#超大列表的显示" class="headerlink" title="超大列表的显示"></a>超大列表的显示</h2><ul>
-<li><p>直接全部显示一个超大的列表是十分消耗资源的，所以必须要采取对策，主流的有两种对策：</p>
-<ol>
-<li><p>Lazyloading: 即开始至加载一部分，每次需要的时候再加载新的内容，一个形象的例子就是“刷微博”</p>
-</li>
-<li><p>局部加载: 每次计算当前页面应当展示的内容</p>
-</li>
-</ol>
-</li>
-</ul>
+	  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">  something</div><div class="line">&#125; <span class="keyword">catch</span> (e) &#123;</div><div class="line">  <span class="built_in">window</span>.location.href = <span class="string">`http://stackoverflow.com/search?q=[js]<span class="subst">$&#123;e.message&#125;</span>`</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-    
-	  <div class="readmore">
-      <a href="/Blogs/2017/04/13/Large-List-in-React/">Read More</a>
-    </div>
     
     
     
@@ -273,7 +305,42 @@
       
         <a href="/Blogs/tags/JavaScript/">JavaScript</a>
       
-        <a href="/Blogs/tags/React/">React</a>
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2017/07/10/filter-in-CSS/">
+        filter in CSS
+      </a>
+    </h2>
+    
+    <time>
+      7月 10, 2017
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="CSS3-中-Filter的应用"><a href="#CSS3-中-Filter的应用" class="headerlink" title="CSS3 中 Filter的应用"></a>CSS3 中 Filter的应用</h3><p>Filter是CSS3中对图片添加特效的方法，可以认为是一种滤镜</p>
+<p>基本语法是：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">filter: &lt;filter-function&gt; [&lt;filter-function&gt;]* | none</div><div class="line"></div><div class="line"></div><div class="line">/* examples */</div><div class="line">.mydiv &#123; filter: grayscale(50%) &#125;</div><div class="line"></div><div class="line">img &#123;</div><div class="line">  filter: grayscale(0.5) blur(10px);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2017/07/10/filter-in-CSS/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/CSS/">CSS</a>
       
 	  </div>
     
@@ -286,31 +353,21 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2017/04/09/Display-flex-in-css/">
-        Display flex in css
+      <a href="/Blogs/2017/07/08/Data-Structures-and-Algorithms-in-JS/">
+        Data Structures and Algorithms
       </a>
     </h2>
     
     <time>
-      4月 9, 2017
+      7月 8, 2017
     </time>
 		
   </section>
   <section class="article typo">
-	  <h1 id="CSS3-弹性盒子-——-Flex-布局"><a href="#CSS3-弹性盒子-——-Flex-布局" class="headerlink" title="CSS3 弹性盒子 —— Flex 布局"></a>CSS3 弹性盒子 —— Flex 布局</h1><p>Flex 布局，是一种用于在页面上布置元素的布局模式，使得当页面布局必须适应不同的屏幕尺寸和不同的显示设备时，元素可预测地运行</p>
+	  
 
     
-	  <div class="readmore">
-      <a href="/Blogs/2017/04/09/Display-flex-in-css/">Read More</a>
-    </div>
     
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/css/">css</a>
-      
-	  </div>
     
   </section>
 </article>
@@ -321,144 +378,58 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/Blogs/2017/04/09/Dialog-in-React-Material-UI/">
-        Dialog in React Material-UI
+      <a href="/Blogs/2017/07/05/Brtfs-Filesystem/">
+        Brtfs Filesystem
       </a>
     </h2>
     
     <time>
-      4月 9, 2017
+      7月 5, 2017
     </time>
 		
   </section>
   <section class="article typo">
-	  <h2 id="解析Material-UI中的Dialog组件"><a href="#解析Material-UI中的Dialog组件" class="headerlink" title="解析Material-UI中的Dialog组件"></a>解析Material-UI中的Dialog组件</h2><ul>
-<li>dialog是常见组件，前段时间研究了一下<a href="">Material-UI</a>的Dialog组件的代码</li>
-</ul>
+	  <h1 id="Btrfs文件系统"><a href="#Btrfs文件系统" class="headerlink" title="Btrfs文件系统"></a>Btrfs文件系统</h1><p>Btrfs是新一代的Linux文件系统，目标是取代Linux目前的ext3文件系统，改善ext3的限制，特别是单一文件大小的限制，总文件系统大小限制以及加入文件校验和特性。</p>
 
     
 	  <div class="readmore">
-      <a href="/Blogs/2017/04/09/Dialog-in-React-Material-UI/">Read More</a>
+      <a href="/Blogs/2017/07/05/Brtfs-Filesystem/">Read More</a>
     </div>
     
     
     
 	  <div class="full-width auto-padding tags">
       
-        <a href="/Blogs/tags/React/">React</a>
-      
-        <a href="/Blogs/tags/Dialog/">Dialog</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2017/03/20/npm-mirror/">
-        npm and googleapis mirror
-      </a>
-    </h2>
-    
-    <time>
-      3月 20, 2017
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>最近家里网络很糟糕，上不了npm，很是纠结，于是修改设置使用国内的taobao镜像</p>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2017/03/20/npm-mirror/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/npm/">npm</a>
-      
-        <a href="/Blogs/tags/googleapis/">googleapis</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2017/03/19/React-Develop-Environment/">
-        React-Develop-Environment
-      </a>
-    </h2>
-    
-    <time>
-      3月 19, 2017
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h1 id="搭建React开发环境"><a href="#搭建React开发环境" class="headerlink" title="搭建React开发环境"></a>搭建React开发环境</h1><p>搭建基于React+webpack+Babel+Eslint的react开发环境</p>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2017/03/19/React-Develop-Environment/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/React/">React</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2017/03/18/Vim-Setting/">
-        Vim-Setting
-      </a>
-    </h2>
-    
-    <time>
-      3月 18, 2017
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>Vim 是高效的文本编辑器，以下是我整理的日常中经常用到的命令与插件</p>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2017/03/18/Vim-Setting/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+        <a href="/Blogs/tags/Brtfs/">Brtfs</a>
       
         <a href="/Blogs/tags/Linux/">Linux</a>
       
-        <a href="/Blogs/tags/Vim/">Vim</a>
-      
 	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2017/07/05/animation-in-react/">
+        animation in react
+      </a>
+    </h2>
+    
+    <time>
+      7月 5, 2017
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  
+
+    
+    
     
   </section>
 </article>
@@ -500,7 +471,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/Algorithm/" style="font-size: 14px; color: #808080">Algorithm</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.5px; color: #606060">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 15.5px; color: #606060">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 17px; color: #404040">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 17px; color: #404040">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.5px; color: #606060">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.5px; color: #606060">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.5px; color: #606060">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.5px; color: #606060">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.5px; color: #202020">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.5px; color: #606060">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
+        <a href="/Blogs/tags/Algorithm/" style="font-size: 15.2px; color: #666">Algorithm</a> <a href="/Blogs/tags/Bash/" style="font-size: 14px; color: #808080">Bash</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.2px; color: #666">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 17.6px; color: #333">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 16.4px; color: #4d4d4d">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 16.4px; color: #4d4d4d">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.2px; color: #666">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.2px; color: #666">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.2px; color: #666">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 16.4px; color: #4d4d4d">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 16.4px; color: #4d4d4d">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.2px; color: #666">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.8px; color: #1a1a1a">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.2px; color: #666">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
     </div>
 </div>
 

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>call(), apply() and bind() | 俊采新驰</title>
+  <meta name="description" content="不知疲倦的翻越，每一个山丘！" />
+  <meta name="keywords" content="俊采新驰" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/Blogs/images/favicon.ico">
+  <link rel="alternate" href="/Blogs/atom.xml" title="俊采新驰">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="call(), apply()和bind()js中的call(), apply()和bind()是Function.prototype下的方法，都是用于改变函数运行时上下文，最终的返回值是你调用的方法的返回值，若该方法没有返回值，则返回undefined。
+
+apply()
+
+使用 apply， 你可以继承其他对象的方法：注意这里apply()的第一个参数是null，在非严格模式下，第一个参数为n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="call(), apply() and bind()">
+<meta property="og:url" content="https://juncaixinchi.github.io/Blogs/2018/11/19/call-apply-and-bind/index.html">
+<meta property="og:site_name" content="俊采新驰">
+<meta property="og:description" content="call(), apply()和bind()js中的call(), apply()和bind()是Function.prototype下的方法，都是用于改变函数运行时上下文，最终的返回值是你调用的方法的返回值，若该方法没有返回值，则返回undefined。
+
+apply()
+
+使用 apply， 你可以继承其他对象的方法：注意这里apply()的第一个参数是null，在非严格模式下，第一个参数为n">
+<meta property="og:updated_time" content="2019-11-12T10:49:54.999Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="call(), apply() and bind()">
+<meta name="twitter:description" content="call(), apply()和bind()js中的call(), apply()和bind()是Function.prototype下的方法，都是用于改变函数运行时上下文，最终的返回值是你调用的方法的返回值，若该方法没有返回值，则返回undefined。
+
+apply()
+
+使用 apply， 你可以继承其他对象的方法：注意这里apply()的第一个参数是null，在非严格模式下，第一个参数为n">
+    
+  <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/Blogs/style.css">
+  
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+		<div class="wrapper container">
+			<a class="logo flat-box" href='/Blogs/' >
+				俊采新驰
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/Blogs/'>
+								Home
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/Blogs/archives'>
+								Archives
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/Blogs/about'>
+								About
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu"></span></a></li>
+			</ul>
+		</div>
+		<aside class="menu-phone">
+			<nav>
+				
+					<a href="/Blogs/" class="nav-home nav">
+						Home
+					</a>
+				
+					<a href="/Blogs/archives" class="nav-archives nav">
+						Archives
+					</a>
+				
+					<a href="/Blogs/about" class="nav-about nav">
+						About
+					</a>
+				
+			</nav>
+		</aside>
+</header>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container'>
+      <div class='l_main'>
+        <article id="post-call-apply-and-bind"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/Blogs/2018/11/19/call-apply-and-bind/">
+    	call(), apply() and bind()
+    </a>
+  </h2>
+	<time>
+	  11月 19, 2018
+	</time>
+	
+	</section>
+	
+		<section class="tog"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#call-apply-和bind"><span class="toc-number">1.</span> <span class="toc-text">call(), apply()和bind()</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h3 id="call-apply-和bind"><a href="#call-apply-和bind" class="headerlink" title="call(), apply()和bind()"></a>call(), apply()和bind()</h3><p>js中的call(), apply()和bind()是Function.prototype下的方法，都是用于改变函数运行时上下文，最终的返回值是你调用的方法的返回值，若该方法没有返回值，则返回undefined。</p>
+<ul>
+<li>apply()</li>
+</ul>
+<p>使用 apply， 你可以继承其他对象的方法：注意这里apply()的第一个参数是null，在非严格模式下，第一个参数为null或者undefined时会自动替换为指向全局对象，apply()的第二个参数为<code>数组或类数组</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]</div><div class="line"><span class="keyword">const</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, arr)</div></pre></td></tr></table></figure>
+<ul>
+<li>call()</li>
+</ul>
+<p>call()是apply()的一颗语法糖，作用和apply()一样，同样可实现继承，唯一的区别就在于call()接收的是<code>参数列表</code>，而apply()则接收参数数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]</div><div class="line"><span class="keyword">const</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, ...arr)</div></pre></td></tr></table></figure>
+<ul>
+<li>bind()</li>
+</ul>
+<p>bind()的作用与call()和apply()一样，都是可以改变函数运行时上下文，区别是call()和apply()在调用函数之后会立即执行，而bind()方法调用并改变函数运行时上下文后， <code>返回一个新的函数，供我们需要时再调用</code>。</p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
+      
+	  </div>
+    
+	</section>
+	
+</article>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/Blogs/images/avatar.jpg' />
+
+<div class='header'>俊采新驰</div>
+<div class='content'>
+<div></div>
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">Tags</div>
+    <div class='content'>
+        <a href="/Blogs/tags/Algorithm/" style="font-size: 15.2px; color: #666">Algorithm</a> <a href="/Blogs/tags/Bash/" style="font-size: 14px; color: #808080">Bash</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.2px; color: #666">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 17.6px; color: #333">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 16.4px; color: #4d4d4d">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 16.4px; color: #4d4d4d">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.2px; color: #666">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.2px; color: #666">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.2px; color: #666">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 16.4px; color: #4d4d4d">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 16.4px; color: #4d4d4d">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.2px; color: #666">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.8px; color: #1a1a1a">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.2px; color: #666">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/juncaixinchi" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/Blogs/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/Blogs/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/Blogs/js/search.js"></script>
+<script src="/Blogs/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
