@@ -5,7 +5,7 @@
   <link href="/Blogs/atom.xml" rel="self"/>
   
   <link href="https://juncaixinchi.github.io/Blogs/"/>
-  <updated>2019-11-12T11:09:10.059Z</updated>
+  <updated>2020-03-08T13:09:07.616Z</updated>
   <id>https://juncaixinchi.github.io/Blogs/</id>
   
   <author>
@@ -14,6 +14,104 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ML中的评价指标对比</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2020/03/05/ML%E4%B8%AD%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87%E5%AF%B9%E6%AF%94/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2020/03/05/ML中的评价指标对比/</id>
+    <published>2020-03-05T13:04:07.000Z</published>
+    <updated>2020-03-08T13:09:07.616Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;准确率(Accuracy), 精确率(Precision), 召回率(Recall)和F1-Measure是机器学习中对模型效果的重要评价指标。&lt;/p&gt;
+&lt;p&gt;假设一个班级有100个学生，其中男生70人，女生30人。如下图，蓝色矩形表示男生，橙色矩形表示女生。&lt;/p&gt;
+&lt;p
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="https://juncaixinchi.github.io/Blogs/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx跨域代理解决方案</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2020/02/27/Nginx%E8%B7%A8%E5%9F%9F%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2020/02/27/Nginx跨域代理解决方案/</id>
+    <published>2020-02-27T13:00:31.000Z</published>
+    <updated>2020-03-08T13:02:51.246Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Nginx 反向代理 和 前端代理处理跨域&lt;/p&gt;
+&lt;h3 id=&quot;Nginx&quot;&gt;&lt;a href=&quot;#Nginx&quot; class=&quot;headerlink&quot; title=&quot;Nginx&quot;&gt;&lt;/a&gt;Nginx&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;页面请求访问本地1026端口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/server/api/&lt;/code&gt;打头的请求是ajax请求，访问本地1027端口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/socket.io/&lt;/code&gt;打头的是socket.io连接，需特别处理&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="nginx" scheme="https://juncaixinchi.github.io/Blogs/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义scrollbar</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/12/25/%E8%87%AA%E5%AE%9A%E4%B9%89scrollbar/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/12/25/自定义scrollbar/</id>
+    <published>2019-12-25T12:58:17.000Z</published>
+    <updated>2020-03-08T13:10:19.811Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;自定义scrollbar， 包括宽度，颜色和圆角&lt;br&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/di
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://juncaixinchi.github.io/Blogs/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flexible Grid View</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/12/11/Flexible-Grid-View/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/12/11/Flexible-Grid-View/</id>
+    <published>2019-12-11T14:18:54.000Z</published>
+    <updated>2019-12-11T14:26:32.669Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;参考Flutter的GridView，在Web环境下用JS实现一个自适应的GridView&lt;/p&gt;
+&lt;p&gt;基本思路是利用react-virtualized-auto-sizer获取当前容器大小，再根据crossAxisCount和childAspectRatio计算布局&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>realTimeEditorDemo</title>
+    <link href="https://juncaixinchi.github.io/Blogs/2019/12/05/realTimeEditorDemo/"/>
+    <id>https://juncaixinchi.github.io/Blogs/2019/12/05/realTimeEditorDemo/</id>
+    <published>2019-12-05T10:49:34.000Z</published>
+    <updated>2020-03-08T13:10:30.213Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;文本编辑器的实时共享编辑&quot;&gt;&lt;a href=&quot;#文本编辑器的实时共享编辑&quot; class=&quot;headerlink&quot; title=&quot;文本编辑器的实时共享编辑&quot;&gt;&lt;/a&gt;文本编辑器的实时共享编辑&lt;/h3&gt;&lt;p&gt;基于 socket.io 和 codemirror实现简单的demo&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="socket.io" scheme="https://juncaixinchi.github.io/Blogs/tags/socket-io/"/>
+    
+  </entry>
   
   <entry>
     <title>ffmpeg note</title>
@@ -272,92 +370,6 @@
     
     
       <category term="Code Complete" scheme="https://juncaixinchi.github.io/Blogs/tags/Code-Complete/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Code Complete Note 002</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/06/03/Code-Complete-Note-002/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/06/03/Code-Complete-Note-002/</id>
-    <published>2018-06-03T15:18:40.000Z</published>
-    <updated>2018-06-03T15:29:29.937Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;代码大全读书笔记002-防御性编程&quot;&gt;&lt;a href=&quot;#代码大全读书笔记002-防御性编程&quot; class=&quot;headerlink&quot; title=&quot;代码大全读书笔记002-防御性编程&quot;&gt;&lt;/a&gt;代码大全读书笔记002-防御性编程&lt;/h1&gt;&lt;p&gt;保护程序免遭非法输入数据的破坏&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Code Complete" scheme="https://juncaixinchi.github.io/Blogs/tags/Code-Complete/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Code Complete Note 001</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/05/27/Code-Complete-Note-001/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/05/27/Code-Complete-Note-001/</id>
-    <published>2018-05-27T14:13:54.000Z</published>
-    <updated>2018-05-27T14:26:55.437Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;代码大全读书笔记001-变量名的力量&quot;&gt;&lt;a href=&quot;#代码大全读书笔记001-变量名的力量&quot; class=&quot;headerlink&quot; title=&quot;代码大全读书笔记001-变量名的力量&quot;&gt;&lt;/a&gt;代码大全读书笔记001-变量名的力量&lt;/h1&gt;&lt;p&gt;好的变量名是可读的、易于记忆和恰如其分的&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Code Complete" scheme="https://juncaixinchi.github.io/Blogs/tags/Code-Complete/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web Spider</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/04/28/Web-Spider/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/04/28/Web-Spider/</id>
-    <published>2018-04-28T14:52:19.000Z</published>
-    <updated>2018-04-28T14:52:19.637Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSS Grid Layout</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/04/15/CSS-Grid-Layout/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/04/15/CSS-Grid-Layout/</id>
-    <published>2018-04-15T13:29:29.000Z</published>
-    <updated>2018-04-15T13:29:29.704Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Debounce and Throttle</title>
-    <link href="https://juncaixinchi.github.io/Blogs/2018/03/25/Debounce-and-Throttle/"/>
-    <id>https://juncaixinchi.github.io/Blogs/2018/03/25/Debounce-and-Throttle/</id>
-    <published>2018-03-25T14:02:50.000Z</published>
-    <updated>2018-05-27T14:27:08.181Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;防抖（Debounce）和节流（Throttle）都是用来控制某个函数在一定时间内执行多少次的技巧&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Debounce: 把触发非常频繁的事件合并成一次执行。&lt;/li&gt;
-&lt;li&gt;Throttle: 把触发非常频繁的事件变成每隔一定时间触发一次。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://juncaixinchi.github.io/Blogs/tags/JavaScript/"/>
     
   </entry>
   

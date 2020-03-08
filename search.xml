@@ -4,6 +4,112 @@
   
     
     <entry>
+      <title><![CDATA[ML中的评价指标对比]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2020/03/05/ML%E4%B8%AD%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87%E5%AF%B9%E6%AF%94/</url>
+      <content type="html"><![CDATA[<p>准确率(Accuracy), 精确率(Precision), 召回率(Recall)和F1-Measure是机器学习中对模型效果的重要评价指标。</p>
+<p>假设一个班级有100个学生，其中男生70人，女生30人。如下图，蓝色矩形表示男生，橙色矩形表示女生。</p>
+<p>又假设，我们不知道这些学生的性别，只知道他们的身高和体重。我们有一个程序(分类器)，这个程序可以通过分析每个学生的身高和体重，对这100个学生的性别分别进行预测。最后的预测结果为，60人为男生，40人为女生，如下图。</p>
+<p><img src="/Blogs/img/ml.png" alt="1"></p>
+<p>TP：实际为男生，预测为男生；<br>FP：实际为女生，预测为男生；<br>FN：实际为男生，预测为女生；<br>TN：实际为女生，预测为女生；</p>
+<p>准确率(Accuracy) ＝ (TP + TN) / 总样本 ＝(40 + 10)/100 = 50%。 定义是: 对于给定的测试数据集，分类器正确分类的样本数与总样本数之比。<br>精确率(Precision) ＝ TP / (TP + FP) = 40/60 =  66.67%。它表示：预测为正的样本中有多少是真正的正样本，它是针对我们预测结果而言的。Precision又称为查准率。<br>召回率(Recall) ＝ TP / (TP + FN) = 40/70 = 57.14% 。它表示：样本中的正例有多少被预测正确了， 它是针对我们原来的样本而言的。Recall又称为查全率。<br>F1值就是精确值和召回率的加权调和均值。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> machine learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Nginx跨域代理解决方案]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2020/02/27/Nginx%E8%B7%A8%E5%9F%9F%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+      <content type="html"><![CDATA[<p>Nginx 反向代理 和 前端代理处理跨域</p>
+<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><ul>
+<li>页面请求访问本地1026端口</li>
+<li><code>/server/api/</code>打头的请求是ajax请求，访问本地1027端口</li>
+<li><code>/socket.io/</code>打头的是socket.io连接，需特别处理</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="section">server</span> &#123;</div><div class="line">	<span class="attribute">listen</span> <span class="number">1026</span> default_server;</div><div class="line">	<span class="attribute">listen</span> [::]:<span class="number">1026</span> default_server;</div><div class="line">	</div><div class="line">	<span class="attribute">root</span> /home/oal/Work/oal/dist;</div><div class="line"></div><div class="line">	<span class="attribute">index</span> index.html index.htm index.nginx-debian.html;</div><div class="line"></div><div class="line">	<span class="attribute">server_name</span> _;</div><div class="line"></div><div class="line">	<span class="attribute">location</span> / &#123;</div><div class="line">		<span class="comment"># First attempt to serve request as file, then</span></div><div class="line">		<span class="comment"># as directory, then fall back to index.html.</span></div><div class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">    <span class="attribute">location</span> /training/ &#123;</div><div class="line">        <span class="comment"># proxy training apis</span></div><div class="line">        <span class="attribute">proxy_pass</span> http://serverip:1029/;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="attribute">location</span> /socket.io/ &#123;</div><div class="line">        <span class="comment"># proxy socket.io</span></div><div class="line">    	<span class="attribute">proxy_pass</span> http://serverip:1029/socket.io/;</div><div class="line">    	<span class="attribute">proxy_redirect</span> <span class="literal">off</span>;</div><div class="line">    </div><div class="line">    	<span class="attribute">proxy_set_header</span> X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">    	<span class="attribute">proxy_set_header</span> X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">    	<span class="attribute">proxy_set_header</span> Host <span class="variable">$http_host</span>;</div><div class="line">    	<span class="attribute">proxy_set_header</span> X-NginX-Proxy <span class="literal">false</span>;</div><div class="line">    </div><div class="line">    	<span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</div><div class="line">    	<span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</div><div class="line">    	<span class="attribute">proxy_set_header</span> Connection <span class="string">"upgrade"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="前端代理配置"><a href="#前端代理配置" class="headerlink" title="前端代理配置"></a>前端代理配置</h3><ul>
+<li><code>/server/api/</code>打头的请求是ajax请求，需要pathRewrite，访问开发环境服务器</li>
+<li><p><code>/socket.io/</code> 不需要需要pathRewrite</p>
+</li>
+<li><p>config.js</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">proxy: &#123;</div><div class="line">  <span class="string">'/server/api/'</span>: &#123;</div><div class="line">    <span class="attr">target</span>: <span class="string">'http://serverip:1027/'</span>, <span class="comment">// 开发环境</span></div><div class="line">    changeOrigin: <span class="literal">true</span>,</div><div class="line">    <span class="attr">pathRewrite</span>: &#123;</div><div class="line">      <span class="string">'^/server/api/'</span>: <span class="string">''</span>,</div><div class="line">    &#125;,</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'/socket.io/'</span>: &#123;</div><div class="line">    <span class="attr">target</span>: <span class="string">'http://serverip:1027/'</span>, <span class="comment">// 开发环境</span></div><div class="line">    changeOrigin: <span class="literal">true</span>,</div><div class="line">  &#125;,</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> nginx </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[自定义scrollbar]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/12/25/%E8%87%AA%E5%AE%9A%E4%B9%89scrollbar/</url>
+      <content type="html"><![CDATA[<p>自定义scrollbar， 包括宽度，颜色和圆角<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">// custom scrollbar</div><div class="line">::-webkit-scrollbar &#123;</div><div class="line">  /* for vertical scrollbars */</div><div class="line">  width: 8px;</div><div class="line">  /* for horizontal scrollbars */</div><div class="line">  height: 8px;</div><div class="line">  border-radius: 8px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">::-webkit-scrollbar-track &#123;</div><div class="line">  background: #f1f1f1;</div><div class="line">  border-radius: 8px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">::-webkit-scrollbar-thumb &#123;</div><div class="line">  background: #c1c1c1;</div><div class="line">  border-radius: 8px;</div><div class="line"></div><div class="line">  &amp;:hover &#123;</div><div class="line">    background: #8c8c8c;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Flexible Grid View]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/12/11/Flexible-Grid-View/</url>
+      <content type="html"><![CDATA[<p>参考Flutter的GridView，在Web环境下用JS实现一个自适应的GridView</p>
+<p>基本思路是利用react-virtualized-auto-sizer获取当前容器大小，再根据crossAxisCount和childAspectRatio计算布局</p>
+<a id="more"></a>]]></content>
+      
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[realTimeEditorDemo]]></title>
+      <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/12/05/realTimeEditorDemo/</url>
+      <content type="html"><![CDATA[<h3 id="文本编辑器的实时共享编辑"><a href="#文本编辑器的实时共享编辑" class="headerlink" title="文本编辑器的实时共享编辑"></a>文本编辑器的实时共享编辑</h3><p>基于 socket.io 和 codemirror实现简单的demo</p>
+<a id="more"></a>
+<ul>
+<li>server端收到<code>update</code>消息后广播到其它所有客户端</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">io.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">socket</span>) </span>&#123;</div><div class="line">  socket.emit(<span class="string">'doc'</span>, &#123;</div><div class="line">    <span class="attr">timestamp</span>: <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(),</div><div class="line">    <span class="attr">doc</span>: file</div><div class="line">  &#125;)</div><div class="line">  socket.on(<span class="string">'update'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">    file = data.doc;</div><div class="line">    io.emit(<span class="string">'doc'</span>, data);</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  socket.on(<span class="string">'disconnect'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'disconnect'</span>, data)</div><div class="line">  &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>客户端检测到变化时触发发送<code>update</code>消息，收到新的<code>doc</code>时更新当前内容</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">socket.on(<span class="string">'doc'</span>, (data) =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> &#123; timestamp, doc &#125; = data</div><div class="line">  <span class="keyword">if</span> (timestamp &gt; <span class="keyword">this</span>.currentDoc.timestamp) &#123;</div><div class="line">    <span class="keyword">this</span>.currentDoc = &#123; timestamp, doc &#125;;</div><div class="line">    <span class="keyword">if</span> (doc !== <span class="keyword">this</span>.codemirror.getValue()) &#123;</div><div class="line">      <span class="keyword">this</span>.codemirror.setValue(doc)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">this</span>.codemirror.on(<span class="string">'change'</span>, (...args) =&gt; &#123;</div><div class="line">  socket.emit(<span class="string">'update'</span>, &#123;</div><div class="line">    <span class="attr">timestamp</span>: <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(),</div><div class="line">    <span class="attr">doc</span>: <span class="keyword">this</span>.codemirror.getValue()</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>完整代码见 <a href="https://github.com/juncaixinchi/realTimeEditorDemo" target="_blank" rel="external">realTimeEditorDemo</a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> socket.io </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[ffmpeg note]]></title>
       <url>https://juncaixinchi.github.io/Blogs/Blogs/2019/11/10/ffmpeg-note/</url>
       <content type="html"><![CDATA[<h1 id="ffmpeg-note"><a href="#ffmpeg-note" class="headerlink" title="ffmpeg note"></a>ffmpeg note</h1><ul>

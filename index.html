@@ -121,6 +121,186 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/Blogs/2020/03/05/ML中的评价指标对比/">
+        ML中的评价指标对比
+      </a>
+    </h2>
+    
+    <time>
+      3月 5, 2020
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>准确率(Accuracy), 精确率(Precision), 召回率(Recall)和F1-Measure是机器学习中对模型效果的重要评价指标。</p>
+<p>假设一个班级有100个学生，其中男生70人，女生30人。如下图，蓝色矩形表示男生，橙色矩形表示女生。</p>
+<p>又假设，我们不知道这些学生的性别，只知道他们的身高和体重。我们有一个程序(分类器)，这个程序可以通过分析每个学生的身高和体重，对这100个学生的性别分别进行预测。最后的预测结果为，60人为男生，40人为女生，如下图。</p>
+<p><img src="/Blogs/img/ml.png" alt="1"></p>
+<p>TP：实际为男生，预测为男生；<br>FP：实际为女生，预测为男生；<br>FN：实际为男生，预测为女生；<br>TN：实际为女生，预测为女生；</p>
+<p>准确率(Accuracy) ＝ (TP + TN) / 总样本 ＝(40 + 10)/100 = 50%。 定义是: 对于给定的测试数据集，分类器正确分类的样本数与总样本数之比。<br>精确率(Precision) ＝ TP / (TP + FP) = 40/60 =  66.67%。它表示：预测为正的样本中有多少是真正的正样本，它是针对我们预测结果而言的。Precision又称为查准率。<br>召回率(Recall) ＝ TP / (TP + FN) = 40/70 = 57.14% 。它表示：样本中的正例有多少被预测正确了， 它是针对我们原来的样本而言的。Recall又称为查全率。<br>F1值就是精确值和召回率的加权调和均值。</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/machine-learning/">machine learning</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2020/02/27/Nginx跨域代理解决方案/">
+        Nginx跨域代理解决方案
+      </a>
+    </h2>
+    
+    <time>
+      2月 27, 2020
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>Nginx 反向代理 和 前端代理处理跨域</p>
+<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><ul>
+<li>页面请求访问本地1026端口</li>
+<li><code>/server/api/</code>打头的请求是ajax请求，访问本地1027端口</li>
+<li><code>/socket.io/</code>打头的是socket.io连接，需特别处理</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2020/02/27/Nginx跨域代理解决方案/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/nginx/">nginx</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/12/25/自定义scrollbar/">
+        自定义scrollbar
+      </a>
+    </h2>
+    
+    <time>
+      12月 25, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>自定义scrollbar， 包括宽度，颜色和圆角<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">// custom scrollbar</div><div class="line">::-webkit-scrollbar &#123;</div><div class="line">  /* for vertical scrollbars */</div><div class="line">  width: 8px;</div><div class="line">  /* for horizontal scrollbars */</div><div class="line">  height: 8px;</div><div class="line">  border-radius: 8px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">::-webkit-scrollbar-track &#123;</div><div class="line">  background: #f1f1f1;</div><div class="line">  border-radius: 8px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">::-webkit-scrollbar-thumb &#123;</div><div class="line">  background: #c1c1c1;</div><div class="line">  border-radius: 8px;</div><div class="line"></div><div class="line">  &amp;:hover &#123;</div><div class="line">    background: #8c8c8c;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/css/">css</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/12/11/Flexible-Grid-View/">
+        Flexible Grid View
+      </a>
+    </h2>
+    
+    <time>
+      12月 11, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>参考Flutter的GridView，在Web环境下用JS实现一个自适应的GridView</p>
+<p>基本思路是利用react-virtualized-auto-sizer获取当前容器大小，再根据crossAxisCount和childAspectRatio计算布局</p>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2019/12/11/Flexible-Grid-View/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/JavaScript/">JavaScript</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/Blogs/2019/12/05/realTimeEditorDemo/">
+        realTimeEditorDemo
+      </a>
+    </h2>
+    
+    <time>
+      12月 5, 2019
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="文本编辑器的实时共享编辑"><a href="#文本编辑器的实时共享编辑" class="headerlink" title="文本编辑器的实时共享编辑"></a>文本编辑器的实时共享编辑</h3><p>基于 socket.io 和 codemirror实现简单的demo</p>
+
+    
+	  <div class="readmore">
+      <a href="/Blogs/2019/12/05/realTimeEditorDemo/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/Blogs/tags/socket-io/">socket.io</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/Blogs/2019/11/10/ffmpeg-note/">
         ffmpeg note
       </a>
@@ -311,167 +491,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2019/07/08/Shortest-subarray-with-sum-at-least-k/">
-        Shortest subarray with sum at least k
-      </a>
-    </h2>
-    
-    <time>
-      7月 8, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>在LeetCode刷算法题，记录一下一道比较难的题目<a href="https://leetcode-cn.com/problems/shortest-subarray-with-sum-at-least-k/description/" target="_blank" rel="external">和至少为 K 的最短子数组</a></p>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>返回 A 的最短的非空连续子数组的长度，该子数组的和至少为 K 。</p>
-<p>如果没有和至少为 K 的非空子数组，返回 -1 。</p>
-<p>其中：</p>
-<ul>
-<li>1 &lt;= A.length &lt;= 50000</li>
-<li>-10 ^ 5 &lt;= A[i] &lt;= 10 ^ 5</li>
-<li>1 &lt;= K &lt;= 10 ^ 9</li>
-</ul>
-<p>最先想到的是依照数值长度进行遍历，但时间复杂度为O(n^2)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * @param &#123;number[]&#125; A</div><div class="line"> * @param &#123;number&#125; K</div><div class="line"> * @return &#123;number&#125;</div><div class="line"> */</div><div class="line"><span class="keyword">const</span> shortestSubarray = <span class="function">(<span class="params">A, K</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> preSum = <span class="number">0</span></div><div class="line">  <span class="keyword">let</span> count = <span class="number">1</span></div><div class="line">  <span class="keyword">while</span> (count &lt;= A.length) &#123;</div><div class="line">    preSum += A[count - <span class="number">1</span>]</div><div class="line">    <span class="keyword">let</span> sum = preSum</div><div class="line">    <span class="keyword">if</span> (sum &gt;= K) <span class="keyword">return</span> count</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i + count &lt;= A.length; i ++) &#123;</div><div class="line">      sum = sum - A[i - <span class="number">1</span>] + A[i + count - <span class="number">1</span>]</div><div class="line">      <span class="keyword">if</span> (sum &gt;= K) <span class="keyword">return</span> count</div><div class="line">    &#125;</div><div class="line">    count += <span class="number">1</span></div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="number">-1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>之后参考了网上的资料，可以使用Sliding Window的方法，复杂度可以下降到O(N)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * @param &#123;number[]&#125; A</div><div class="line"> * @param &#123;number&#125; K</div><div class="line"> * @return &#123;number&#125;</div><div class="line"> */</div><div class="line"><span class="keyword">const</span> shortestSubarray = <span class="function">(<span class="params">A, K</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">if</span> (!A.length) <span class="keyword">return</span> <span class="number">-1</span></div><div class="line">  <span class="keyword">let</span> S = [<span class="number">0</span>]</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</div><div class="line">    S[i + <span class="number">1</span>] = S[i] + A[i]</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">const</span> queue = []</div><div class="line">  <span class="keyword">let</span> ans = A.length + <span class="number">1</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; A.length + <span class="number">1</span>; j++) &#123; </div><div class="line">    <span class="keyword">while</span> (queue.length &amp;&amp; S[j] &lt;= S[queue[queue.length - <span class="number">1</span>]]) &#123;</div><div class="line">      queue.pop()</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(queue.length &amp;&amp; S[j] &gt;= S[queue[<span class="number">0</span>]] + K) &#123;</div><div class="line">      ans = <span class="built_in">Math</span>.min(ans, j - queue.shift())</div><div class="line">    &#125;</div><div class="line">    queue.push(j)</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ans &lt; A.length + <span class="number">1</span> ? ans : <span class="number">-1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/Algorithm/">Algorithm</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2019/04/02/Some-bash-scripts/">
-        Some bash scripts
-      </a>
-    </h2>
-    
-    <time>
-      4月 2, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h1 id="setInterval-in-bash"><a href="#setInterval-in-bash" class="headerlink" title="setInterval in bash"></a>setInterval in bash</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> <span class="literal">true</span>; <span class="keyword">do</span> ls <span class="_">-l</span>; sleep 2; <span class="keyword">done</span></div></pre></td></tr></table></figure>
-<h1 id="count-files-fastly"><a href="#count-files-fastly" class="headerlink" title="count files fastly"></a>count files fastly</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -type f | wc -l</div></pre></td></tr></table></figure>
-<h1 id="find-files-that-large-than-1-GiB"><a href="#find-files-that-large-than-1-GiB" class="headerlink" title="find files that large than 1 GiB"></a>find files that large than 1 GiB</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -type f -size +1G</div></pre></td></tr></table></figure>
-<h1 id="test-if-file-exist"><a href="#test-if-file-exist" class="headerlink" title="test if file exist"></a>test if file exist</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">myFile=<span class="string">"/home/lxw/abc"</span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span></div><div class="line">touch <span class="string">"<span class="variable">$myFile</span>"</span></div><div class="line"><span class="keyword">else</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"skip"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
-<h1 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h1><p>find all <code>dart</code> process and kill them all<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># find</span></div><div class="line">ps -aux | grep dart</div><div class="line"><span class="comment"># find &amp;&amp; kill</span></div><div class="line">pgrep <span class="_">-f</span> dart | xargs <span class="built_in">kill</span></div></pre></td></tr></table></figure></p>
-<h1 id="Wifi"><a href="#Wifi" class="headerlink" title="Wifi"></a>Wifi</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># connect to wifi</span></div><div class="line">sudo nmcli d wifi connect iPhone password 11345678</div><div class="line"></div><div class="line"><span class="comment"># show saved connections</span></div><div class="line">ls -sail /etc/NetworkManager/system-connections/</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/Blogs/tags/Bash/">Bash</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2019/02/12/show-colored-word-in-bash/">
-        show colored word in bash
-      </a>
-    </h2>
-    
-    <time>
-      2月 12, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h1 id="echo-color-in-bash-console"><a href="#echo-color-in-bash-console" class="headerlink" title="echo color in bash console"></a>echo color in bash console</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"\033[01;32m 绿色字体 √ \033[0m"</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'\033[01;32m'</span>, <span class="string">'绿色字体 √'</span>)</div></pre></td></tr></table></figure>
-<h1 id="color-matrix"><a href="#color-matrix" class="headerlink" title="color matrix"></a>color matrix</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">64</span>; i++) &#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">32</span>; j &lt; <span class="number">48</span>; j++) &#123;</div><div class="line">    <span class="keyword">const</span> ii = i.toString().padStart(<span class="number">2</span>, <span class="string">'0'</span>)</div><div class="line">    <span class="keyword">const</span> jj = j.toString().padStart(<span class="number">2</span>, <span class="string">'0'</span>)</div><div class="line">    <span class="keyword">const</span> str = <span class="string">'\033'</span> + <span class="string">`[<span class="subst">$&#123;ii&#125;</span>;<span class="subst">$&#123;jj&#125;</span>m`</span> + <span class="string">`[<span class="subst">$&#123;ii&#125;</span>;<span class="subst">$&#123;jj&#125;</span>m`</span> + <span class="string">'\033[0m '</span></div><div class="line">    process.stdout.write(str)</div><div class="line">  &#125;</div><div class="line">  process.stdout.write(<span class="string">'\n'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2019/01/07/Check-Chinese-Word/">
-        Check Chinese Word
-      </a>
-    </h2>
-    
-    <time>
-      1月 7, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>使用<code>grep -r</code>读取当前文件夹下的所有文件内容，使用正则匹配筛选中文<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> child = <span class="built_in">require</span>(<span class="string">'child_process'</span>)</div><div class="line"><span class="keyword">const</span> all = child.execSync(<span class="string">`grep -r ''`</span>).toString().split(<span class="string">'\n'</span>).map(<span class="function"><span class="params">l</span> =&gt;</span> l.trim()).filter(<span class="function"><span class="params">l</span> =&gt;</span> l.length)</div><div class="line"><span class="keyword">const</span> chinese = all.filter(<span class="function"><span class="params">l</span> =&gt;</span> /[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+<span class="regexp">/.test(l))</span></div></pre></td></tr></table></figure></p>
-
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/Blogs/2019/01/02/Common-Http-Code/">
-        Common Http Code
-      </a>
-    </h2>
-    
-    <time>
-      1月 2, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h3 id="常见的HTTP-Code"><a href="#常见的HTTP-Code" class="headerlink" title="常见的HTTP Code"></a>常见的HTTP Code</h3>
-
-    
-	  <div class="readmore">
-      <a href="/Blogs/2019/01/02/Common-Http-Code/">Read More</a>
-    </div>
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -503,7 +522,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/Blogs/tags/Algorithm/" style="font-size: 15.2px; color: #666">Algorithm</a> <a href="/Blogs/tags/Bash/" style="font-size: 14px; color: #808080">Bash</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.2px; color: #666">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 17.6px; color: #333">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 16.4px; color: #4d4d4d">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 16.4px; color: #4d4d4d">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.2px; color: #666">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.2px; color: #666">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.2px; color: #666">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 16.4px; color: #4d4d4d">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 16.4px; color: #4d4d4d">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.2px; color: #666">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.8px; color: #1a1a1a">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 14px; color: #808080">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.2px; color: #666">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
+        <a href="/Blogs/tags/Algorithm/" style="font-size: 15.2px; color: #666">Algorithm</a> <a href="/Blogs/tags/Bash/" style="font-size: 14px; color: #808080">Bash</a> <a href="/Blogs/tags/Blog/" style="font-size: 15.2px; color: #666">Blog</a> <a href="/Blogs/tags/Brtfs/" style="font-size: 14px; color: #808080">Brtfs</a> <a href="/Blogs/tags/CSS/" style="font-size: 17.6px; color: #333">CSS</a> <a href="/Blogs/tags/Canvas/" style="font-size: 14px; color: #808080">Canvas</a> <a href="/Blogs/tags/Cheat-sheet/" style="font-size: 16.4px; color: #4d4d4d">Cheat-sheet</a> <a href="/Blogs/tags/Code-Complete/" style="font-size: 16.4px; color: #4d4d4d">Code Complete</a> <a href="/Blogs/tags/Copy/" style="font-size: 14px; color: #808080">Copy</a> <a href="/Blogs/tags/Demo/" style="font-size: 14px; color: #808080">Demo</a> <a href="/Blogs/tags/Dialog/" style="font-size: 14px; color: #808080">Dialog</a> <a href="/Blogs/tags/ES6/" style="font-size: 15.2px; color: #666">ES6</a> <a href="/Blogs/tags/Game/" style="font-size: 14px; color: #808080">Game</a> <a href="/Blogs/tags/Git/" style="font-size: 15.2px; color: #666">Git</a> <a href="/Blogs/tags/GitHub-Pages/" style="font-size: 14px; color: #808080">GitHub Pages</a> <a href="/Blogs/tags/Github/" style="font-size: 15.2px; color: #666">Github</a> <a href="/Blogs/tags/Hexo/" style="font-size: 16.4px; color: #4d4d4d">Hexo</a> <a href="/Blogs/tags/JSX/" style="font-size: 14px; color: #808080">JSX</a> <a href="/Blogs/tags/JavaScript/" style="font-size: 20px; color: #000">JavaScript</a> <a href="/Blogs/tags/Linux/" style="font-size: 16.4px; color: #4d4d4d">Linux</a> <a href="/Blogs/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/Blogs/tags/Next/" style="font-size: 14px; color: #808080">Next</a> <a href="/Blogs/tags/Node-js/" style="font-size: 15.2px; color: #666">Node.js</a> <a href="/Blogs/tags/React/" style="font-size: 18.8px; color: #1a1a1a">React</a> <a href="/Blogs/tags/Vim/" style="font-size: 14px; color: #808080">Vim</a> <a href="/Blogs/tags/ads/" style="font-size: 14px; color: #808080">ads</a> <a href="/Blogs/tags/css/" style="font-size: 15.2px; color: #666">css</a> <a href="/Blogs/tags/googleapis/" style="font-size: 14px; color: #808080">googleapis</a> <a href="/Blogs/tags/js/" style="font-size: 14px; color: #808080">js</a> <a href="/Blogs/tags/machine-learning/" style="font-size: 14px; color: #808080">machine learning</a> <a href="/Blogs/tags/nginx/" style="font-size: 14px; color: #808080">nginx</a> <a href="/Blogs/tags/node/" style="font-size: 14px; color: #808080">node</a> <a href="/Blogs/tags/npm/" style="font-size: 15.2px; color: #666">npm</a> <a href="/Blogs/tags/sha256/" style="font-size: 14px; color: #808080">sha256</a> <a href="/Blogs/tags/socket-io/" style="font-size: 14px; color: #808080">socket.io</a> <a href="/Blogs/tags/state/" style="font-size: 14px; color: #808080">state</a> <a href="/Blogs/tags/xattr/" style="font-size: 14px; color: #808080">xattr</a>
     </div>
 </div>
 
